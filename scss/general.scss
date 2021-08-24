@@ -97,7 +97,6 @@
     }
 }
 
-
 $CarouselBackground: 1;
 $HeadlineLayer: 2;
 $SearchbarlineLayer: 3;
@@ -446,5 +445,24 @@ footer {
     
     a {
         text-decoration: none !important;
+    }
+}
+
+#siteSearch {
+    button[data-bs-dismiss] {
+        color: #FFDDB4 !important;
+        border: 1.5px solid #FFDDB4;
+    }
+
+    .modal {
+        &-content {
+            background-color: transparent;
+            border: none;
+            color: #FFFFFF;
+        }
+
+        &-backdrop {
+            backdrop-filter: blur(10px);
+        }
     }
 }

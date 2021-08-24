@@ -12321,4 +12321,20 @@ footer .FooterList ul li a {
 .FooterBottom a {
   text-decoration: none !important;
 }
+
+#siteSearch button[data-bs-dismiss] {
+  color: #FFDDB4 !important;
+  border: 1.5px solid #FFDDB4;
+}
+
+#siteSearch .modal-content {
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+}
+
+#siteSearch .modal-backdrop {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
 /*# sourceMappingURL=general.css.map */
