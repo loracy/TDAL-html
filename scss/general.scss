@@ -1,6 +1,18 @@
 @import "custom";
 .btn {
     padding: 0.375rem 1.25rem;
+
+    &-primary {
+        &-fb {
+            background: #248DEE;
+            color: #FFFFFF;
+        }
+        
+        &-gmail {
+            background: #EA371D;
+            color: #FFFFFF;
+        }
+    }
 }
 
 .navbar {
@@ -43,6 +55,7 @@
     padding: 0;
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
     overflow: hidden;
+    left: calc(20px - 0.5rem);
 
     &.show {
         display: flex;
@@ -51,19 +64,28 @@
 
     &-col {
         display: inline-block;
-        width: auto;
+        width: 236px;
         min-width: 196px;
         padding: 10px 0;
-        overflow: auto;
+        overflow: scroll;
         background: #FFFFFF;
         box-shadow: -1px 0 0 0 #DDDDDD;
         margin-left: 1px;
-        
-        &:first-of-type {
-            background: #FFF8EF;
-            box-shadow: none;
+        margin-right: 1px;
+    }
+
+    &[aria-labelledby="navbarDropdown-1"] {
+        left: -196px;
+
+        .Dropdown-col {
+            &:first-of-type {
+                width: 196px;
+                background: #FFF8EF;
+                box-shadow: none;
+            }
         }
     }
+
 }
 
 .DropdownInner {
@@ -94,7 +116,23 @@
                 background: rgba(241, 228, 211, 1);
             }
         }
+        
+        &_featured {
+            .dropdown-item {
+                //styleName: PingFangTC/Body/Medium;
+                font-family: PingFang TC;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                letter-spacing: 0px;
+                color: #4968A6;
+                display: flex;
+                align-items: center;
+                padding: 15px 20px 15px 45px;
+            }
+        }
     }
+    
 }
 
 $CarouselBackground: 1;
@@ -248,6 +286,11 @@ $CarouselControls: 4;
         text-align: center;
         padding: 6px 52px;
 
+        &:hover {
+            color: inherit;
+            background: #EDEDED;
+        }
+
         &.active {
             font-weight: 500;
             box-shadow: 0 3px 0 0 #6F593E;
@@ -320,6 +363,12 @@ $CarouselControls: 4;
             margin-bottom: 0;
             margin-left: 6px;
             margin-right: 6px;
+        }
+    }
+
+    .btn {
+        &:hover {
+            color: #E84028 !important;
         }
     }
 }
@@ -402,6 +451,15 @@ $CarouselControls: 4;
 
 }
 
+.HomeMidCover {
+    height: 460px;
+    background-image: url(../img/home_mid_1.png);
+
+    h2, h6 {
+        color: #FFFFFF;
+    }
+}
+
 footer {
     background: #234459;
     height: 362px;
@@ -463,6 +521,55 @@ footer {
 
         &-backdrop {
             backdrop-filter: blur(10px);
+        }
+    }
+}
+
+#signUpDialog {
+    .form-control {
+        padding: 10px;
+    }
+
+    .modal {
+        &-content {
+            padding: 0 calc(50% - 193px); //：(100% - 386)/2
+        }
+
+        &-header {
+            flex-wrap: wrap;
+            padding-top: 40px;
+            border-bottom: none;
+
+            .btn-close {
+                position: absolute;
+                right: 16px;
+                top: 16px;
+            }
+        }
+
+        &-title {
+            //styleName: PingFangTC/H2//Medium;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25px;
+            letter-spacing: 0px;
+            flex-basis: 100%;
+            text-align: center;
+        }
+
+        &-subtitle {
+            //styleName: PingFangTC/H2/Regular;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 0px;
+            flex-basis: 100%;
+            text-align: center;
+        }
+
+        &-footer {
+            align-items: center;
+            justify-content: center;
         }
     }
 }
