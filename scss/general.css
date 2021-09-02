@@ -11871,6 +11871,26 @@ fieldset:disabled .btn {
   color: #FFFFFF;
 }
 
+.icon-xxs {
+  font-size: 14px;
+}
+
+.icon-xs {
+  font-size: 20px;
+}
+
+.icon-sm {
+  font-size: 24px;
+}
+
+.icon-md {
+  font-size: 32px;
+}
+
+.icon-lg {
+  font-size: 40px;
+}
+
 .navbar {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -11888,12 +11908,35 @@ fieldset:disabled .btn {
   background-color: #FFFFFF;
 }
 
+.navbar button[data-bs-target="#logInDialog"] {
+  color: #000000 !important;
+}
+
+.navbar button[data-bs-target="#logInDialog"]:hover {
+  color: #FFFFFF !important;
+}
+
+.navbar button[data-bs-target="#siteSearch"], .navbar button[id="cart"], .navbar button[id="languageSwitch"] {
+  color: #000000 !important;
+}
+
+.navbar button[data-bs-target="#siteSearch"]:hover, .navbar button[id="cart"]:hover, .navbar button[id="languageSwitch"]:hover {
+  color: #785122 !important;
+  background-color: transparent;
+}
+
+.navbar button[data-bs-toggle="dropdown"]:after {
+  display: none;
+}
+
 .nav-item {
   margin-right: 24px;
+  max-width: calc(133px + 1rem);
 }
 
 .nav-link {
   color: #000000;
+  white-space: normal;
 }
 
 .nav-link.dropdown-toggle.show:after {
@@ -11902,6 +11945,8 @@ fieldset:disabled .btn {
 }
 
 .Dropdown {
+  left: calc(20px - 0.5rem);
+  top: 50px !important;
   height: auto;
   max-height: 470px;
   border: none;
@@ -11910,7 +11955,6 @@ fieldset:disabled .btn {
   -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  left: calc(20px - 0.5rem);
 }
 
 .Dropdown.show {
@@ -11933,6 +11977,21 @@ fieldset:disabled .btn {
           box-shadow: -1px 0 0 0 #DDDDDD;
   margin-left: 1px;
   margin-right: 1px;
+}
+
+.Dropdown-col::-webkit-scrollbar {
+  padding: 14px;
+  width: 6px;
+  height: 100%;
+}
+
+.Dropdown-col::-webkit-scrollbar-thumb {
+  background: #DDDDDD;
+  border-radius: 6px;
+}
+
+.Dropdown-col::-webkit-scrollbar-track {
+  background: none;
 }
 
 .Dropdown[aria-labelledby="navbarDropdown-1"] {
@@ -11959,6 +12018,17 @@ fieldset:disabled .btn {
           align-items: stretch;
 }
 
+.DropdownInner[category] {
+  display: none;
+  min-height: 100%;
+}
+
+.DropdownInner[category].Show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .DropdownInner-item .dropdown-item {
   font-family: PingFang TC;
   font-size: 14px;
@@ -11975,8 +12045,31 @@ fieldset:disabled .btn {
   padding: 15px 20px;
 }
 
-.DropdownInner-item .dropdown-item img {
+.DropdownInner-item .dropdown-item span[class*="icon-"] {
   margin-right: 4px;
+}
+
+.DropdownInner-item .dropdown-item.icon-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.DropdownInner-item .dropdown-item.icon-arrow::before {
+  color: #979797;
+  font-size: 20px;
+}
+
+.DropdownInner-item .dropdown-item.icon-arrow:hover::before {
+  color: #212529;
 }
 
 .DropdownInner-item.Active .dropdown-item {
@@ -12209,6 +12302,10 @@ fieldset:disabled .btn {
   width: 14px;
   height: 14px;
   margin-right: 2px;
+}
+
+.HomeProducts .card-title span .icon-veiw {
+  color: #979797;
 }
 
 .HomeProducts .card-text {
