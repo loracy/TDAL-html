@@ -11929,17 +11929,17 @@ fieldset:disabled .btn {
   display: none;
 }
 
-.nav-item {
+header .nav-item {
   margin-right: 24px;
   max-width: calc(133px + 1rem);
 }
 
-.nav-link {
+header .nav-link {
   color: #000000;
   white-space: normal;
 }
 
-.nav-link.dropdown-toggle.show:after {
+header .nav-link.dropdown-toggle.show:after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -12165,6 +12165,26 @@ fieldset:disabled .btn {
           align-items: center;
 }
 
+.HomeTopCover .carousel-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.HomeTopCover .carousel-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .HomeTopCover .carousel-indicators {
   bottom: 160px;
 }
@@ -12185,6 +12205,20 @@ fieldset:disabled .btn {
 
 .HomeTopCover .carousel-control-prev, .HomeTopCover .carousel-control-next {
   z-index: 4;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 12px;
+  top: calc(50% - 20px);
+}
+
+.HomeTopCover .carousel-control-prev {
+  left: 30px;
+}
+
+.HomeTopCover .carousel-control-next {
+  right: 30px;
 }
 
 .HomeCommonSection {
@@ -12224,16 +12258,37 @@ fieldset:disabled .btn {
   margin-right: auto;
 }
 
-.HomeCommonSection-widget img {
-  margin-bottom: 16px;
-}
-
 .HomeCommonSection-widget h6, .HomeCommonSection-widget .h6 {
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
   letter-spacing: 0px;
   text-align: center;
+}
+
+.HomeCommonSection-widget-cover {
+  margin-bottom: 16px;
+  overflow: hidden;
+  border-radius: 50% !important;
+}
+
+.HomeCommonSection-widget > img {
+  margin-bottom: 16px;
+}
+
+.HomeCommonSection-widget[directto]:hover {
+  cursor: pointer;
+}
+
+.HomeCommonSection-widget[directto]:hover h6, .HomeCommonSection-widget[directto]:hover .h6 {
+  color: #FF3A1E;
+}
+
+.HomeCommonSection-widget[directto]:hover img {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: 0.1s all ease-in-out;
+  transition: 0.1s all ease-in-out;
 }
 
 .HomeProducts {
@@ -12249,6 +12304,7 @@ fieldset:disabled .btn {
   letter-spacing: 0px;
   text-align: center;
   padding: 6px 52px;
+  color: #212529;
 }
 
 .HomeProducts .nav-link:hover {
@@ -12265,10 +12321,18 @@ fieldset:disabled .btn {
 .HomeProducts .card {
   border: 1px solid #DDDDDD;
   border-radius: 0px;
+  overflow: hidden;
+  position: relative;
+}
+
+.HomeProducts .card-img-top {
+  z-index: 1;
 }
 
 .HomeProducts .card-body {
   padding: 16px 20px 20px 20px;
+  z-index: 2;
+  background: #FFFFFF;
 }
 
 .HomeProducts .card-title {
@@ -12313,6 +12377,29 @@ fieldset:disabled .btn {
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0px;
+}
+
+.HomeProducts .card .badge {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  padding: 4px 10px;
+  z-index: 3;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0px;
+}
+
+.HomeProducts .card:hover {
+  cursor: pointer;
+}
+
+.HomeProducts .card:hover > img {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: 0.1s all ease-in-out;
+  transition: 0.1s all ease-in-out;
 }
 
 .HomeCounter {
@@ -12406,10 +12493,34 @@ fieldset:disabled .btn {
   margin-bottom: 16px;
 }
 
+.HomeArticles .carousel-item .card-title-tag {
+  font-family: PingFang TC;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: #979797;
+  margin-bottom: 12px;
+}
+
 .HomeArticles .carousel-item .card-text {
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
+  letter-spacing: 0px;
+}
+
+.HomeArticles .carousel#carouselHomeArticles-1 .card-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0px;
+}
+
+.HomeArticles .carousel#carouselHomeArticles-1 .card-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
   letter-spacing: 0px;
 }
 

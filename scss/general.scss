@@ -81,19 +81,21 @@
     }
 }
 
-.nav {
-    &-item {
-        margin-right: 24px;
-        max-width: calc(133px + 1rem);
-    }
-
-    &-link {
-        color: #000000;
-        white-space: normal;
-
-        &.dropdown-toggle.show {
-            &:after {
-                transform: rotate(180deg);
+header {
+    .nav {
+        &-item {
+            margin-right: 24px;
+            max-width: calc(133px + 1rem);
+        }
+    
+        &-link {
+            color: #000000;
+            white-space: normal;
+    
+            &.dropdown-toggle.show {
+                &:after {
+                    transform: rotate(180deg);
+                }
             }
         }
     }
@@ -301,6 +303,19 @@ $CarouselControls: 4;
             align-items: center;
         }
 
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
         &-indicators {
             bottom: 160px;
 
@@ -322,7 +337,20 @@ $CarouselControls: 4;
         &-control-prev,
         &-control-next {
             z-index: $CarouselControls;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.4);
+            padding: 12px;
+            top: calc(50% - 20px);
+        }
 
+        &-control-prev {
+            left: 30px;
+        }
+
+        &-control-next {
+            right: 30px;
         }
     }
 }
@@ -355,17 +383,39 @@ $CarouselControls: 4;
         margin-left: auto;
         margin-right: auto;
 
-        img {
-            //border-radius: 50% !important;
-            margin-bottom: 16px
-        }
-
         h6 {
             font-size: 18px;
             font-weight: 500;
             line-height: 26px;
             letter-spacing: 0px;
             text-align: center;
+        }
+
+        &-cover {
+            margin-bottom: 16px;
+            overflow: hidden;
+            border-radius: 50% !important;
+
+        }
+
+        > img {
+            margin-bottom: 16px
+        }
+
+        &[directto]{
+            &:hover {
+                cursor: pointer;
+    
+                h6 {
+                    color: #FF3A1E;
+                }
+    
+                img {
+                    transform: scale(1.25);
+                    transition: 0.1s all ease-in-out;
+                }
+            }
+
         }
     }
 }
@@ -382,6 +432,7 @@ $CarouselControls: 4;
         letter-spacing: 0px;
         text-align: center;
         padding: 6px 52px;
+        color: #212529;
 
         &:hover {
             color: inherit;
@@ -397,13 +448,17 @@ $CarouselControls: 4;
     .card {
         border: 1px solid #DDDDDD;
         border-radius: 0px;
+        overflow: hidden;
+        position: relative;
 
-        > img {
-
+        &-img-top {
+            z-index: 1;
         }
 
         &-body {
             padding: 16px 20px 20px 20px;
+            z-index: 2;
+            background: #FFFFFF;
         }
 
         &-title {
@@ -438,6 +493,27 @@ $CarouselControls: 4;
             font-weight: 500;
             line-height: 20px;
             letter-spacing: 0px;
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 12px;
+            padding: 4px 10px;
+            z-index: 3;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0px;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            > img {
+                transform: scale(1.25);
+                transition: 0.1s all ease-in-out;
+            }
         }
     }
 }
@@ -517,10 +593,6 @@ $CarouselControls: 4;
                 box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.15);
                 overflow: hidden;
 
-                img {
-
-                }
-                
                 &-body {
                     padding: 57px 40px;
                 }
@@ -531,6 +603,17 @@ $CarouselControls: 4;
                     line-height: 45px;
                     letter-spacing: 0px;
                     margin-bottom: 16px;
+
+                    &-tag {
+                        //styleName: PingFangTC/H3/Regular;
+                        font-family: PingFang TC;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 22px;
+                        letter-spacing: 0px;
+                        color: #979797;
+                        margin-bottom: 12px;
+                    }
                 }
                 
                 &-text {
@@ -542,6 +625,26 @@ $CarouselControls: 4;
             }
         }
 
+        &#carouselHomeArticles-1 {
+            .card {
+                &-title {
+                    //styleName: PingFangTC/H2//Medium;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 25px;
+                    letter-spacing: 0px;
+                }
+
+                &-text {
+                    //styleName: PingFangTC/Body/Regular;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    letter-spacing: 0px;
+                }
+            }
+        }
+        
         &-control-prev,
         &-control-next {
             width: 50px;
