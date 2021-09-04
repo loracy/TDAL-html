@@ -11,4 +11,5 @@ $(document).ready(function() {
             }
         });
     });
+    $('.HomeTopCover-searchbar .input-group input').autoComplete();
 });

@@ -42,8 +42,14 @@
                </button>
             </div>
             <div class="input-group">
-               <input type="text" class="form-control" placeholder="搜尋3D模型" aria-label="搜尋3D模型" aria-describedby="button-addon2">
-               <button class="btn btn-primary p-3" type="button" id="button-addon2">
+               <input type="text" class="form-control"
+               autocomplete="off" 
+               placeholder="搜尋3D模型"
+               aria-label="搜尋3D模型"
+               aria-describedby="button-addon2"
+               data-url="https://loracy.github.io/TDAL-html/assets/siteSearchKeywords.json">
+
+               <button class="btn btn-primary px-3 py-2" type="button" id="button-addon2">
                   <img src="./icons/search_2.svg">
                </button>
             </div>
@@ -486,7 +492,14 @@
       <div class="row">
          <div class="col-6 mx-auto mb-2">
             <div class="input-group">
-               <input type="text" class="form-control" placeholder="搜尋3D模型" aria-label="搜尋3D模型" aria-describedby="button-addon2">
+               <input type="text" 
+               class="form-control"
+               placeholder="搜尋3D模型" 
+               aria-label="搜尋3D模型" 
+               aria-describedby="button-addon2"
+               autocomplete="on"
+               data-url="https://loracy.github.io/TDAL-html/assets/siteSearchKeywords.json">
+
                <button class="btn btn-primary p-3" type="button" id="button-addon2">
                   <!-- <img src="./icons/search_2.svg"> -->
                   <span class="icon-search icon-md"></span>
@@ -1143,5 +1156,6 @@
   </div>
 </footer>
     <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap-autocomplete.min.js"></script>
    </body>
 </html>
