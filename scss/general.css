@@ -11891,6 +11891,31 @@ fieldset:disabled .btn {
   font-size: 40px;
 }
 
+.bootstrap-autocomplete.dropdown-menu {
+  padding-top: 6px;
+  padding-bottom: 5px;
+  border: none;
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 0px 0px 5px 5px;
+}
+
+.bootstrap-autocomplete.dropdown-menu .dropdown-item {
+  font-family: PingFang TC;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #212529;
+  padding: 9px 20px;
+}
+
+.bootstrap-autocomplete.dropdown-menu .dropdown-item.active {
+  background-color: #F2F2F2;
+}
+
 .navbar {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -12595,6 +12620,12 @@ footer .FooterList ul li a {
 #siteSearch .modal-backdrop {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+}
+
+#siteSearch button.btn-outline-light:hover {
+  color: #FFFFFF !important;
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 #signUpDialog .form-control {
