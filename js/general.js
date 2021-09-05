@@ -11,5 +11,7 @@ $(document).ready(function() {
             }
         });
     });
-    $('.HomeTopCover-searchbar .input-group input').autoComplete();
+
+    $('#autocomplete-homeTopSearchbar').autoComplete('show');
+    $('#autocomplete-siteSearch').autoComplete('show');
 });
