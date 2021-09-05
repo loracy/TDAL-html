@@ -14,4 +14,15 @@ $(document).ready(function() {
 
     $('#autocomplete-homeTopSearchbar').autoComplete('show');
     $('#autocomplete-siteSearch').autoComplete('show');
+
+    $('#FilterSectionOption-4_1').slider({
+        range: true,
+        min: 0,
+        max: 10000,
+        values: [0, 10000],
+        slide: function(event, ui) {
+            $("#rangeValueFrom").val(ui.values[0]);
+            $("#rangeValueTo").val(ui.values[1]);
+        }
+      });
 });

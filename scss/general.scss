@@ -12,6 +12,192 @@
             background: #EA371D;
             color: #FFFFFF;
         }
+
+        &-light {
+            color: #212529;
+            background: rgba(255, 58, 30, 0.1);
+        }
+    }
+}
+
+.card {
+    border: 1px solid #DDDDDD;
+    border-radius: 0px;
+    overflow: hidden;
+    position: relative;
+
+    &-img-top {
+        z-index: 1;
+    }
+
+    &-body {
+        padding: 16px 20px 20px 20px;
+        z-index: 2;
+        background: #FFFFFF;
+    }
+
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 2px;
+        
+        span {
+            color: #979797;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0px;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 14px;
+                height: 14px;
+                margin-right: 2px;
+            }
+
+            .icon-veiw {
+                color: #979797;
+            }
+        }
+    }
+
+    &-text {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0px;
+    }
+
+    .badge {
+        position: absolute;
+        top: 10px;
+        left: 12px;
+        padding: 4px 10px;
+        z-index: 3;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0px;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        > img {
+            transform: scale(1.25);
+            transition: 0.1s all ease-in-out;
+        }
+    }
+}
+
+.ui-slider {
+    height: .4em;
+    border: none !important;
+    background: rgba(255, 58, 30, 0.5);
+    
+    &-range {
+        background: rgba(255, 58, 30, 0.5);
+        border-color: transparent;
+    }
+
+    &-handle {
+        top: -.45em !important;
+        border-radius: 50%;
+        border-color: #FF3A1E !important;
+        background-color: #FF3A1E  !important;
+
+        &.ui-state-default {
+            border-radius: 50%;
+            border-color: #FF3A1E !important;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.form-check:not([class^="form-switch"]){
+    margin-right: 12px;
+    padding-left: 28px;
+
+    .form-check-input {
+        opacity: 0;
+    }
+    
+    .form-check-label {
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            width: 22px;
+            height: 22px;
+            background: #d3e8fc;
+            border-radius: 3px;
+            left: -28px;
+            position: absolute;
+        }
+
+        &::after {
+            content: '';
+            opacity: 0;
+            width: 18px;
+            height: 16px;
+            margin: 3px 2px;
+            left: -28px;
+            position: absolute;
+            background-image: url(../icons/check.svg);
+            background-repeat: no-repeat;
+            background-position-y: 1px;
+        }
+    }
+
+    .form-check-input:checked ~ .form-check-label {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+
+.Filter {
+    background: #FFFFFF;
+    box-shadow: 0 0 0 1px #DDDDDD;
+    display: flex;
+    flex-wrap: nowrap;
+    
+    &-section {
+        flex-grow: 1;
+        flex-basis: 0;
+        background: #FFFFFF;
+        box-shadow: -12px 0 0 -11px #DDDDDD;
+        padding: 20px;
+
+        &:first-of-type {
+            box-shadow: none;
+        }
+        
+        &-heading {
+            display: flex;
+            justify-content: space-between;
+
+            h6 {
+                flex: 1;
+            }
+            .btn-link {
+                text-decoration: none !important;
+            }
+
+        }
+
+        &-options {
+            display: flex;
+            flex-wrap: wrap;
+
+            padding-top: 20px;
+        }
     }
 }
 
@@ -35,6 +221,16 @@
     &-lg {
         font-size: 40px;
     }
+}
+
+.breadcrumb {
+    font-family: PingFang TC;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
 }
 
 .bootstrap-autocomplete.dropdown-menu {
@@ -472,78 +668,6 @@ $CarouselControls: 4;
             box-shadow: 0 3px 0 0 #6F593E;
         }
     }
-
-    .card {
-        border: 1px solid #DDDDDD;
-        border-radius: 0px;
-        overflow: hidden;
-        position: relative;
-
-        &-img-top {
-            z-index: 1;
-        }
-
-        &-body {
-            padding: 16px 20px 20px 20px;
-            z-index: 2;
-            background: #FFFFFF;
-        }
-
-        &-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 2px;
-            
-            span {
-                color: #979797;
-                font-size: 12px;
-                font-weight: 400;
-                line-height: 17px;
-                letter-spacing: 0px;
-                display: flex;
-                align-items: center;
-
-                img {
-                    width: 14px;
-                    height: 14px;
-                    margin-right: 2px;
-                }
-
-                .icon-veiw {
-                    color: #979797;
-                }
-            }
-        }
-
-        &-text {
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 20px;
-            letter-spacing: 0px;
-        }
-
-        .badge {
-            position: absolute;
-            top: 10px;
-            left: 12px;
-            padding: 4px 10px;
-            z-index: 3;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 18px;
-            letter-spacing: 0px;
-        }
-
-        &:hover {
-            cursor: pointer;
-
-            > img {
-                transform: scale(1.25);
-                transition: 0.1s all ease-in-out;
-            }
-        }
-    }
 }
 
 .HomeCounter {
@@ -812,4 +936,39 @@ footer {
             justify-content: center;
         }
     }
+}
+
+.ProductsPagination {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        &:first-of-type {
+            
+        }
+
+        &:last-of-type {
+        }
+
+    }
+
+    .pagination {
+        .page-item {
+            a.page-link {
+                border-color: transparent;
+            }
+
+            &.active {
+                a.page-link {
+                    border-color: transparent;
+                }
+            }
+        }
+
+    }
+}
+
+.SearchResult {
+    padding-top: 40px;
+    padding-bottom: 100px;
 }
