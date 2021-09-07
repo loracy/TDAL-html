@@ -7,10 +7,9 @@
       <meta name="author" content="TDAL Team">
       <title>TDAL Home Page</title>
 
-      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
-      <link rel="stylesheet" href="fonts/font.css">
+      <link rel="stylesheet" href="fonts/style.css">
       <link rel="stylesheet" href="css/jquery-ui.min.css">
-      <link href="./scss/general.css" rel="stylesheet">
+      <link href="css/scss/general.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -142,7 +141,7 @@
                   </div>
                   <div class="mb-3 d-flex">
                      <input type="text" class="form-control" placeholder="請輸入右側驗證碼*">
-                     <img class="ms-2" src="./img/validationcode.png" />
+                     <img class="ms-2" src="assets/img/validationcode.png" />
                      <span class="icon-refresh icon-md"></span>
                   </div>
                   <div class="mb-3 d-flex">
@@ -480,7 +479,7 @@
    <div class="SearchResult">
       <div class="container">
          <div class="row">
-            <nav aria-label="breadcrumb" class="pt-5">
+            <nav aria-label="breadcrumb">
                <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">3D數位模型</a></li>
                   <li class="breadcrumb-item active" aria-current="page">建築</li>
@@ -488,7 +487,7 @@
             </nav>
          </div>
          <div class="row">
-            <div aria-label="Tags pt-2 pb-3">
+            <div class="Tags pt-2 pb-3">
                <button type="button" class="btn btn-primary-light rounded-pill mx-1 my-2 px-3" value="Submit">
                   年代
                </button>
@@ -503,15 +502,20 @@
          </div>
          <div class="row">
             <div class="col-12">
-               <p>共有 123 個物件</p>
+               <div class="d-flex justify-content-between pb-1">
+                  <p class="mb-0">共有 123 個物件</p>
+                  <button type="button" class="btn btn-outline-primary border-0 px-3 align-items-center d-flex">
+                     重設<span class="icon-close ml-2 icon-xs"></span>
+                  </button>
+               </div>
             </div>
             
             <div class="col-12">
                <div class="Filter pt-2">
                   <div class="Filter-section">
                      <div class="Filter-section-heading">
-                        <h6>授權許可</h6>
-                        <button type="button" class="btn btn-link">不限</button>
+                        <h6 class="mb-0">授權許可</h6>
+                        <button type="button" class="btn btn-link p-0 border-0">不限</button>
                      </div>
                      <div class="Filter-section-options">
                         <div class="form-check">
@@ -530,8 +534,8 @@
                   </div>
                   <div class="Filter-section">
                      <div class="Filter-section-heading">
-                        <h6>檔案格式</h6>
-                        <button type="button" class="btn btn-link">不限</button>
+                        <h6 class="mb-0">檔案格式</h6>
+                        <button type="button" class="btn btn-link p-0 border-0">不限</button>
                      </div>
                      <div class="Filter-section-options">
                         <div class="form-check">
@@ -575,8 +579,8 @@
                   </div>
                   <div class="Filter-section">
                      <div class="Filter-section-heading">
-                        <h6>模型面數</h6>
-                        <button type="button" class="btn btn-link">不限</button>
+                        <h6 class="mb-0">模型面數</h6>
+                        <button type="button" class="btn btn-link p-0 border-0">不限</button>
                      </div>
                      <div class="Filter-section-options">
                         <div class="form-check">
@@ -595,7 +599,7 @@
                   </div>
                   <div class="Filter-section">
                      <div class="Filter-section-heading">
-                        <h6>價格</h6>
+                        <h6 class="mb-0">價格</h6>
                         <div class="form-check form-switch">
                            <input class="form-check-input" type="checkbox" id="FilterSectionOption-4_0">
                            <label class="form-check-label" for="FilterSectionOption-4_0">僅顯示免費</label>
@@ -634,7 +638,7 @@
          <div class="row row-cols-1 row-cols-md-4 g-4 mb-6">
             <div class="col">
                <div class="card">
-                  <img src="./img/home_product_1.png" class="card-img-top">
+                  <img src="assets/img/home_product_1.png" class="card-img-top">
                   <div class="card-body">
                      <h5 class="card-title">
                         <span class="flex-grow-1">作者名稱</span>
@@ -652,7 +656,7 @@
             </div>
             <div class="col">
                <div class="card">
-                  <img src="./img/home_product_2.png" class="card-img-top">
+                  <img src="assets/img/home_product_2.png" class="card-img-top">
                   <div class="card-body">
                      <h5 class="card-title">
                         <span class="flex-grow-1">作者名稱</span>
@@ -670,7 +674,7 @@
             </div>
             <div class="col">
                <div class="card">
-                  <img src="./img/home_product_3.png" class="card-img-top">
+                  <img src="assets/img/home_product_3.png" class="card-img-top">
                   <div class="card-body">
                      <h5 class="card-title">
                         <span class="flex-grow-1">作者名稱</span>
@@ -688,7 +692,7 @@
             </div>
             <div class="col">
                <div class="card">
-                  <img src="./img/home_product_4.png" class="card-img-top">
+                  <img src="assets/img/home_product_4.png" class="card-img-top">
                   <div class="card-body">
                      <h5 class="card-title">
                         <span class="flex-grow-1">作者名稱</span>
@@ -706,7 +710,7 @@
             </div>
             <div class="col">
                <div class="card">
-                  <img src="./img/home_product_5.png" class="card-img-top">
+                  <img src="assets/img/home_product_5.png" class="card-img-top">
                   <div class="card-body">
                      <h5 class="card-title">
                         <span class="flex-grow-1">作者名稱</span>
@@ -724,7 +728,7 @@
             </div>
             <div class="col">
                <div class="card">
-                  <img src="./img/home_product_6.png" class="card-img-top">
+                  <img src="assets/img/home_product_6.png" class="card-img-top">
                   <div class="card-body">
                      <h5 class="card-title">
                         <span class="flex-grow-1">作者名稱</span>
@@ -742,7 +746,7 @@
             </div>
             <div class="col">
                <div class="card">
-                  <img src="./img/home_product_7.png" class="card-img-top">
+                  <img src="assets/img/home_product_7.png" class="card-img-top">
                   <div class="card-body">
                      <h5 class="card-title">
                         <span class="flex-grow-1">作者名稱</span>
@@ -862,16 +866,16 @@
             <p>中華民國文化內容策進院 臺灣數位模型庫 TAIWAN DIGITAL ASSET LIBRARY © 2021</p>
             <span>
                <a href="#">
-                  <img class="mx-2" src="./icons/facebook.svg" />
+                  <img class="mx-2" src="assets/icon/facebook.svg" />
                </a>
                <a href="#">
-                  <img class="mx-2" src="./icons/instagram.svg" />
+                  <img class="mx-2" src="assets/icon/instagram.svg" />
                </a>
                <a href="#">
-                  <img class="mx-2" src="./icons/pinterest.svg" />
+                  <img class="mx-2" src="assets/icon/pinterest.svg" />
                </a>
                <a href="#">
-                  <img class="mx-2" src="./icons/youtube.svg" />
+                  <img class="mx-2" src="assets/icon/youtube.svg" />
                </a>
             </span>
          </div>
@@ -879,9 +883,9 @@
   </div>
 </footer>
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-   <script src="./js/jquery-ui.min.js"></script>
-   <script src="./bootstrap/js/bootstrap.min.js"></script>
-   <script src="./bootstrap/js/bootstrap-autocomplete.min.js"></script>
-   <script src="./js/general.js"></script>
+   <script src="js/jquery-ui.min.js"></script>
+   <script src="bootstrap/js/bootstrap.min.js"></script>
+   <script src="bootstrap/js/bootstrap-autocomplete.min.js"></script>
+   <script src="js/general.js"></script>
    </body>
 </html>
