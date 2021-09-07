@@ -12738,7 +12738,7 @@ header .nav-link.dropdown-toggle.show:after {
 
 .HomeMidCover {
   height: 460px;
-  background-image: url(../img/home_mid_1.png);
+  background-image: url(../../assets/img/home_mid_1.png);
 }
 
 .HomeMidCover h2, .HomeMidCover .h2, .HomeMidCover h6, .HomeMidCover .h6 {
