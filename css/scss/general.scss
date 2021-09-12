@@ -20,6 +20,10 @@
     }
 }
 
+main {
+    overflow: hidden;
+}
+
 .card {
     border: 1px solid #DDDDDD;
     border-radius: 0px;
@@ -1011,7 +1015,294 @@ footer {
     }
 }
 
-.SearchResult {
+.SearchResult, .SellingReportContent {
     padding-top: 40px;
     padding-bottom: 100px;
+}
+
+.SearchResultAddon {
+    margin-top: 30px;
+    margin-bottom: 36px;
+    background: #F7F7F7;
+
+    &-cover {
+
+    }
+
+    &-countdown {
+        background: #E84028;
+        padding: 16px;
+
+        p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            margin-bottom: 0;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            
+            span {
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 35px;
+                letter-spacing: 0px;
+                margin-bottom: 0;
+                margin-left: 6px;
+                margin-right: 6px;
+            }
+    }
+
+    .btn {
+        &:hover {
+            color: #E84028 !important;
+        }
+    }
+
+    }
+
+    h6, p {
+        font-family: PingFang TC;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0px;
+        color: #212529;
+
+    }
+}
+
+.LineTrough {
+    color: $primary;
+    text-decoration: line-through;
+    padding: 1px;
+
+    &-inner {
+        text-align: center;
+        color: #979797;
+    }
+}
+
+.SellingReport {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.SellingReportContent {
+    flex: 1;
+
+    .nav-link {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0px;
+        text-align: center;
+        padding: 14px 92px;
+        color: #212529;
+        box-shadow: 0 3px 0 0 #DDDDDD;
+        //styleName: PingFangTC/H3/Medium;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0px;
+
+        &:hover {
+            color: inherit;
+            background: #EDEDED;
+        }
+
+        &.active {
+            background: rgba($primary, 0.1);
+            box-shadow: 0 3px 0 0 $primary;
+        }
+    }
+}
+
+.SellingReportMenu {
+    width: 196px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+    
+    &-item {
+        display: inline-flex;
+
+        &:hover {
+            background: #F2F2F2;
+        }
+        
+        a {
+            text-decoration: none;
+            padding: 15px 20px;
+            color: #212529;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0px;
+            
+            flex: 1;
+            display: flex;
+            align-items: center;
+
+        }
+
+    }
+}
+
+.Summary {
+    color: #212529;
+    background: #F7F7F7;
+    display: flex;
+
+
+    &-section {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: -17px 0 0 -16px #DDDDDD;
+        height: 140px;
+        flex-grow: 1;
+        
+        p {
+            margin: 0px;
+            //styleName: PingFangTC/H2//Medium;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25px;
+            letter-spacing: 0px;
+            padding: 12px 0;
+        }
+
+        &:first-of-type {
+            box-shadow: none;
+
+        }
+
+    }
+
+}
+
+.SellingReportTable {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+
+    &-image {
+        width: 140px;
+    }
+    
+    &-id {
+        width: 74px;
+    }
+
+    &-permission {
+        width: 99px;
+    }
+    
+    &-status {
+        width: 99px;
+    }
+    
+    &-action {
+        width: 153px;
+    }
+
+    thead {
+        tr{
+            background: #F7F7F7;
+            
+            th {
+                padding: 20px;
+                //styleName: PingFangTC/H2//Medium;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 25px;
+                letter-spacing: 0px;
+                text-align: center;
+
+                vertical-align: middle;
+                border-bottom: 1px solid #DDDDDD !important;
+                border-top: 1px solid #DDDDDD;
+                padding: 20px;
+                
+                &:first-of-type {
+                    border-left: 1px solid #DDDDDD;
+                }
+                
+                &:last-of-type {
+                    border-right: 1px solid #DDDDDD;
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr {
+
+            td {
+                color: #979797;
+                text-align: center;
+                border-top: 1px solid #DDDDDD !important;
+                border-bottom: 1px solid #DDDDDD !important;
+                padding: 20px;
+                vertical-align: middle;
+
+                
+                &:first-of-type {
+                    border-left: 1px solid #DDDDDD;
+                }
+                
+                &:last-of-type {
+                    border-right: 1px solid #DDDDDD;
+                }
+
+
+                p {
+                    //styleName: PingFangTC/Body/Medium;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                    color: #212529;
+                }
+                
+            }
+
+            &.Invalid {
+                position: relative;
+
+                td {
+                    padding-top: 60px;
+
+                    &:first-of-type {
+                        position: initial;
+
+                        &::before {
+                            content: '未通過原因：檔案內容與物件說明不相符。';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            background: gray;
+                            height: 40px;
+                            font-size: 12px;
+                            background: #EF6B23;
+                            //styleName: PingFangTC/Body/Regular;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 20px;
+                            letter-spacing: 0px;
+
+                            padding: 10px 20px;
+                            color: #FFFFFF;
+                            text-align: left;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
 }
