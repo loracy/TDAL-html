@@ -1,10 +1,12 @@
-@import "custom";
+@import "_mixin";
+@import "_custom";
+
 .btn {
     padding: 0.375rem 1.25rem;
 
     &-primary {
         &-fb {
-            background: #248DEE;
+            background: $info;
             color: #FFFFFF;
         }
         
@@ -14,7 +16,7 @@
         }
 
         &-light {
-            color: #212529;
+            color: $text-black;
             background: rgba(255, 58, 30, 0.1);
         }
     }
@@ -25,7 +27,7 @@ main {
 }
 
 .card {
-    border: 1px solid #DDDDDD;
+    border: 1px solid $puregray-300;
     border-radius: 0px;
     overflow: hidden;
     position: relative;
@@ -47,11 +49,7 @@ main {
         padding-bottom: 2px;
         
         span {
-            color: #979797;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 17px;
-            letter-spacing: 0px;
+            @include common-text(small, regular, #979797);
             display: flex;
             align-items: center;
 
@@ -68,10 +66,7 @@ main {
     }
 
     &-text {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 20px;
-        letter-spacing: 0px;
+        @include common-text(body, medium);
     }
 
     .badge {
@@ -80,10 +75,7 @@ main {
         left: 12px;
         padding: 4px 10px;
         z-index: 3;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 18px;
-        letter-spacing: 0px;
+        @include common-text(small, medium);
     }
 
     &:hover {
@@ -109,12 +101,12 @@ main {
     &-handle {
         top: -.45em !important;
         border-radius: 50%;
-        border-color: #FF3A1E !important;
-        background-color: #FF3A1E  !important;
+        border-color: $primary !important;
+        background-color: $primary  !important;
 
         &.ui-state-default {
             border-radius: 50%;
-            border-color: #FF3A1E !important;
+            border-color: $primary !important;
             outline: none;
             cursor: pointer;
         }
@@ -191,7 +183,7 @@ main {
             height: 20px;
             margin-top: 2px;
             box-shadow: inset 0 0 0 2px #d3e8fc;
-            background: #248DEE;
+            background: $info;
             border-radius: 10px;
             left: -48px;
             position: absolute;
@@ -211,7 +203,7 @@ main {
 
 .Filter {
     background: #FFFFFF;
-    box-shadow: 0 0 0 1px #DDDDDD;
+    box-shadow: 0 0 0 1px $puregray-300;
     display: flex;
     flex-wrap: nowrap;
     
@@ -219,7 +211,7 @@ main {
         flex-grow: 1;
         flex-basis: 0;
         background: #FFFFFF;
-        box-shadow: -12px 0 0 -11px #DDDDDD;
+        box-shadow: -12px 0 0 -11px $puregray-300;
         padding: 20px;
 
         &:first-of-type {
@@ -271,13 +263,7 @@ main {
 }
 
 .breadcrumb {
-    font-family: PingFang TC;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-    letter-spacing: 0px;
-    text-align: left;
+    @include common-text(h3, regular);
 }
 
 .bootstrap-autocomplete.dropdown-menu {
@@ -288,24 +274,13 @@ main {
     border-radius: 0px 0px 5px 5px;
 
     .dropdown-item {
-        //styleName: PingFangTC/H3/Regular;
-        font-family: PingFang TC;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 22px;
-        letter-spacing: 0px;
-        text-align: left;
-        color: #212529;
+        @include common-text(h4, regular);
         padding: 9px 20px;
 
         &.active {
-            background-color: #F2F2F2;
-
-        }
-        
+            background-color: $puregray-200;
+        }        
     }
-
 }
 
 .navbar {
@@ -395,7 +370,7 @@ header {
         padding: 10px 0;
         overflow: scroll;
         background: #FFFFFF;
-        box-shadow: -1px 0 0 0 #DDDDDD;
+        box-shadow: -1px 0 0 0 $puregray-300;
         margin-left: 1px;
         margin-right: 1px;
 
@@ -405,7 +380,7 @@ header {
             height: 100%;
 
             &-thumb {
-                background: #DDDDDD;
+                background: $puregray-300;
                 border-radius: 6px;
             }
 
@@ -445,13 +420,7 @@ header {
 
     &-item {
         .dropdown-item {
-            //styleName: PingFangTC/Body/Medium;
-            font-family: PingFang TC;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 20px;
-            letter-spacing: 0px;
-            color: #000000;
+            @include common-text(body, medium, #000000);
             display: flex;
             align-items: center;
             padding: 15px 20px;
@@ -467,16 +436,13 @@ header {
                 position: relative;
                 
                 &::before {
-                    color: #979797;
-                    //position: absolute;
-                    //right: 0;
+                    color: $text-secondary;
                     font-size: 20px;
-                    //padding: 15px;
                 }
                 
                 &:hover {
                     &::before {
-                        color: #212529;
+                        color: $text-black;
                     }
                 }
             }
@@ -490,13 +456,7 @@ header {
 
         &_featured {
             .dropdown-item {
-                //styleName: PingFangTC/Body/Medium;
-                font-family: PingFang TC;
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 20px;
-                letter-spacing: 0px;
-                color: #4968A6;
+                @include common-text(body, medium, #4968A6);
                 display: flex;
                 align-items: center;
                 padding: 15px 20px 15px 45px;
@@ -555,11 +515,7 @@ $CarouselControls: 4;
                 color: #FFFFFF !important;
                 margin-left: 15px;
                 margin-right: 16px;
-                //styleName: PingFangTC/H3/Medium;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 22px;
-                letter-spacing: 0px;
+                @include common-text(h4, medium);
             }
         }
     }
@@ -637,11 +593,7 @@ $CarouselControls: 4;
         margin-bottom: 40px;
 
         h1 {
-            //styleName: PingFangTC/H1/Medium;
-            font-size: 32px;
-            font-weight: 500;
-            line-height: 45px;
-            letter-spacing: 0px;
+            @include common-text(h1, medium);
             text-align: center;
         }
     }
@@ -655,10 +607,7 @@ $CarouselControls: 4;
         margin-right: auto;
 
         h6 {
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 26px;
-            letter-spacing: 0px;
+            @include common-text(h3, medium);
             text-align: center;
         }
 
@@ -678,7 +627,7 @@ $CarouselControls: 4;
                 cursor: pointer;
     
                 h6 {
-                    color: #FF3A1E;
+                    color: $primary;
                 }
     
                 img {
@@ -694,16 +643,12 @@ $CarouselControls: 4;
 .HomeProducts {
     padding-top: 100px;
     padding-bottom: 100px;
-    background: #F7F7F7;
+    background: $puregray-100;
 
     .nav-link {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: 0px;
+        @include common-text(h2, regular);
         text-align: center;
         padding: 6px 52px;
-        color: #212529;
 
         &:hover {
             color: inherit;
@@ -722,11 +667,7 @@ $CarouselControls: 4;
     padding: 16px;
 
     p {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: 0px;
-        color: #FFFFFF;
+        @include common-text(h2, regular, #FFFFFF);
         margin-bottom: 0;
         padding-top: 7px;
         padding-bottom: 7px;
@@ -735,7 +676,6 @@ $CarouselControls: 4;
             font-size: 30px;
             font-weight: 700;
             line-height: 35px;
-            letter-spacing: 0px;
             margin-bottom: 0;
             margin-left: 6px;
             margin-right: 6px;
@@ -752,7 +692,7 @@ $CarouselControls: 4;
 .HomeArticles {
     padding-top: 100px;
     padding-bottom: 100px;
-    background: #F7F7F7;
+    background: $puregray-100;
 
 
     .carousel {        
@@ -797,29 +737,17 @@ $CarouselControls: 4;
                 }
 
                 &-title {
-                    font-size: 32px;
-                    font-weight: 500;
-                    line-height: 45px;
-                    letter-spacing: 0px;
+                    @include common-text(h1, medium);
                     margin-bottom: 16px;
 
                     &-tag {
-                        //styleName: PingFangTC/H3/Regular;
-                        font-family: PingFang TC;
-                        font-size: 16px;
-                        font-weight: 400;
-                        line-height: 22px;
-                        letter-spacing: 0px;
-                        color: #979797;
+                        @include common-text(h4, regular, $text-secondary);
                         margin-bottom: 12px;
                     }
                 }
                 
                 &-text {
-                    font-size: 18px;
-                    font-weight: 400;
-                    line-height: 25px;
-                    letter-spacing: 0px;
+                    @include common-text(h3, regular);
                 }
             }
         }
@@ -827,19 +755,11 @@ $CarouselControls: 4;
         &#carouselHomeArticles-1 {
             .card {
                 &-title {
-                    //styleName: PingFangTC/H2//Medium;
-                    font-size: 18px;
-                    font-weight: 500;
-                    line-height: 25px;
-                    letter-spacing: 0px;
+                    @include common-text(h3, medium);
                 }
 
                 &-text {
-                    //styleName: PingFangTC/Body/Regular;
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 20px;
-                    letter-spacing: 0px;
+                    @include common-text(body, regular);
                 }
             }
         }
@@ -851,7 +771,6 @@ $CarouselControls: 4;
             top: calc(50% - 25px);
         }
     }
-
 }
 
 .HomeMidCover {
@@ -871,12 +790,8 @@ footer {
 
     .FooterList {
         h6 {
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 22px;
-            letter-spacing: 0px;
+            @include common-text(h4, medium, #FFFFFF);
             margin-bottom: 24px;
-            color: #FFFFFF;
         }
 
         ul {
@@ -887,11 +802,7 @@ footer {
                 margin-bottom: 4px;
 
                 a {
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 20px;
-                    letter-spacing: 0px;
-                    color: #FFFFFF;
+                    @include common-text(body, regular, #FFFFFF);
                     text-decoration: none !important;
                 }
             }
@@ -959,21 +870,13 @@ footer {
         }
 
         &-title {
-            //styleName: PingFangTC/H2//Medium;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 25px;
-            letter-spacing: 0px;
+            @include common-text(h3, medium);
             flex-basis: 100%;
             text-align: center;
         }
 
         &-subtitle {
-            //styleName: PingFangTC/H2/Regular;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 25px;
-            letter-spacing: 0px;
+            @include common-text(h3, regular);
             flex-basis: 100%;
             text-align: center;
         }
@@ -1023,7 +926,7 @@ footer {
 .SearchResultAddon {
     margin-top: 30px;
     margin-bottom: 36px;
-    background: #F7F7F7;
+    background: $puregray-100;
 
     &-cover {
 
@@ -1034,11 +937,7 @@ footer {
         padding: 16px;
 
         p {
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 28px;
-            letter-spacing: 0px;
-            color: #FFFFFF;
+            @include common-text(h2, regular, #FFFFFF);
             margin-bottom: 0;
             padding-top: 7px;
             padding-bottom: 7px;
@@ -1063,12 +962,7 @@ footer {
     }
 
     h6, p {
-        font-family: PingFang TC;
-        font-size: 18px;
-        line-height: 25px;
-        letter-spacing: 0px;
-        color: #212529;
-
+        @include common-text(h3, regular);
     }
 }
 
@@ -1079,230 +973,6 @@ footer {
 
     &-inner {
         text-align: center;
-        color: #979797;
-    }
-}
-
-.SellingReport {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.SellingReportContent {
-    flex: 1;
-
-    .nav-link {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: 0px;
-        text-align: center;
-        padding: 14px 92px;
-        color: #212529;
-        box-shadow: 0 3px 0 0 #DDDDDD;
-        //styleName: PingFangTC/H3/Medium;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 22px;
-        letter-spacing: 0px;
-
-        &:hover {
-            color: inherit;
-            background: #EDEDED;
-        }
-
-        &.active {
-            background: rgba($primary, 0.1);
-            box-shadow: 0 3px 0 0 $primary;
-        }
-    }
-}
-
-.SellingReportMenu {
-    width: 196px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
-    
-    &-item {
-        display: inline-flex;
-
-        &:hover {
-            background: #F2F2F2;
-        }
-        
-        a {
-            text-decoration: none;
-            padding: 15px 20px;
-            color: #212529;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 20px;
-            letter-spacing: 0px;
-            
-            flex: 1;
-            display: flex;
-            align-items: center;
-
-        }
-
-    }
-}
-
-.Summary {
-    color: #212529;
-    background: #F7F7F7;
-    display: flex;
-
-
-    &-section {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-shadow: -17px 0 0 -16px #DDDDDD;
-        height: 140px;
-        flex-grow: 1;
-        
-        p {
-            margin: 0px;
-            //styleName: PingFangTC/H2//Medium;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 25px;
-            letter-spacing: 0px;
-            padding: 12px 0;
-        }
-
-        &:first-of-type {
-            box-shadow: none;
-
-        }
-
-    }
-
-}
-
-.SellingReportTable {
-    border-collapse: separate;
-    border-spacing: 0 1em;
-
-    &-image {
-        width: 140px;
-    }
-    
-    &-id {
-        width: 74px;
-    }
-
-    &-permission {
-        width: 99px;
-    }
-    
-    &-status {
-        width: 99px;
-    }
-    
-    &-action {
-        width: 153px;
-    }
-
-    thead {
-        tr{
-            background: #F7F7F7;
-            
-            th {
-                padding: 20px;
-                //styleName: PingFangTC/H2//Medium;
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 25px;
-                letter-spacing: 0px;
-                text-align: center;
-
-                vertical-align: middle;
-                border-bottom: 1px solid #DDDDDD !important;
-                border-top: 1px solid #DDDDDD;
-                padding: 20px;
-                
-                &:first-of-type {
-                    border-left: 1px solid #DDDDDD;
-                }
-                
-                &:last-of-type {
-                    border-right: 1px solid #DDDDDD;
-                }
-            }
-        }
-    }
-
-    tbody {
-        tr {
-
-            td {
-                color: #979797;
-                text-align: center;
-                border-top: 1px solid #DDDDDD !important;
-                border-bottom: 1px solid #DDDDDD !important;
-                padding: 20px;
-                vertical-align: middle;
-
-                
-                &:first-of-type {
-                    border-left: 1px solid #DDDDDD;
-                }
-                
-                &:last-of-type {
-                    border-right: 1px solid #DDDDDD;
-                }
-
-
-                p {
-                    //styleName: PingFangTC/Body/Medium;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 20px;
-                    letter-spacing: 0px;
-                    text-align: left;
-                    color: #212529;
-                }
-                
-            }
-
-            &.Invalid {
-                position: relative;
-
-                td {
-                    padding-top: 60px;
-
-                    &:first-of-type {
-                        position: initial;
-
-                        &::before {
-                            content: '未通過原因：檔案內容與物件說明不相符。';
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            background: gray;
-                            height: 40px;
-                            font-size: 12px;
-                            background: #EF6B23;
-                            //styleName: PingFangTC/Body/Regular;
-                            font-size: 14px;
-                            font-weight: 400;
-                            line-height: 20px;
-                            letter-spacing: 0px;
-
-                            padding: 10px 20px;
-                            color: #FFFFFF;
-                            text-align: left;
-                        }
-                    }
-
-                }
-            }
-        }
+        color: $text-secondary;
     }
 }

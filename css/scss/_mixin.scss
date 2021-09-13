@@ -1,0 +1,37 @@
+//@include common-text(small, regular, #979797);
+@mixin common-text($scale, $weight, $color: $text-black) {
+    font-family: PingFang TC, Roboto;
+    color: $color;
+
+    @if $scale == h1 {
+        font-size: 32px;
+        line-height: 45px;
+
+    } @else if $scale == h2 {
+        font-size: 20px;
+        line-height: 28px;
+
+    } @else if $scale == h3 {
+        font-size: 18px;
+        line-height: 25px;
+        
+    } @else if $scale == h4 {
+        font-size: 16px;
+        line-height: 22px;
+
+    } @else if $scale == body {
+        font-size: 14px;
+        line-height: 20px;
+
+    } @else if $scale == small {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    @if $weight == medium {
+        font-weight: 500;
+
+    } @else if $weight == regular {
+          font-weight: 400;
+    }
+}
