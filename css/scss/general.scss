@@ -1,5 +1,147 @@
-@import "_mixin";
-@import "_custom";
+@import "mixin";
+@import "variable";
+@import "custom";
+
+#map {
+    display: block;
+    background: $puregray-200;
+    height: 600px;
+}
+
+.H3 {
+    &-regular {
+        @include common-text(h3, regular);
+        
+        &-secondary {
+            @include common-text(h3, regular, $text-secondary);
+        }
+    }
+
+    &-medium {
+        @include common-text(h3, medium);
+
+        &-secondary {
+            @include common-text(h3, regular, $text-secondary);
+        }
+    }
+}
+
+.H4 {
+    &-regular {
+        @include common-text(h4, regular);
+
+        &-secondary {
+            @include common-text(h4, regular, $text-secondary);
+        }
+    }
+
+    &-medium {
+        @include common-text(h4, medium);
+
+        &-secondary {
+            @include common-text(h4, regular, $text-secondary);
+        }
+    }
+}
+
+.Small {
+    &-regular {
+        @include common-text(small, regular);
+
+        &-secondary {
+            @include common-text(small, regular, $text-secondary);
+        }
+    }
+
+    &-medium {
+        @include common-text(small, medium);
+
+        &-secondary {
+            @include common-text(small, regular, $text-secondary);
+        }
+    }
+}
+
+.accordion {
+    &-button {
+        color: $text-black !important;
+
+        span {
+            &::before {
+                content: '/';
+                margin: 0 16px;
+            }
+
+            &:first-of-type {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        &:not(.collapsed) {
+            box-shadow: none;
+        }
+    }
+
+    &-collapse {
+        background: rgba($primary, 0.1);
+    }
+
+    &-body {
+        padding-top: 0px;
+    }
+}
+
+.form {
+    &-label {
+
+        .form-check {
+            position: absolute;
+            right: 0px;
+        }
+
+        &-required {
+            &::after {
+                content: '*';
+            }
+        }
+    }
+
+    &-control,
+    &-select {
+        @include common-text(h3, regular);
+        padding: 10.5px 10px;
+        border: 1px solid $puregray-300;
+        border-radius: 5px;
+
+        &::placeholder {
+            color: $text-secondary;
+            opacity: 1;
+        }
+        
+        &:-ms-input-placeholder,
+        &::-ms-input-placeholder {
+            color: $text-secondary;
+        }
+    }
+
+    &-select[multiple] {
+        color: $text-secondary;
+
+        option {
+            &:checked {
+                background: $puregray-200;
+            }
+        }
+    }
+}
+
+.input-group {
+    .btn-outline-primary.border-start-0 {
+        border-color: $puregray-300;
+    }
+}
+
 
 .btn {
     padding: 0.375rem 1.25rem;
@@ -113,7 +255,7 @@ main {
     }
 }
 
-.form-check:not(.form-switch) {
+.form-check:not(.form-switch):not(.form-radio) {
     margin-right: 12px;
     padding-left: 28px;
 
@@ -308,6 +450,7 @@ main {
         }
     }
     
+    &[id="miniCart"],
     &[data-bs-target="#siteSearch"],
     &[id="cart"],
     &[id="languageSwitch"] {
@@ -324,6 +467,37 @@ main {
                 display: none;
             }
         }
+    }
+}
+
+.AvatarUploader {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    //overflow: hidden;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 3px solid #FFFFFF;
+
+    img {
+        width: 100%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: -5px;
+        bottom: -5px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../../assets/icon/camara.svg);
+        background-size: 12px;
+        background-color: #FFF;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 5px 4px;
+        border-radius: 50%;
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
     }
 }
 
@@ -359,7 +533,7 @@ header {
     overflow: hidden;
 
     &.show {
-        display: flex;
+        display: flex !important;
         align-items: stretch;
     }
 
@@ -974,5 +1148,20 @@ footer {
     &-inner {
         text-align: center;
         color: $text-secondary;
+    }
+}
+
+.FileUploaderWrapper {
+    background: $puregray-100;
+    padding: 20px;
+
+    .btn-outline-primary {
+        background-color: #FFFFFF;
+
+        &[disabled] {
+            border-color: $puregray-400;
+            color: $puregray-400;
+
+        }
     }
 }

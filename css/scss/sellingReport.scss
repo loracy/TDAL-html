@@ -1,5 +1,5 @@
-@import "_mixin";
-@import "_custom";
+@import "mixin";
+@import "variable";
 
 .SellingReport {
     display: flex;
@@ -37,6 +37,7 @@
     &-item {
         display: inline-flex;
 
+        &.Active,
         &:hover {
             background: $puregray-200;
         }

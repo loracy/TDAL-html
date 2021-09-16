@@ -1,4 +1,3 @@
-//@include common-text(small, regular, #979797);
 @mixin common-text($scale, $weight, $color: $text-black) {
     font-family: PingFang TC, Roboto;
     color: $color;
