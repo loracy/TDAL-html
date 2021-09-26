@@ -13180,4 +13180,110 @@ footer .FooterList ul li a {
   border-color: #CDCDCD;
   color: #CDCDCD;
 }
+
+.dropdown-menu[aria-labelledby="userAccount"] {
+  width: 320px;
+  padding: 1px;
+  left: auto;
+  right: 0px;
+  border: 0px;
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-menu[aria-labelledby="userAccount"] li .dropdown-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 15px;
+}
+
+.dropdown-menu[aria-labelledby="userAccount"] li .dropdown-item img, .dropdown-menu[aria-labelledby="userAccount"] li .dropdown-item span {
+  margin-right: 4px;
+}
+
+.dropdown-menu[aria-labelledby="userAccount"] li:first-of-type .dropdown-item {
+  padding: 20px;
+  -webkit-box-shadow: 0 19px 0 -18px #DDDDDD;
+          box-shadow: 0 19px 0 -18px #DDDDDD;
+}
+
+.dropdown-menu[aria-labelledby="userAccount"] li:last-of-type .dropdown-item {
+  padding: 20px;
+  -webkit-box-shadow: 0 -19px 0 -18px #DDDDDD;
+          box-shadow: 0 -19px 0 -18px #DDDDDD;
+}
+
+.dropdown-toggle#cart:before {
+  content: '99';
+  height: 14px;
+  background: #FF3A1E;
+  position: absolute;
+  right: 0px;
+  top: -2px;
+  padding: 5px 4px;
+  color: #FFF;
+  border-radius: 12px;
+  font-size: 9px;
+  line-height: 8px;
+  text-align: center;
+}
+
+.dropdown-menu[aria-labelledby="cart"] {
+  padding: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 320px;
+  left: auto;
+  right: 0px;
+  max-height: 470px;
+  border: 0px;
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-menu[aria-labelledby="cart"] div:first-of-type button {
+  display: none;
+}
+
+.dropdown-menu[aria-labelledby="cart"]:hover div:first-of-type button {
+  display: block;
+}
+
+.dropdown-menu[aria-labelledby="cart"].show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dropdown-menu[aria-labelledby="cart"] p {
+  margin-bottom: 0px;
+}
+
+.dropdown-menu[aria-labelledby="cart"] img {
+  width: 80px;
+  height: 45px;
+  margin-right: 8px;
+}
+
+.dropdown-menu[aria-labelledby="cart"] .border-bottom {
+  padding-bottom: 16px;
+}
+
+.dropdown-menu[aria-labelledby="cart"] a {
+  text-decoration: none !important;
+}
+
+.dropdown-menu[aria-labelledby="cart"] .icon-delete {
+  color: #C4C4C4 !important;
+  margin-left: 10px;
+}
 /*# sourceMappingURL=general.css.map */
