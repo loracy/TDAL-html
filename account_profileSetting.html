@@ -11,26 +11,9 @@
       <link rel="stylesheet" href="css/jquery-ui.min.css">
       <link href="css/scss/general.css" rel="stylesheet">
       <link href="css/scss/sellingReport.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
   </head>
   <body>
-    
-<header>
+ <header>
    <div class="modal fade" id="siteSearch" data-bs-backdrop="static" abindex="-1" aria-labelledby="siteSearch" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl">
          <div class="modal-content">
@@ -41,15 +24,9 @@
                </button>
             </div>
             <div class="input-group">
-               <input type="text" class="form-control" id="autocomplete-siteSearch" 
-               placeholder="搜尋3D模型"
-               aria-label="搜尋3D模型"
-               aria-describedby="button-addon2"
-               autocomplete="off" 
-               data-url="https://loracy.github.io/TDAL-html/assets/siteSearchKeywords.json">
-
-               <button class="btn btn-primary px-3 py-2" type="button" id="button-addon2">
-                  <span class="icon-search icon-md"></span>
+               <input type="text" class="form-control" placeholder="搜尋3D模型" aria-label="搜尋3D模型" aria-describedby="button-addon2">
+               <button class="btn btn-primary p-3" type="button" id="button-addon2">
+                  <img src="./icons/search_2.svg">
                </button>
             </div>
             <div class="d-flex flex-column align-items-stretch mt-4">
@@ -142,8 +119,8 @@
                   </div>
                   <div class="mb-3 d-flex">
                      <input type="text" class="form-control" placeholder="請輸入右側驗證碼*">
-                     <img class="ms-2" src="assets/img/validationcode.png" />
-                     <span class="icon-refresh icon-md"></span>
+                     <img class="ms-2" src="./img/validationcode.png" />
+                     <img class="ms-2" src="./icons/refresh.svg" />
                   </div>
                   <div class="mb-3 d-flex">
                      <button type="button" class="btn btn-primary flex-grow-1">
@@ -455,22 +432,123 @@
             <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" id="cart">
                <span class="icon-cart icon-md"></span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="loginDialog">
-               <li><a class="dropdown-item" href="#">Action</a></li>
-               <li><a class="dropdown-item" href="#">Another action</a></li>
-               <li><a class="dropdown-item" href="#">Something else here</a></li>
-             </ul>
+            <ul class="dropdown-menu" aria-labelledby="cart">
+               <div class="d-flex justify-content-between">
+                  <p class="flex-grow-1">共 3 項商品</p>
+                  <button class="btn btn-outline-info border-0 p-0 btn-sm border-round-0 d-flex align-items-center">
+                     <span class="icon-cart icon-xs"></span>  
+                     檢視購物車
+                  </button>
+               </div>
+               <div class="d-flex my-2">
+                  <img src="assets/img/home_product_2.png" />
+                  <div class="d-flex flex-column flex-align-stretch py-1">
+                     <p class="Small-regular">標題標題標題標題標題標題標...</p>
+                     <p class="Small-medium">NT$ 500</p>
+                  </div>
+                  <div class="d-flex flex-align-center ml-2">
+                     <a href="#"><span class="icon-delete icon-xxs"></span></a>
+                  </div>
+               </div>
+               <div class="d-flex my-2">
+                  <img src="assets/img/home_product_2.png" />
+                  <div class="d-flex flex-column flex-align-stretch py-1">
+                     <p class="Small-regular">標題標題標題標題標題標題標...</p>
+                     <p class="Small-medium">NT$ 500</p>
+                  </div>
+                  <div class="d-flex flex-align-center ml-2">
+                     <a href="#"><span class="icon-delete icon-xxs"></span></a>
+                  </div>
+               </div>
+               <div class="d-flex my-2 border-bottom">
+                  <img src="assets/img/home_product_2.png" />
+                  <div class="d-flex flex-column flex-align-stretch py-1">
+                     <p class="Small-regular">標題標題標題標題標題標題標...</p>
+                     <div class="d-flex">
+                        <span class="LineTrough">
+                           <span class="LineTrough-inner">NT$ 900</span>
+                        </span>
+                        <span class="text-primary ms-2">NT$ 400</span>
+                     </div>
+                  </div>
+                  <div class="d-flex flex-align-center ml-2">
+                     <a href="#"><span class="icon-delete icon-xxs"></span></a>
+                  </div>
+               </div>
+               <p class="my-2">總計 NT$ 1000</p>
+               <button class="btn btn-primary w-100 mt-1">前往購物車</button> 
+            </div>
+         </ul>
+         <div class="dropdown">
+            <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" id="userAccount">
+               <img src="assets/img/avatar.png">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="userAccount">
+               <li>
+                  <a class="dropdown-item H4-medium" href="#">
+                     <img src="assets/icon/member_2nd.svg" />
+                     Hi, Lisa !
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-user icon-xs"></span>
+                     帳戶設定
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-bell icon-xs"></span>
+                     訊息通知
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-form icon-xs"></span>
+                     訂單記錄
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-heart icon-xs"></span>
+                     收藏清單
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-heart icon-xs"></span>
+                     收藏清單
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-chart icon-xs"></span>
+                     模型銷售
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-card icon-xs"></span>
+                     我的錢包
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item text-info" href="#">
+                     <span class="icon-folder icon-xs"></span>
+                     上傳模型
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class=""></span>
+                     登出
+                  </a>
+               </li>
+            </ul>
          </div>
-         <button type="button" class="btn btn-outline-primary border-0 ms-2" data-bs-toggle="modal" data-bs-target="#logInDialog">
-            登入
-         </button>
-         <button type="button" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#signUpDialog">
-            註冊
-         </button>
          <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1" id="languageSwitch">
             <span class="icon-earth icon-xs"></span> EN
          </button>
-         
        </form>
     </div>
   </div>
@@ -532,6 +610,12 @@
                      <div class="d-flex align-items-center d-flex justify-content-center mb-3">
                         <img src="assets/icon/member_2nd.svg" />
                         <h3 class="H3-regular mb-0 ms-1">貢獻會員</h3>
+                        <span class="icon-info icon-xs text-secondary" tabindex="0" data-bs-toggle="popover"
+                           data-bs-placement="bottom"
+                           data-bs-trigger="hover focus"
+                           data-bs-html="true"
+                           data-bs-content="<p class='w-100 Small-medium mb-1'>會員分級說明</p><p class='Small-regular m-0'>初級會員：註冊並通過信箱驗證<br/>貢獻會員：成功完成一個模型上傳<br/>高貢獻會員：單一模型達五次銷售</p>">
+                         </span>
                      </div>
                      <div class="d-flex align-items-center justify-content-center">
                         <button type="button" class="AvatarUploader">
@@ -565,7 +649,7 @@
                </div>
                <div class="col-12">
                   <label class="form-label">性別</label>
-                  <div class="d-flex">
+                  <div class="d-flex align-items-center justify-content-between">
                      <div class="form-check form-radio form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
                         <label class="form-check-label" for="inlineRadio1">男性</label>
@@ -574,9 +658,11 @@
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                         <label class="form-check-label" for="inlineRadio2">女性</label>
                      </div>
-                     <div class="form-check form-radio form-check-inline">
+                     <div class="form-check form-radio form-check-inline d-flex align-items-center">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                        <label class="form-check-label" for="inlineRadio3">非二元性別</label>
+                        <label class="form-check-label d-flex align-items-center" for="inlineRadio3">
+                           <input class="form-control py-2 ms-2" type="text" placeholder="自訂" style="width: 150px;">
+                        </label>
                      </div>
                   </div>
                </div>
@@ -606,7 +692,9 @@
                </div>
                <div class="col-12">
                   <div class="border-top pt-4 w-100">
-                     <button type="button" class="btn btn-primary w-100">變更密碼</button>
+                     <button type="button" class="btn btn-primary w-100"  data-bs-toggle="modal" data-bs-target="#changePasswordDialog">
+                        變更密碼
+                     </button>
                   </span>
                </div>
             </div>
@@ -705,8 +793,35 @@
       </div>
   </div>
 </footer>
+
+<div class="modal fade CommonModal" id="changePasswordDialog" data-bs-backdrop="static" abindex="-1" aria-labelledby="changePasswordDialog" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="padding: 0 calc(50% - 193px);">
+         <div class="modal-header">
+            <h5 class="modal-title">變更您的密碼</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body pt-1">
+            <form>
+               <input type="text" class="form-control mb-3" placeholder="請輸入原密碼*">
+               <input type="text" class="form-control mb-3" placeholder="新密碼6-20位英數(大小寫區分)*">
+               <input type="text" class="form-control mb-3" placeholder="請再次輸入新密碼">
+               <div class="pb-3 mb-3 d-flex justify-content-center W-100">
+                  <button type="button" class="btn btn-outline-primary me-2 flex-grow-1">
+                     取消
+                  </button>
+                  <button type="button" class="btn btn-primary ms-2  flex-grow-1">
+                     儲存資料
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    <script src="js/jquery-ui.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
    <script src="bootstrap/js/bootstrap.min.js"></script>
    <script src="bootstrap/js/bootstrap-autocomplete.min.js"></script>
    <script src="js/general.js"></script>

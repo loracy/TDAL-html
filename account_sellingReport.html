@@ -11,26 +11,9 @@
       <link rel="stylesheet" href="css/jquery-ui.min.css">
       <link href="css/scss/general.css" rel="stylesheet">
       <link href="css/scss/sellingReport.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
   </head>
   <body>
-    
-<header>
+  <header>
    <div class="modal fade" id="siteSearch" data-bs-backdrop="static" abindex="-1" aria-labelledby="siteSearch" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl">
          <div class="modal-content">
@@ -41,15 +24,9 @@
                </button>
             </div>
             <div class="input-group">
-               <input type="text" class="form-control" id="autocomplete-siteSearch" 
-               placeholder="搜尋3D模型"
-               aria-label="搜尋3D模型"
-               aria-describedby="button-addon2"
-               autocomplete="off" 
-               data-url="https://loracy.github.io/TDAL-html/assets/siteSearchKeywords.json">
-
-               <button class="btn btn-primary px-3 py-2" type="button" id="button-addon2">
-                  <span class="icon-search icon-md"></span>
+               <input type="text" class="form-control" placeholder="搜尋3D模型" aria-label="搜尋3D模型" aria-describedby="button-addon2">
+               <button class="btn btn-primary p-3" type="button" id="button-addon2">
+                  <img src="./icons/search_2.svg">
                </button>
             </div>
             <div class="d-flex flex-column align-items-stretch mt-4">
@@ -142,8 +119,8 @@
                   </div>
                   <div class="mb-3 d-flex">
                      <input type="text" class="form-control" placeholder="請輸入右側驗證碼*">
-                     <img class="ms-2" src="assets/img/validationcode.png" />
-                     <span class="icon-refresh icon-md"></span>
+                     <img class="ms-2" src="./img/validationcode.png" />
+                     <img class="ms-2" src="./icons/refresh.svg" />
                   </div>
                   <div class="mb-3 d-flex">
                      <button type="button" class="btn btn-primary flex-grow-1">
@@ -455,22 +432,123 @@
             <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" id="cart">
                <span class="icon-cart icon-md"></span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="loginDialog">
-               <li><a class="dropdown-item" href="#">Action</a></li>
-               <li><a class="dropdown-item" href="#">Another action</a></li>
-               <li><a class="dropdown-item" href="#">Something else here</a></li>
-             </ul>
+            <ul class="dropdown-menu" aria-labelledby="cart">
+               <div class="d-flex justify-content-between">
+                  <p class="flex-grow-1">共 3 項商品</p>
+                  <button class="btn btn-outline-info border-0 p-0 btn-sm border-round-0 d-flex align-items-center">
+                     <span class="icon-cart icon-xs"></span>  
+                     檢視購物車
+                  </button>
+               </div>
+               <div class="d-flex my-2">
+                  <img src="assets/img/home_product_2.png" />
+                  <div class="d-flex flex-column flex-align-stretch py-1">
+                     <p class="Small-regular">標題標題標題標題標題標題標...</p>
+                     <p class="Small-medium">NT$ 500</p>
+                  </div>
+                  <div class="d-flex flex-align-center ml-2">
+                     <a href="#"><span class="icon-delete icon-xxs"></span></a>
+                  </div>
+               </div>
+               <div class="d-flex my-2">
+                  <img src="assets/img/home_product_2.png" />
+                  <div class="d-flex flex-column flex-align-stretch py-1">
+                     <p class="Small-regular">標題標題標題標題標題標題標...</p>
+                     <p class="Small-medium">NT$ 500</p>
+                  </div>
+                  <div class="d-flex flex-align-center ml-2">
+                     <a href="#"><span class="icon-delete icon-xxs"></span></a>
+                  </div>
+               </div>
+               <div class="d-flex my-2 border-bottom">
+                  <img src="assets/img/home_product_2.png" />
+                  <div class="d-flex flex-column flex-align-stretch py-1">
+                     <p class="Small-regular">標題標題標題標題標題標題標...</p>
+                     <div class="d-flex">
+                        <span class="LineTrough">
+                           <span class="LineTrough-inner">NT$ 900</span>
+                        </span>
+                        <span class="text-primary ms-2">NT$ 400</span>
+                     </div>
+                  </div>
+                  <div class="d-flex flex-align-center ml-2">
+                     <a href="#"><span class="icon-delete icon-xxs"></span></a>
+                  </div>
+               </div>
+               <p class="my-2">總計 NT$ 1000</p>
+               <button class="btn btn-primary w-100 mt-1">前往購物車</button> 
+            </div>
+         </ul>
+         <div class="dropdown">
+            <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" id="userAccount">
+               <img src="assets/img/avatar.png">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="userAccount">
+               <li>
+                  <a class="dropdown-item H4-medium" href="#">
+                     <img src="assets/icon/member_2nd.svg" />
+                     Hi, Lisa !
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-user icon-xs"></span>
+                     帳戶設定
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-bell icon-xs"></span>
+                     訊息通知
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-form icon-xs"></span>
+                     訂單記錄
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-heart icon-xs"></span>
+                     收藏清單
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-heart icon-xs"></span>
+                     收藏清單
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-chart icon-xs"></span>
+                     模型銷售
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class="icon-card icon-xs"></span>
+                     我的錢包
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item text-info" href="#">
+                     <span class="icon-folder icon-xs"></span>
+                     上傳模型
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <span class=""></span>
+                     登出
+                  </a>
+               </li>
+            </ul>
          </div>
-         <button type="button" class="btn btn-outline-primary border-0 ms-2" data-bs-toggle="modal" data-bs-target="#logInDialog">
-            登入
-         </button>
-         <button type="button" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#signUpDialog">
-            註冊
-         </button>
          <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1" id="languageSwitch">
             <span class="icon-earth icon-xs"></span> EN
          </button>
-         
        </form>
     </div>
   </div>
@@ -705,7 +783,8 @@
                         </p>
                      </td>
                      <td>
-                        <button type="button" class="btn btn-secondary">編輯</button>
+                        <button type="button" class="btn btn-secondary my-1">編輯</button>
+                        <button type="button" class="btn btn-outline-secondary my-1">刪除</button>
                      </td>
                   </tr>
                   <tr>

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('icomoon.eot?7n9stf');
-  src:  url('icomoon.eot?7n9stf#iefix') format('embedded-opentype'),
-    url('icomoon.ttf?7n9stf') format('truetype'),
-    url('icomoon.woff?7n9stf') format('woff'),
-    url('icomoon.svg?7n9stf#icomoon') format('svg');
+  src:  url('icomoon.eot?1qw7rm');
+  src:  url('icomoon.eot?1qw7rm#iefix') format('embedded-opentype'),
+    url('icomoon.ttf?1qw7rm') format('truetype'),
+    url('icomoon.woff?1qw7rm') format('woff'),
+    url('icomoon.svg?1qw7rm#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,75 +25,81 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-out:before {
+.icon-trashcan:before {
   content: "\e900";
 }
-.icon-in:before {
+.icon-out:before {
   content: "\e901";
 }
-.icon-add:before {
-  content: "\e917";
-}
-.icon-next:before {
+.icon-in:before {
   content: "\e902";
 }
-.icon-previous:before {
+.icon-next:before {
   content: "\e903";
 }
-.icon-search:before {
+.icon-previous:before {
   content: "\e904";
 }
-.icon-cart:before {
+.icon-search:before {
   content: "\e905";
 }
-.icon-veiw:before {
+.icon-cart:before {
   content: "\e906";
 }
-.icon-close:before {
+.icon-veiw:before {
   content: "\e907";
 }
-.icon-delete:before {
+.icon-close:before {
   content: "\e908";
 }
-.icon-update:before {
+.icon-delete:before {
   content: "\e909";
 }
-.icon-download:before {
+.icon-update:before {
   content: "\e90a";
 }
-.icon-star:before {
+.icon-download:before {
   content: "\e90b";
 }
-.icon-user:before {
+.icon-star:before {
   content: "\e90c";
 }
-.icon-bell:before {
+.icon-user:before {
   content: "\e90d";
 }
-.icon-form:before {
+.icon-bell:before {
   content: "\e90e";
 }
-.icon-heart:before {
+.icon-form:before {
   content: "\e90f";
 }
-.icon-chart:before {
+.icon-heart:before {
   content: "\e910";
 }
-.icon-card:before {
+.icon-chart:before {
   content: "\e911";
 }
-.icon-folder:before {
+.icon-card:before {
   content: "\e912";
 }
-.icon-caret-up:before {
+.icon-folder:before {
   content: "\e913";
 }
-.icon-earth:before {
+.icon-caret-up:before {
   content: "\e914";
 }
-.icon-arrow:before {
+.icon-earth:before {
   content: "\e915";
 }
-.icon-caret-down:before {
+.icon-arrow:before {
   content: "\e916";
+}
+.icon-caret-down:before {
+  content: "\e917";
+}
+.icon-add:before {
+  content: "\e918";
+}
+.icon-info:before {
+  content: "\e919";
 }

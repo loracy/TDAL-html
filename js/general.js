@@ -24,5 +24,16 @@ $(document).ready(function() {
             $("#rangeValueFrom").val(ui.values[0]);
             $("#rangeValueTo").val(ui.values[1]);
         }
-      });
+    });
+
+    $('.btn[updload]').each(function(index) {
+        console.log($(this).find('.FileUploaderWrapper-progressBar'));
+        console.log($(this).attr('updload'));
+        $(this).find('.FileUploaderWrapper-progressBar').css('width', $(this).attr('updload') + '%');
+    });
+    
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
 });

@@ -123,6 +123,10 @@
         &::-ms-input-placeholder {
             color: $text-secondary;
         }
+
+        &.Invalid {
+            border-color: $warning;
+        }
     }
 
     &-select[multiple] {
@@ -288,6 +292,45 @@ main {
             background-image: url(../../assets/icon/check.svg);
             background-repeat: no-repeat;
             background-position-y: 1px;
+        }
+    }
+
+    .form-check-input:checked ~ .form-check-label {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+.form-radio {
+    .form-check-input {
+        opacity: 0;
+    }
+    
+    .form-check-label {
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            width: 22px;
+            height: 22px;
+            background: #d3e8fc;
+            border-radius: 22px;
+            left: -28px;
+            position: absolute;
+        }
+
+        &::after {
+            content: '';
+            opacity: 0;
+            width: 12px;
+            height: 12px;
+            background: #248DEE;
+            border-radius: 12px;
+            margin: 5px;
+            left: -28px;
+            position: absolute;
         }
     }
 
@@ -1062,6 +1105,93 @@ footer {
     }
 }
 
+.CommonModal {
+    .modal {
+        &-content {
+            padding: 0 40px;
+        }
+
+        &-header {
+            flex-wrap: wrap;
+            padding-top: 40px;
+            border-bottom: none;
+
+            .btn-close {
+                position: absolute;
+                right: 16px;
+                top: 16px;
+                color: $primary;
+            }
+        }
+
+        &-title {
+            @include common-text(h3, medium);
+            flex-basis: 100%;
+            text-align: center;
+        }
+
+        &-subtitle {
+            @include common-text(h3, regular);
+            flex-basis: 100%;
+            text-align: center;
+        }
+
+        &-footer {
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    table {
+        thead {
+            tr {
+                background: $puregray-100;
+                
+                th {
+                    @include common-text(h3, medium);
+                    text-align: center;
+                    padding: 10px 20px;
+                    vertical-align: middle;
+                    border-bottom: 1px solid $puregray-300 !important;
+                    border-top: 1px solid $puregray-300;
+                    
+                    &:first-of-type {
+                        border-left: 1px solid $puregray-300;
+                    }
+                    
+                    &:last-of-type {
+                        border-right: 1px solid $puregray-300;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    text-align: center;
+                    border-top: 1px solid $puregray-300 !important;
+                    border-bottom: 1px solid $puregray-300 !important;
+                    padding: 10px 20px;
+                    vertical-align: middle;
+                    
+                    &:first-of-type {
+                        border-left: 1px solid $puregray-300;
+                    }
+                    
+                    &:last-of-type {
+                        border-right: 1px solid $puregray-300;
+                    }
+
+                    p {
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .ProductsPagination {
     display: flex;
     justify-content: space-between;
@@ -1155,13 +1285,50 @@ footer {
     background: $puregray-100;
     padding: 20px;
 
+    &.Invalid {
+        background: rgba($warning, 0.1);
+    }
+
     .btn-outline-primary {
+        border-radius: 5px;
         background-color: #FFFFFF;
 
         &[disabled] {
             border-color: $puregray-400;
             color: $puregray-400;
+        }
 
+        &[updload] {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+
+            p, span {
+                z-index: 2;
+            }
+
+            span[class*="icon-"] {
+            }
+
+            &:hover {
+                span[class*="icon-"] {
+                    color: $primary !important;
+                }
+            }
+
+            .FileUploaderWrapper-progressBar {
+                display: inline;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 0%;
+                height: 100%;
+                border-radius: 5px;
+                background: rgba($primary, 0.2);
+                z-index: 1;
+            }
         }
     }
 }

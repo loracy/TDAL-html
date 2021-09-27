@@ -575,13 +575,13 @@
                <span>訂單記錄</span>
             </a>
          </div>
-         <div class="SellingReportMenu-item Active">
+         <div class="SellingReportMenu-item">
             <a href="#">
                <span class="icon-heart icon-xs me-2"></span>
                <span>收藏清單</span>
             </a>
          </div>
-         <div class="SellingReportMenu-item">
+         <div class="SellingReportMenu-item Active">
             <a href="#">
                <span class="icon-chart icon-xs me-2"></span>
                <span>模型銷售</span>
@@ -600,159 +600,411 @@
                <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                      <li class="breadcrumb-item"><a href="#">會員中心</a></li>
-                     <li class="breadcrumb-item">收藏清單</li>
+                     <li class="breadcrumb-item active" aria-current="page">模型銷售</li>
                   </ol>
                </nav>
             </div>
-            <div class="row row-cols-1 row-cols-md-4 g-4 mb-6">
-               <div class="col">
-                  <div class="card">
-                     <img src="assets/img/home_product_1.png" class="card-img-top">
-                     <div class="card-body">
-                        <h5 class="card-title">
-                           <span class="flex-grow-1">作者名稱</span>
-                           <span>
-                              <span class="icon-veiw icon-xxs"></span>
-                              100010
-                           </span>
-                        </h5>
-                        <p class="card-text">作品標題標題標題標題標題標題標題標題標題標題標題標題標題標題</p>
-                        <p class="card-text mb-2">
-                           <span class="text-primary">Free</span>
-                        </p>
-                        <button type="button" class="btn btn-outline-secondary w-100">
-                           移除
-                        </button>
+
+            <div class="row">
+               <div class="col-12">
+                  <div class="d-flex justify-content-end pb-1">
+                     <p class="mb-0">統計期間：2021.12.10 ~ 2022.03.15</p>
+                  </div>
+               </div>
+               
+               <div class="col-6">
+                  <div class="Summary">
+                     <div class="Summary-section">
+                        <div class="d-flex align-items-center pt-3">
+                           <img src="assets/icon/number.svg" />
+                           <h2 class="ms-2">5,000</h2>
+                        </div>
+                        <div class="d-flex">
+                           <p>模型總數</p>
+                        </div>
+                     </div>
+                     <div class="Summary-section">
+                        <div class="d-flex justify-content-between flex-grow-1 align-items-center">
+                           <p>審核中</p>  
+                           <p>5,000</p>  
+                        </div>
+                        <div class="d-flex justify-content-between flex-grow-1 align-items-center">
+                           <p>審核未通過</p>  
+                           <p>5,000</p>  
+                        </div>
+                     </div>
+                     <div class="Summary-section">
+                        <div class="d-flex justify-content-between flex-grow-1 align-items-center">
+                           <p>已上架</p>  
+                           <p>5,000</p>  
+                        </div>
+                        <div class="d-flex justify-content-between flex-grow-1 align-items-center">
+                           <p>已下架</p>  
+                           <p>5,000</p>
+                        </div>
                      </div>
                   </div>
                </div>
-               <div class="col">
-                  <div class="card">
-                     <img src="assets/img/home_product_2.png" class="card-img-top">
-                     <div class="card-body">
-                        <h5 class="card-title">
-                           <span class="flex-grow-1">作者名稱</span>
-                           <span>
-                              <span class="icon-veiw icon-xxs"></span>
-                              100010
-                           </span>
-                        </h5>
-                        <p class="card-text">作品標題標題標題標題標題標題標題標題標題標題標題標題標題標題</p>
-                        <p class="card-text mb-2">
-                           <span>NT$ 200</span>
-                        </p>
-                        <button type="button" class="btn btn-outline-secondary w-100">
-                           移除
-                        </button>
+               <div class="col-6">
+                  <div class="Summary">
+                     <div class="Summary-section">
+                        <div class="d-flex align-items-center pt-3">
+                           <img src="assets/icon/money.svg" />
+                           <h2 class="ms-2">50,000 NT$</h2>
+                        </div>
+                        <div class="d-flex">
+                           <p>分潤總金額</p>
+                        </div>
+                     </div>
+                     <div class="Summary-section">
+                        <div class="d-flex justify-content-between align-items-center">
+                           <p>免費售量</p>  
+                           <p class=" ms-auto">5,000</p>
+                           <button type="button" class="btn btn-primary ms-3">銷售紀錄</button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                           <p>付費售量</p>  
+                           <p class=" ms-auto">5,000</p>
+                           <button type="button" class="btn btn-primary ms-3">銷售紀錄</button>
+                        </div>
                      </div>
                   </div>
-               </div>
-               <div class="col">
-                  <div class="card">
-                     <img src="assets/img/home_product_3.png" class="card-img-top">
-                     <div class="card-body">
-                        <h5 class="card-title">
-                           <span class="flex-grow-1">作者名稱</span>
-                           <span>
-                              <span class="icon-veiw icon-xxs"></span>
-                              100010
-                           </span>
-                        </h5>
-                        <p class="card-text">作品標題標題標題標題標題標題標題標題標題標題標題標題標題標題</p>
-                        <p class="card-text mb-2">
-                           <span>NT$ 200</span>
-                        </p>
-                        <button type="button" class="btn btn-outline-secondary w-100">
-                           移除
-                        </button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col">
-                  <div class="card">
-                     <img src="assets/img/home_product_4.png" class="card-img-top">
-                     <div class="card-body">
-                        <h5 class="card-title">
-                           <span class="flex-grow-1">作者名稱</span>
-                           <span>
-                              <span class="icon-veiw icon-xxs"></span>
-                              100010
-                           </span>
-                        </h5>
-                        <p class="card-text">作品標題標題標題標題標題標題標題標題標題標題標題標題標題標題</p>
-                        <p class="card-text mb-2">
-                           <span>NT$ 1,280</span>
-                        </p>
-                        <button type="button" class="btn btn-outline-secondary w-100">
-                           移除
-                        </button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col">
-                  <div class="card">
-                     <img src="assets/img/home_product_5.png" class="card-img-top">
-                     <div class="card-body">
-                        <h5 class="card-title">
-                           <span class="flex-grow-1">作者名稱</span>
-                           <span>
-                              <span class="icon-veiw icon-xxs"></span>
-                              100010
-                           </span>
-                        </h5>
-                        <p class="card-text">作品標題標題標題標題標題標題標題標題標題標題標題標題標題標題</p>
-                        <p class="card-text mb-2">
-                           <span>NT$ 1,280</span>
-                        </p>
-                        <button type="button" class="btn btn-outline-secondary w-100">
-                           移除
-                        </button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col">
-                  <div class="card">
-                     <img src="assets/img/home_product_6.png" class="card-img-top">
-                     <div class="card-body">
-                        <h5 class="card-title">
-                           <span class="flex-grow-1">作者名稱</span>
-                           <span>
-                              <span class="icon-veiw icon-xxs"></span>
-                              100010
-                           </span>
-                        </h5>
-                        <p class="card-text">作品標題標題標題標題標題標題標題標題標題標題標題標題標題標題</p>
-                        <p class="card-text">
-                           <span class="text-primary mb-2">Free</span>
-                        </p>
-                        <button type="button" class="btn btn-outline-secondary w-100">
-                           移除
-                        </button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col">
-                  <div class="card">
-                     <img src="assets/img/home_product_7.png" class="card-img-top">
-                     <div class="card-body">
-                        <h5 class="card-title">
-                           <span class="flex-grow-1">作者名稱</span>
-                           <span>
-                              <span class="icon-veiw icon-xxs"></span>
-                              100010
-                           </span>
-                        </h5>
-                        <p class="card-text">作品標題標題標題標題標題標題標題標題標題標題標題標題標題標題</p>
-                        <p class="card-text mb-2">
-                           <span>NT$ 1,280</span>
-                        </p>
-                        <button type="button" class="btn btn-outline-secondary w-100">
-                           移除
-                        </button>
-                     </div>
-                  </div>
+                  
                </div>
             </div>
+            
+            <ul class="nav mb-3 mt-5">
+               <li class="nav-item">
+                  <a class="nav-link" href="#">模型總數</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">上/下架</a>
+               </li>
+               <span class="d-flex justify-content-end flex-grow-1">
+                  <button type="button" class="btn btn-info">
+                     <span class="icon-add me-1"></span>
+                     上傳模型
+                  </button>
+               </span>
+            </ul>
+
+            <table class="SellingReportTable table">
+               <colgroup>
+                  <col class="SellingReportTable-image">
+                  <col class="SellingReportTable-id">
+                  <col class="SellingReportTable-name">
+                  <col class="SellingReportTable-permission">
+                  <col class="SellingReportTable-price">
+                  <col class="SellingReportTable-selling">
+                  <col class="SellingReportTable-status">
+                  <col class="SellingReportTable-time">
+                  <col class="SellingReportTable-action">
+               </colgroup>
+               <thead>
+                 <tr>
+                   <th scope="col">圖片</th>
+                   <th scope="col">模型編號</th>
+                   <th scope="col">模型名稱</th>
+                   <th scope="col">授權</th>
+                   <th scope="col">販售金額</th>
+                   <th scope="col">銷售</th>
+                   <th scope="col">狀態</th>
+                   <th scope="col">上/下架時間</th>
+                   <th scope="col">動作</th>
+                 </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>
+                        <img src="assets/img/sellingReport_product_1.png" />
+                     </td>
+                     <td>
+                        --
+                     </td>
+                     <td>
+                        <p>
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           可商用
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           NT$ 5,0000
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           - -
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           已上架
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           2021/11/15 11:30
+                        </p>
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-outline-secondary">下架</button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <img src="assets/img/no_img.png" />
+                     </td>
+                     <td>
+                        C000115
+                     </td>
+                     <td>
+                        <p>
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           可商用
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           免費
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           1
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           已下架
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           2021/11/15 11:30
+                        </p>
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-outline-secondary d-none">下架</button>
+                     </td>
+                  </tr>
+                  <tr class="Invalid">
+                     <td>
+                        <img src="assets/img/no_img.png" />
+                     </td>
+                     <td>
+                        C000115
+                     </td>
+                     <td>
+                        <p>
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           可商用
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           免費
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           1
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           已下架
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           2021/11/15 11:30
+                        </p>
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-outline-secondary d-none">下架</button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <img src="assets/img/no_img.png" />
+                     </td>
+                     <td>
+                        C000115
+                     </td>
+                     <td>
+                        <p>
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           可商用
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           NT$ 5,0000
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           - -
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           已上架
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           2021/11/15 11:30
+                        </p>
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-outline-secondary">下架</button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <img src="assets/img/no_img.png" />
+                     </td>
+                     <td>
+                        C000115
+                     </td>
+                     <td>
+                        <p>
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           可商用
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           免費
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           1
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           已下架
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           2021/11/15 11:30
+                        </p>
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-outline-secondary d-none">下架</button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <img src="assets/img/no_img.png" />
+                     </td>
+                     <td>
+                        C000115
+                     </td>
+                     <td>
+                        <p>
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           可商用
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           免費
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           1
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           已下架
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           2021/11/15 11:30
+                        </p>
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-outline-secondary d-none">下架</button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <img src="assets/img/no_img.png" />
+                     </td>
+                     <td>
+                        C000115
+                     </td>
+                     <td>
+                        <p>
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           可商用
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           免費
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           1
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           已下架
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           2021/11/15 11:30
+                        </p>
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-outline-secondary d-none">下架</button>
+                     </td>
+                  </tr>
+                 
+               </tbody>
+            </table>
+
             <div class="row justify-content-center pt-3">
                <div class="col-9">
                   <nav class="ProductsPagination">
@@ -843,7 +1095,7 @@
          </div>
          <div class="col-2 offset-2">
             <div class="FooterList">
-               <select class="form-select">
+               <select class="form-select" aria-label="Default select example">
                   <option selected>繁體中文</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>

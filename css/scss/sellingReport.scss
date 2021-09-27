@@ -196,20 +196,12 @@
                             width: 100%;
                             background: gray;
                             height: 40px;
-                            font-size: 12px;
                             background: #EF6B23;
-                            //styleName: PingFangTC/Body/Regular;
-                            font-size: 14px;
-                            font-weight: 400;
-                            line-height: 20px;
-                            letter-spacing: 0px;
-
+                            @include common-text(body, regular, #FFFFFF);
                             padding: 10px 20px;
-                            color: #FFFFFF;
                             text-align: left;
                         }
                     }
-
                 }
             }
         }
