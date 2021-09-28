@@ -12544,6 +12544,10 @@ main {
   color: #FF3A1E;
 }
 
+.Progress-item.active:first-of-type .rounded-circle::after {
+  background: #CDCDCD;
+}
+
 .Filter {
   background: #FFFFFF;
   -webkit-box-shadow: 0 0 0 1px #DDDDDD;

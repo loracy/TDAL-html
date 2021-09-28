@@ -558,6 +558,14 @@ main {
             p {
                 color: $primary;
             }
+
+            &:first-of-type {
+                .rounded-circle {
+                    &::after {
+                        background: $puregray-400;
+                    }
+                }
+            }
         }
     }
 }
