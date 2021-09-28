@@ -8,6 +8,42 @@
     height: 600px;
 }
 
+.H1 {
+    &-regular {
+        @include common-text(h1, regular);
+        
+        &-secondary {
+            @include common-text(h1, regular, $text-secondary);
+        }
+    }
+
+    &-medium {
+        @include common-text(h1, medium);
+
+        &-secondary {
+            @include common-text(h1, regular, $text-secondary);
+        }
+    }
+}
+
+.H2 {
+    &-regular {
+        @include common-text(h2, regular);
+        
+        &-secondary {
+            @include common-text(h2, regular, $text-secondary);
+        }
+    }
+
+    &-medium {
+        @include common-text(h2, medium);
+
+        &-secondary {
+            @include common-text(h2, regular, $text-secondary);
+        }
+    }
+}
+
 .H3 {
     &-regular {
         @include common-text(h3, regular);
@@ -44,7 +80,7 @@
     }
 }
 
-.Normal {
+.Body {
     &-regular {
         @include common-text(body, regular);
 
@@ -467,7 +503,7 @@ main {
 
             &::before {
                 content: '';
-                width: 50%;
+                width: calc(50% - 20px);
                 height: 2px;
                 position: absolute;
                 top: 19px;
@@ -478,7 +514,7 @@ main {
             
             &::after {
                 content: '';
-                width: 50%;
+                width: calc(50% - 20px);
                 height: 2px;
                 position: absolute;
                 top: 19px;
@@ -513,6 +549,10 @@ main {
         &.active {
             .rounded-circle {
                 background: $primary;
+
+                &::before, &::after {
+                    background: $primary;
+                }
             }
             
             p {
@@ -644,6 +684,33 @@ main {
         &[data-bs-toggle="dropdown"] {
             &:after {
                 display: none;
+            }
+        }
+    }
+}
+
+.CommonNav {
+    .nav {
+        &-item {
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+
+        &-link {
+            text-align: center;
+            padding: 8px 20px;
+            box-shadow: 0 3px 0 0 $puregray-300;
+            @include common-text(h4, medium);
+            line-height: 40px !important;
+    
+            &:hover {
+                color: inherit;
+                background: #EDEDED;
+            }
+    
+            &.active {
+                background: rgba($primary, 0.1);
+                box-shadow: 0 3px 0 0 $primary;
             }
         }
     }

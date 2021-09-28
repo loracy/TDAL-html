@@ -1,19 +1,86 @@
 @import "mixin";
 @import "variable";
-@import "custom";
+
+.card {
+    border-radius: 0px;
+
+    &:hover {
+        cursor: default;
+    }
+}
+
+.Cart {
+    padding-bottom: 100px;
+
+    .bg-light {
+        background-color: $puregray-100 !important;
+        margin-bottom: 206px;
+    }
+}
 
 .CartList {
-    cursor: default;
+
+    &-footer {
+        padding: 16px 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 150%;
+            height: 1px;
+            position: absolute;
+            top: 0;
+            left: -25%;
+            background: $puregray-300;
+        }
+    }
 
     &-item {
-        padding-bottom: 20px;
+        display: flex;
+        padding: 16px 0;
         box-shadow: 0 1px 0 0 $puregray-300;
+        
+        &:first-of-type {
+            padding: 0 0 16px 0;
+        }
+
+        &:last-of-type {
+            padding: 16px 0 0 0;
+            box-shadow: none;
+        }
 
         &-cover {
-            
             img {
                 width: 163px;
             }
         }
+
+        &-id {
+            width: 80px;
+            margin: 0 10px 0 0;
+        }
+
+        &-name {
+            @include common-text(body, medium);
+            width: 477px;
+            margin: 0 22px 0 10px;
+        }
+        
+        &-certification {
+            @include common-text(body, regular);
+            margin: 0 10px;
+            width: 260px;
+            display: flex;
+            align-items: center;
+        }
+
+        &-price {
+            @include common-text(body, medium);
+            width: 100px;
+            margin: 0 0 0 10px;
+            text-align: right;
+        }
+
+
     }
 }
