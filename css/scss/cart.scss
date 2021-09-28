@@ -1,0 +1,19 @@
+@import "mixin";
+@import "variable";
+@import "custom";
+
+.CartList {
+    cursor: default;
+
+    &-item {
+        padding-bottom: 20px;
+        box-shadow: 0 1px 0 0 $puregray-300;
+
+        &-cover {
+            
+            img {
+                width: 163px;
+            }
+        }
+    }
+}

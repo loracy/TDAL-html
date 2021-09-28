@@ -31,9 +31,40 @@ $(document).ready(function() {
         console.log($(this).attr('updload'));
         $(this).find('.FileUploaderWrapper-progressBar').css('width', $(this).attr('updload') + '%');
     });
-    
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-      return new bootstrap.Popover(popoverTriggerEl)
-    })
 });
+
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl);
+});
+
+var toastElList = [].slice.call(document.querySelectorAll('.toast'));
+var toastList = toastElList.map(function (toastEl) {
+    return new bootstrap.Toast(toastEl);
+});
+
+
+var myToastEl = document.getElementById('myToast');
+myToastEl.addEventListener('hidden.bs.toast', function () {
+    $('.toast-container').hide();
+});
+
+function showToast(state, content) {
+    let tosatBody = '<h3 class="H3-regular">' + content + '</h3>';
+
+    if(state == '1') {
+        tosatBody = 
+        '<img class="me-2" src="assets/icon/successful.svg" />' + 
+        '<h3 class="H3-regular m-0">' + content + '</h3>';
+
+        $('.toast-body').html(tosatBody);
+        $('.toast-container').show();
+        $('.toast').toast('show');
+        $('.toast').attr('state-type', state);
+
+    } else {
+        $('.toast-body').html(tosatBody);
+        $('.toast-container').show();
+        $('.toast').toast('show');
+    }
+}

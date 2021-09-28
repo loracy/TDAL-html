@@ -810,7 +810,7 @@
                   <button type="button" class="btn btn-outline-primary me-2 flex-grow-1">
                      取消
                   </button>
-                  <button type="button" class="btn btn-primary ms-2  flex-grow-1">
+                  <button type="button" class="btn btn-primary ms-2 flex-grow-1" data-bs-dismiss="modal" onclick="showToast('1', '密碼變更成功');">
                      儲存資料
                   </button>
                </div>
@@ -819,6 +819,17 @@
       </div>
    </div>
 </div>
+<div  class="toast-container">
+   <div class="toast hide border-0" id="myToast"
+   data-bs-autohide="true"
+   data-bs-delay="2000"
+   aria-live="polite" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+         <div class="toast-body"></div>
+         <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+   </div>
+ </div>
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    <script src="js/jquery-ui.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
