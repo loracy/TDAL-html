@@ -74,14 +74,11 @@
         box-shadow: -17px 0 0 -16px $puregray-300;
         height: 140px;
         flex-grow: 1;
+        flex-basis: 0;
         
         p {
             margin: 0px;
-            //styleName: PingFangTC/H2//Medium;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 25px;
-            letter-spacing: 0px;
+            @include common-text(h3, medium);
         }
 
         &:first-of-type {
@@ -94,8 +91,11 @@
 }
 
 .SellingReportTable {
-    border-collapse: separate;
-    border-spacing: 0 1em;
+
+    &-separate {
+        border-collapse: separate;
+        border-spacing: 0 1em;
+    }
 
     &-image {
         width: 140px;
@@ -116,6 +116,15 @@
     &-action {
         width: 153px;
     }
+
+    &-submitTime {
+        width: 163px;
+    }
+    
+    &-payment {
+        width: 183px;
+    }
+
 
     thead {
         tr{
@@ -148,9 +157,8 @@
 
     tbody {
         tr {
-
             td {
-                color: #979797;
+                color: $text-secondary;
                 text-align: center;
                 border-top: 1px solid $puregray-300 !important;
                 border-bottom: 1px solid $puregray-300 !important;
@@ -168,15 +176,10 @@
 
 
                 p {
-                    //styleName: PingFangTC/Body/Medium;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 20px;
-                    letter-spacing: 0px;
+                    @include common-text(body, medium);
                     text-align: left;
-                    color: $text-black;
+                    margin-bottom: 0;
                 }
-                
             }
 
             &.Invalid {

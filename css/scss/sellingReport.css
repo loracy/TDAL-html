@@ -107,14 +107,17 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
 }
 
 .Summary-section p {
   margin: 0px;
+  font-family: PingFang TC, Roboto;
+  color: #212529;
   font-size: 18px;
-  font-weight: 500;
   line-height: 25px;
-  letter-spacing: 0px;
+  font-weight: 500;
 }
 
 .Summary-section:first-of-type {
@@ -122,7 +125,7 @@
           box-shadow: none;
 }
 
-.SellingReportTable {
+.SellingReportTable-separate {
   border-collapse: separate;
   border-spacing: 0 1em;
 }
@@ -145,6 +148,14 @@
 
 .SellingReportTable-action {
   width: 153px;
+}
+
+.SellingReportTable-submitTime {
+  width: 163px;
+}
+
+.SellingReportTable-payment {
+  width: 183px;
 }
 
 .SellingReportTable thead tr {
@@ -190,12 +201,13 @@
 }
 
 .SellingReportTable tbody tr td p {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0px;
-  text-align: left;
+  font-family: PingFang TC, Roboto;
   color: #212529;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 0;
 }
 
 .SellingReportTable tbody tr.Invalid {

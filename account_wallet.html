@@ -581,13 +581,13 @@
                <span>收藏清單</span>
             </a>
          </div>
-         <div class="SellingReportMenu-item Active">
+         <div class="SellingReportMenu-item">
             <a href="#">
                <span class="icon-chart icon-xs me-2"></span>
                <span>模型銷售</span>
             </a>
          </div>
-         <div class="SellingReportMenu-item">
+         <div class="SellingReportMenu-item Active">
             <a href="#">
                <span class="icon-card icon-xs me-2"></span>
                <span>我的錢包</span>
@@ -600,326 +600,90 @@
                <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                      <li class="breadcrumb-item"><a href="#">會員中心</a></li>
-                     <li class="breadcrumb-item active" aria-current="page">模型銷售</li>
+                     <li class="breadcrumb-item active" aria-current="page">我的錢包</li>
                   </ol>
                </nav>
             </div>
 
-            <div class="row">
+            <div class="row">               
                <div class="col-12">
-                  <div class="d-flex justify-content-end pb-1">
-                     <p class="mb-0">統計期間：2021.12.10 ~ 2022.03.15</p>
-                  </div>
-               </div>
-               
-               <div class="col-6">
                   <div class="Summary">
                      <div class="Summary-section">
-                        <div class="d-flex align-items-center pt-3">
-                           <img src="assets/icon/number.svg" />
-                           <h2 class="ms-2">5,000</h2>
-                        </div>
-                        <div class="d-flex">
-                           <p>模型總數</p>
-                        </div>
-                     </div>
-                     <div class="Summary-section">
-                        <div class="d-flex justify-content-between flex-grow-1 align-items-center">
-                           <p>審核中</p>  
-                           <p>5,000</p>  
-                        </div>
-                        <div class="d-flex justify-content-between flex-grow-1 align-items-center">
-                           <p>審核未通過</p>  
-                           <p>5,000</p>  
-                        </div>
-                     </div>
-                     <div class="Summary-section">
-                        <div class="d-flex justify-content-between flex-grow-1 align-items-center">
-                           <p>已上架</p>  
-                           <p>5,000</p>  
-                        </div>
-                        <div class="d-flex justify-content-between flex-grow-1 align-items-center">
-                           <p>已下架</p>  
-                           <p>5,000</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-6">
-                  <div class="Summary">
-                     <div class="Summary-section">
-                        <div class="d-flex align-items-center pt-3">
+                        <span class="py-1">
                            <img src="assets/icon/money.svg" />
-                           <h2 class="ms-2">50,000 NT$</h2>
+                        </span>
+                        <div class="d-flex justify-content-between pb-1">
+                           <h1 class="H1-medium m-0">
+                              5,000
+                              <span class="H2-medium ms-3">NT$</span>
+                           </h1>
+                           <button class="btn btn-primary px-6 me-4" data-bs-toggle="modal" data-bs-target="#requestPayment">
+                              匯款申請
+                           </button>
                         </div>
-                        <div class="d-flex">
-                           <p>分潤總金額</p>
-                        </div>
+                        <p class="H3-medium mt-1">目前可領取金額</p>
                      </div>
-                     <div class="Summary-section">
-                        <div class="d-flex justify-content-between align-items-center">
-                           <p>免費售量</p>  
-                           <p class=" ms-auto">5,000</p>
-                           <button type="button" class="btn btn-primary ms-3">銷售紀錄</button>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                           <p>付費售量</p>  
-                           <p class=" ms-auto">5,000</p>
-                           <button type="button" class="btn btn-primary ms-3">銷售紀錄</button>
+                     <div class="Summary-section py-2">
+                        <div class="p-1">
+                           <h3 class="H3-medium">匯款申請說明</h3>
+                           <ul class="Body-regular ps-4 mb-0">
+                              <li>分配金額超過NT$500，即可申請匯款。</li>
+                              <li>款項將於申請匯款當日起算30天內匯出。</li>
+                              <li>可領取金額為您實際可收到的金額。</li>
+                              <li>提出匯款申請後，客服人員將會與您聯繫處理後續作業。</li>
+                           </p>
                         </div>
                      </div>
                   </div>
-                  
                </div>
             </div>
             
-            <ul class="nav mb-3 mt-5">
-               <li class="nav-item">
-                  <a class="nav-link active" href="#">模型總數</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">上/下架</a>
-               </li>
-               <span class="d-flex justify-content-end flex-grow-1">
-                  <button type="button" class="btn btn-info">
-                     <span class="icon-add me-1"></span>
-                     上傳模型
-                  </button>
-               </span>
-            </ul>
-
-            <table class="SellingReportTable SellingReportTable-separate table">
+            <table class="SellingReportTable table mt-5">
                <colgroup>
-                  <col class="SellingReportTable-image">
-                  <col class="SellingReportTable-id">
-                  <col class="SellingReportTable-name">
-                  <col class="SellingReportTable-permission">
+                  <col class="SellingReportTable-submitTime">
+                  <col class="SellingReportTable-payment">
                   <col class="SellingReportTable-status">
-                  <col class="SellingReportTable-action">
+                  <col class="SellingReportTable-comment">
                </colgroup>
                <thead>
                  <tr>
-                   <th scope="col">圖片</th>
-                   <th scope="col">模型編號</th>
-                   <th scope="col">模型名稱</th>
-                   <th scope="col">授權</th>
+                   <th scope="col">申請日期</th>
+                   <th scope="col">匯款金額</th>
                    <th scope="col">狀態</th>
-                   <th scope="col">動作</th>
+                   <th scope="col">備註</th>
                  </tr>
                </thead>
                <tbody>
                   <tr>
                      <td>
-                        <img src="assets/img/sellingReport_product_1.png" />
+                        <p>2021/01/31</p>
                      </td>
                      <td>
-                        --
+                        <p>NT$ 1,250</p>
                      </td>
                      <td>
-                        <p>
-                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
-                        </p>
+                        <p>處理中</p>
                      </td>
                      <td>
-                        <p>
-                           可商用
-                        </p>
-                     </td>
-                     <td>
-                        <p>
-                           審核中
-                        </p>
-                     </td>
-                     <td>
-                        <button type="button" class="btn btn-secondary">編輯</button>
+                        <p></p>
                      </td>
                   </tr>
                   <tr>
                      <td>
-                        <img src="assets/img/no_img.png" />
+                        <p>2021/01/31</p>
                      </td>
                      <td>
-                        C000115
+                        <p>NT$ 1,150</p>
                      </td>
                      <td>
-                        <p>
-                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
-                        </p>
+                        <p>已完成</p>
                      </td>
                      <td>
-                        <p>
-                           可商用
-                        </p>
+                        <p>已將款項會到XXXX帳戶，請查收。</p>
                      </td>
-                     <td>
-                        <p>
-                           審核中
-                        </p>
-                     </td>
-                     <td>
-                        <button type="button" class="btn btn-secondary">編輯</button>
-                     </td>
-                  </tr>
-                  <tr class="Invalid">
-                     <td>
-                        <img src="assets/img/no_img.png" />
-                     </td>
-                     <td>
-                        C000115
-                     </td>
-                     <td>
-                        <p>
-                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
-                        </p>
-                     </td>
-                     <td>
-                        <p>
-                           可商用
-                        </p>
-                     </td>
-                     <td>
-                        <p>
-                           審核中
-                        </p>
-                     </td>
-                     <td>
-                        <button type="button" class="btn btn-secondary my-1">編輯</button>
-                        <button type="button" class="btn btn-outline-secondary my-1">刪除</button>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>
-                        <img src="assets/img/no_img.png" />
-                     </td>
-                     <td>
-                        C000115
-                     </td>
-                     <td>
-                        <p>
-                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
-                        </p>
-                     </td>
-                     <td>
-                        <p>
-                           可商用
-                        </p>
-                     </td>
-                     <td>
-                        <p>
-                           審核中
-                        </p>
-                     </td>
-                     <td>
-                        <button type="button" class="btn btn-secondary">編輯</button>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>
-                        <img src="assets/img/no_img.png" />
-                     </td>
-                     <td>
-                        C000115
-                     </td>
-                     <td>
-                        <p>
-                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
-                        </p>
-                     </td>
-                     <td>
-                        <p>
-                           可商用
-                        </p>
-                     </td>
-                     <td>
-                        <p>
-                           審核中
-                        </p>
-                     </td>
-                     <td>
-                        <button type="button" class="btn btn-secondary">編輯</button>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>
-                        <img src="assets/img/sellingReport_product_1.png" />
-                     </td>
-                     <td>
-                        C000115
-                     </td>
-                     <td>
-                        <p>
-                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
-                        </p>
-                     </td>
-                     <td>
-                        <p>
-                           可商用
-                        </p>
-                     </td>
-                     <td>
-                        <p>
-                           審核中
-                        </p>
-                     </td>
-                     <td>
-                        <button type="button" class="btn btn-secondary">編輯</button>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>
-                        <img src="assets/img/no_img.png" />
-                     </td>
-                     <td>
-                        C000115
-                     </td>
-                     <td>
-                        <p>
-                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
-                        </p>
-                     </td>
-                     <td>
-                        <p>
-                           可商用
-                        </p>
-                     </td>
-                     <td>
-                        <p>
-                           審核中
-                        </p>
-                     </td>
-                     <td>
-                        <button type="button" class="btn btn-secondary">編輯</button>
-                     </td>
-                  </tr>
-                 
+                  </tr>             
                </tbody>
             </table>
-
-            <div class="row justify-content-center pt-3">
-               <div class="col-9">
-                  <nav class="ProductsPagination">
-                     <button type="button" class="btn btn-outline-primary">
-                        <span class="icon-previous icon-xxs"></span>
-                        上一頁
-                     </button>
-                     <ul class="pagination mb-0">
-                        <li class="page-item active" aria-current="page">
-                           <span class="page-link">1</span>
-                        </li>
-                        <li class="page-item">
-                           <a class="page-link" href="#">2</a>
-                           </li>
-                        <li class="page-item">
-                           <a class="page-link" href="#">3</a>
-                        </li>
-                     </ul>
-                     <button type="button" class="btn btn-primary">
-                        下一頁
-                        <span class="icon-next icon-xxs"></span>
-                     </button>
-                  </nav>
-               </div>
-            </div>
          </div>
       </div>
    </div>
@@ -1015,6 +779,33 @@
       </div>
   </div>
 </footer>
+
+<div class="modal fade CommonModal" id="requestPayment" data-bs-backdrop="static" abindex="-1" aria-labelledby="requestPayment" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">匯款申請</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body pt-1" style="padding: 0 calc(50% - 193px);">
+            <form>
+               <input type="text" class="form-control mb-3" placeholder="請輸入您的真實姓名*">
+               <input type="text" class="form-control mb-3" placeholder="請輸入您的聯絡信箱*">
+               <input type="text" class="form-control mb-3" placeholder="請輸入您的電話號碼">
+               <div class="pb-3 pt-2 mb-3 mt-5 d-flex justify-content-center W-100">
+                  <button type="button" class="btn btn-outline-primary me-2 flex-grow-1">
+                     取消
+                  </button>
+                  <button type="button" class="btn btn-primary ms-2 flex-grow-1" data-bs-dismiss="modal">
+                     提出申請
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    <script src="js/jquery-ui.min.js"></script>
    <script src="bootstrap/js/bootstrap.min.js"></script>
