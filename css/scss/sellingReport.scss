@@ -33,7 +33,7 @@
     flex-direction: column;
     align-items: stretch;
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
-    
+
     &-item {
         display: inline-flex;
 
@@ -41,7 +41,7 @@
         &:hover {
             background: $puregray-200;
         }
-        
+
         a {
             text-decoration: none;
             padding: 15px 20px;
@@ -50,7 +50,7 @@
             font-weight: 500;
             line-height: 20px;
             letter-spacing: 0px;
-            
+
             flex: 1;
             display: flex;
             align-items: center;
@@ -75,7 +75,7 @@
         height: 140px;
         flex-grow: 1;
         flex-basis: 0;
-        
+
         p {
             margin: 0px;
             @include common-text(h3, medium);
@@ -100,7 +100,7 @@
     &-image {
         width: 140px;
     }
-    
+
     &-id {
         width: 120px;
     }
@@ -108,11 +108,11 @@
     &-permission {
         width: 99px;
     }
-    
+
     &-status {
         width: 99px;
     }
-    
+
     &-action {
         width: 153px;
     }
@@ -120,34 +120,56 @@
     &-submitTime {
         width: 163px;
     }
-    
+
     &-payment {
         width: 183px;
     }
+    
+    &-dateTime {
+        width: 158px;
+    }
+    
+    &-sellingPrice,
+    &-sharingPrice {
+        width: 125px;
+    }
 
+    &-downloadAction {
+        width: 270px;
+    }
+
+    &-commentAction {
+        width: 190px;
+    }
+
+    &-comment {
+        text-align: left;
+
+        p {
+            text-align: left;
+        }
+    }
+
+    &-name {
+    }
 
     thead {
         tr{
             background: $puregray-100;
-            
+
             th {
                 padding: 20px;
-                //styleName: PingFangTC/H2//Medium;
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 25px;
-                letter-spacing: 0px;
+                @include common-text(h3, medium);
                 text-align: center;
-
                 vertical-align: middle;
                 border-bottom: 1px solid $puregray-300 !important;
                 border-top: 1px solid $puregray-300;
                 padding: 20px;
-                
+
                 &:first-of-type {
                     border-left: 1px solid $puregray-300;
                 }
-                
+
                 &:last-of-type {
                     border-right: 1px solid $puregray-300;
                 }
@@ -158,18 +180,18 @@
     tbody {
         tr {
             td {
-                color: $text-secondary;
+                @include common-text(body, medium, $text-secondary);
                 text-align: center;
                 border-top: 1px solid $puregray-300 !important;
                 border-bottom: 1px solid $puregray-300 !important;
-                padding: 20px;
+                padding: 30px 20px;
                 vertical-align: middle;
 
-                
+
                 &:first-of-type {
                     border-left: 1px solid $puregray-300;
                 }
-                
+
                 &:last-of-type {
                     border-right: 1px solid $puregray-300;
                 }
@@ -177,7 +199,7 @@
 
                 p {
                     @include common-text(body, medium);
-                    text-align: left;
+                    text-align: center;
                     margin-bottom: 0;
                 }
             }
@@ -186,27 +208,105 @@
                 position: relative;
 
                 td {
-                    padding-top: 60px;
+                    @include common-text(body, medium, #FFFFFF);
+                    text-align: left;
+                    padding: 16px 20px 0px 20px;
+                    height: 40px;
+                    background: #EF6B23;
+                    box-shadow: 0 16px 0 0 #EF6B23;
+                    border-color: #EF6B23 !important; 
+                }
+            }
 
-                    &:first-of-type {
-                        position: initial;
+            &.Overdue {
+                position: relative;
 
-                        &::before {
-                            content: '未通過原因：檔案內容與物件說明不相符。';
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            background: gray;
-                            height: 40px;
-                            background: #EF6B23;
-                            @include common-text(body, regular, #FFFFFF);
-                            padding: 10px 20px;
-                            text-align: left;
-                        }
-                    }
+                td {
+                    @include common-text(body, medium, #FFFFFF);
+                    text-align: left;
+                    padding: 16px 20px 0px 20px;
+                    height: 40px;
+                    background: $puregray-400;
+                    box-shadow: 0 16px 0 0 $puregray-400;
+                    border-color: $puregray-400 !important;
                 }
             }
         }
+    }
+}
+
+.Cart {
+    padding-bottom: 100px;
+
+    .bg-light {
+        background-color: $puregray-100 !important;
+        margin-bottom: 206px;
+    }
+}
+
+.CartList {
+
+    &-footer {
+        padding: 16px 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 150%;
+            height: 1px;
+            position: absolute;
+            top: 0;
+            left: -25%;
+            background: $puregray-300;
+        }
+    }
+
+    &-item {
+        display: flex;
+        padding: 16px 0;
+        box-shadow: 0 1px 0 0 $puregray-300;
+        
+        &:first-of-type {
+            padding: 0 0 16px 0;
+        }
+
+        &:last-of-type {
+            padding: 16px 0 0 0;
+            box-shadow: none;
+        }
+
+        &-cover {
+            img {
+                width: 163px;
+            }
+        }
+
+        &-id {
+            width: 80px;
+            margin: 0 10px 0 0;
+        }
+
+        &-name {
+            @include common-text(body, medium);
+            width: 477px;
+            margin: 0 22px 0 10px;
+        }
+        
+        &-certification {
+            @include common-text(body, regular);
+            margin: 0 10px;
+            width: 260px;
+            display: flex;
+            align-items: center;
+        }
+
+        &-price {
+            @include common-text(body, medium);
+            width: 100px;
+            margin: 0 0 0 10px;
+            text-align: right;
+        }
+
+
     }
 }

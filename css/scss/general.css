@@ -12195,7 +12195,19 @@ fieldset:disabled .btn {
 }
 
 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0.375rem 1.25rem;
+}
+
+.btn-primary[disabled] {
+  background-color: #CDCDCD;
+  border-color: #CDCDCD;
+  color: #979797;
 }
 
 .btn-primary-fb {
@@ -12211,6 +12223,49 @@ fieldset:disabled .btn {
 .btn-primary-light {
   color: #212529;
   background: rgba(255, 58, 30, 0.1);
+}
+
+.btn-downloader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5px;
+  background-color: #F2F2F2;
+  padding: 8px 10px !important;
+}
+
+.btn-downloader p {
+  font-family: PingFang TC, Roboto;
+  color: #212529;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.btn-downloader span.icon-download {
+  color: #212529;
+}
+
+.btn-downloader:hover {
+  background-color: rgba(255, 58, 30, 0.1);
+}
+
+.btn-downloader:hover p {
+  font-family: PingFang TC, Roboto;
+  color: #212529;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.btn-downloader:hover span.icon-download {
+  color: #FF3A1E;
 }
 
 main {
@@ -12301,6 +12356,33 @@ main {
           transform: scale(1.25);
   -webkit-transition: 0.1s all ease-in-out;
   transition: 0.1s all ease-in-out;
+}
+
+.card-header {
+  position: relative;
+}
+
+.card-header-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.card-header[aria-expanded="false"] {
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.card-header[aria-expanded="false"] .card-header-toggle img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .ui-slider {

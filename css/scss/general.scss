@@ -236,9 +236,18 @@
 
 
 .btn {
+    display: flex;
+    align-items: center;
     padding: 0.375rem 1.25rem;
 
     &-primary {
+
+        &[disabled] {
+            background-color: $puregray-400;
+            border-color: $puregray-400;
+            color: $text-secondary;
+        }
+
         &-fb {
             background: $info;
             color: #FFFFFF;
@@ -252,6 +261,36 @@
         &-light {
             color: $text-black;
             background: rgba(255, 58, 30, 0.1);
+        }
+    }
+
+    &-downloader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+        background-color: $puregray-200;
+        padding: 8px 10px !important;
+
+        p {
+            @include common-text(body, regular);
+        }
+
+        span.icon-download {
+            color: $text-black;
+        }
+
+        &:hover {
+            background-color: rgba($primary, 0.1);
+
+            p {
+                @include common-text(body, medium);
+            }
+            
+            span.icon-download {
+                color: $primary;
+            }
+
         }
     }
 }
@@ -318,6 +357,30 @@ main {
         > img {
             transform: scale(1.25);
             transition: 0.1s all ease-in-out;
+        }
+    }
+
+    &-header {
+        position: relative;
+
+        &-toggle {
+            display: flex;
+            align-items: center;
+            width: 40px;
+            height: 100%;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+        
+        &[aria-expanded="false"] {
+            border-bottom: 1px solid rgba(0, 0, 0, 0);
+
+            .card-header-toggle {
+                img {
+                    transform: rotate(180deg);
+                }
+            }
         }
     }
 }

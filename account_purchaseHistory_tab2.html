@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -600,90 +601,264 @@
                <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                      <li class="breadcrumb-item"><a href="#">會員中心</a></li>
-                     <li class="breadcrumb-item active" aria-current="page">我的錢包</li>
+                     <li class="breadcrumb-item active" aria-current="page">訂單記錄</li>
                   </ol>
                </nav>
             </div>
 
-            <div class="row">
-               <div class="col-12">
-                  <div class="Summary">
-                     <div class="Summary-section">
-                        <span class="py-1">
-                           <img src="assets/icon/money.svg" />
-                        </span>
-                        <div class="d-flex justify-content-between pb-1">
-                           <h1 class="H1-medium m-0">
-                              5,000
-                              <span class="H2-medium ms-3">NT$</span>
-                           </h1>
-                           <button class="btn btn-primary px-6 me-4" data-bs-toggle="modal" data-bs-target="#requestPayment">
-                              匯款申請
-                           </button>
-                        </div>
-                        <p class="H3-medium mt-1">目前可領取金額</p>
-                     </div>
-                     <div class="Summary-section py-2">
-                        <div class="p-1">
-                           <h3 class="H3-medium">匯款申請說明</h3>
-                           <ul class="Body-regular ps-4 mb-0">
-                              <li>分配金額超過NT$500，即可申請匯款。</li>
-                              <li>款項將於申請匯款當日起算30天內匯出。</li>
-                              <li>可領取金額為您實際可收到的金額。</li>
-                              <li>提出匯款申請後，客服人員將會與您聯繫處理後續作業。</li>
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <table class="SellingReportTable table mt-5">
+            <ul class="nav mb-4 mt-5">
+               <li class="nav-item">
+                  <a class="nav-link" href="#">我的訂單</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">下載模型</a>
+               </li>
+            </ul>
+            <table class="SellingReportTable SellingReportTable-separate table">
                <colgroup>
+                  <col class="SellingReportTable-id">
+                  <col class="SellingReportTable-name">
+                  <col class="SellingReportTable-permission" style="width: 170px;">
                   <col class="SellingReportTable-submitTime">
-                  <col class="SellingReportTable-payment">
-                  <col class="SellingReportTable-status">
-                  <col class="SellingReportTable-comment">
+                  <col class="SellingReportTable-downloadAction">
+                  <col class="SellingReportTable-commentAction">
                </colgroup>
                <thead>
                  <tr>
-                   <th scope="col">申請日期</th>
-                   <th scope="col">匯款金額</th>
-                   <th scope="col">狀態</th>
-                   <th scope="col">備註</th>
+                   <th scope="col">模型ID</th>
+                   <th scope="col">模型名稱</th>
+                   <th scope="col">
+                      授權條款<span class="icon-info icon-xs ms-2"></span>
+                     </th>
+                   <th scope="col">最新上傳日期</th>
+                   <th scope="col">下載檔案</th>
+                   <th scope="col">評論</th>
                  </tr>
                </thead>
                <tbody>
                   <tr>
                      <td>
-                        <p>2021/01/31</p>
+                        #010123
                      </td>
                      <td>
-                        <p>NT$ 1,250</p>
+                        <p>
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
+                        </p>
                      </td>
                      <td>
-                        <p>處理中</p>
+                        <p>
+                           非商業授權CC BY-NC-SA 3.0
+                        </p>
                      </td>
                      <td>
-                        <p></p>
+                        <p>
+                           2021/01/31
+                        </p>
+                     </td>
+                     <td>
+                        <div class="d-flex flex-column">
+                           <button type="button" class="btn btn-downloader w-100 mb-2">
+                              <p class="d-flex align-items-center">
+                                 <span class="icon-form icon-xs m-0 me-1"></span>
+                                 table_stl.zip
+                              </p>
+                              <span class="icon-download icon-sm"></span>
+                           </button>
+                           <button type="button" class="btn btn-downloader w-100 mb-2">
+                              <p class="d-flex align-items-center">
+                                 <span class="icon-form icon-xs m-0 me-1"></span>
+                                 table_stl.zip
+                              </p>
+                              <span class="icon-download icon-sm"></span>
+                           </button>
+                           <button type="button" class="btn btn-downloader w-100 mb-2">
+                              <p class="d-flex align-items-center">
+                                 <span class="icon-form icon-xs m-0 me-1"></span>
+                                 table_stl.zip
+                              </p>
+                              <span class="icon-download icon-sm"></span>
+                           </button>
+                           <button type="button" class="btn btn-downloader w-100 mb-2">
+                              <p class="d-flex align-items-center">
+                                 <span class="icon-form icon-xs m-0 me-1"></span>
+                                 table_stl.zip
+                              </p>
+                              <span class="icon-download icon-sm"></span>
+                           </button>
+
+                        </div>
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-outline-info border-0">
+                           <span class="icon-star icon-xs me-1"></span>
+                           給予評論
+                        </button>
                      </td>
                   </tr>
                   <tr>
                      <td>
-                        <p>2021/01/31</p>
+                        #010123
                      </td>
                      <td>
-                        <p>NT$ 1,150</p>
+                        <p>
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名稱範例
+                        </p>
                      </td>
                      <td>
-                        <p>已完成</p>
+                        <p>
+                           非商業授權CC BY-NC-SA 3.0
+                        </p>
                      </td>
                      <td>
-                        <p>已將款項會到XXXX帳戶，請查收。</p>
+                        <p>
+                           2021/01/31
+                        </p>
+                     </td>
+                     <td>
+                        <div class="d-flex flex-column">
+                           <button type="button" class="btn btn-downloader w-100 mb-2">
+                              <p class="d-flex align-items-center">
+                                 <span class="icon-form icon-xs m-0 me-1"></span>
+                                 table_stl.zip
+                              </p>
+                              <span class="icon-download icon-sm"></span>
+                           </button>
+                        </div>
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-outline-secondary border-0">
+                           <span class="icon-star icon-xs me-1"></span>
+                           查看評論
+                        </button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        #010123
+                     </td>
+                     <td>
+                        <p>
+                           模型名稱範例模型名稱範例模型名稱範例
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           非商業授權CC BY-NC-SA 3.0
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           2021/01/31
+                        </p>
+                     </td>
+                     <td>
+                        <div class="d-flex flex-column">
+                           <button type="button" class="btn btn-downloader w-100 mb-2">
+                              <p class="d-flex align-items-center">
+                                 <span class="icon-form icon-xs m-0 me-1"></span>
+                                 table_stl.zip
+                              </p>
+                              <span class="icon-download icon-sm"></span>
+                           </button>
+                        </div>
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-outline-secondary border-0">
+                           <span class="icon-star icon-xs me-1"></span>
+                           查看評論
+                        </button>
+                     </td>
+                  </tr>
+                  <tr class="Invalid">
+                     <td colspan="6">
+                        下載期限至 <span>2022.01.31 12:00</span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        #010123
+                     </td>
+                     <td>
+                        <p>
+                           模型名稱範例模型名稱範例模型名稱範例
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           非商業授權CC BY-NC-SA 3.0
+                        </p>
+                     </td>
+                     <td>
+                        <p>
+                           2021/01/31
+                        </p>
+                     </td>
+                     <td>
+                        <div class="d-flex flex-column">
+                           <button type="button" class="btn btn-downloader w-100 mb-2">
+                              <p class="d-flex align-items-center">
+                                 <span class="icon-form icon-xs m-0 me-1"></span>
+                                 table_stl.zip
+                              </p>
+                              <span class="icon-download icon-sm"></span>
+                           </button>
+                        </div>
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-outline-secondary border-0">
+                           <span class="icon-star icon-xs me-1"></span>
+                           查看評論
+                        </button>
+                     </td>
+                  </tr>
+                  <tr class="Overdue">
+                     <td colspan="6">
+                        創作者於 <span>2021/12/31</span> 將模型下架，已超過14天下載期限
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        #010123
+                     </td>
+                     <td>
+                        模型名稱範例模型名稱範例模型名稱範例
+                     </td>
+                     <td>
+                     </td>
+                     <td>
+                     </td>
+                     <td>
+                     </td>
+                     <td>
                      </td>
                   </tr>
                </tbody>
             </table>
+            <div class="row justify-content-center pt-3">
+               <div class="col-9">
+                  <nav class="ProductsPagination">
+                     <button type="button" class="btn btn-outline-primary">
+                        <span class="icon-previous icon-xxs"></span>
+                        上一頁
+                     </button>
+                     <ul class="pagination mb-0">
+                        <li class="page-item active" aria-current="page">
+                           <span class="page-link">1</span>
+                        </li>
+                        <li class="page-item">
+                           <a class="page-link" href="#">2</a>
+                           </li>
+                        <li class="page-item">
+                           <a class="page-link" href="#">3</a>
+                        </li>
+                     </ul>
+                     <button type="button" class="btn btn-primary">
+                        下一頁
+                        <span class="icon-next icon-xxs"></span>
+                     </button>
+                  </nav>
+               </div>
+            </div>
          </div>
       </div>
    </div>

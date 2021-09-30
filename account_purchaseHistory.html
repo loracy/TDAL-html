@@ -600,90 +600,272 @@
                <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                      <li class="breadcrumb-item"><a href="#">會員中心</a></li>
-                     <li class="breadcrumb-item active" aria-current="page">我的錢包</li>
+                     <li class="breadcrumb-item active" aria-current="page">訂單記錄</li>
                   </ol>
                </nav>
             </div>
 
-            <div class="row">
-               <div class="col-12">
-                  <div class="Summary">
-                     <div class="Summary-section">
-                        <span class="py-1">
-                           <img src="assets/icon/money.svg" />
-                        </span>
-                        <div class="d-flex justify-content-between pb-1">
-                           <h1 class="H1-medium m-0">
-                              5,000
-                              <span class="H2-medium ms-3">NT$</span>
-                           </h1>
-                           <button class="btn btn-primary px-6 me-4" data-bs-toggle="modal" data-bs-target="#requestPayment">
-                              匯款申請
-                           </button>
-                        </div>
-                        <p class="H3-medium mt-1">目前可領取金額</p>
+            <ul class="nav mb-4 mt-5">
+               <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">我的訂單</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">下載模型</a>
+               </li>
+            </ul>
+            <div class="card CartList my-3">
+               <div class="card-header p-3 d-flex justify-content-between" 
+               data-bs-toggle="collapse" 
+               href="#purchaseRecord-1" 
+               role="button" aria-expanded="true" aria-controls="purchaseRecord-1">
+                  <h3 class="H3-medium p-1 m-0">
+                     訂單編號
+                     <span class="ms-1">910293</span>
+                  </h3>
+                  <h3 class="H3-medium p-1 pe-6 m-0">
+                     訂單金額
+                     <span class="ms-1">NT$ 605</span>
+                  </h3>
+                  <span class="card-header-toggle me-3">
+                     <img src="assets/icon/btn_unfold.svg" />
+                  </span>
+               </div>
+               <div class="card-body p-3 pb-1 collapse show" id="purchaseRecord-1">
+                  <div class="CartList-item">
+                     <div class="d-flex flex-grow-1 p-1 justify-content-between align-items-center">
+                        <p class="CartList-item-id Small-regular-secondary">
+                           #010123
+                        </p>
+                        <p class="CartList-item-name">
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名
+                        </p>
+                        <p class="CartList-item-certification">
+                           非商業授權(CC BY-NC-SA 3.0) 
+                           <span class="icon-info icon-xs ms-2 text-secondary"></span>
+                        </p>
+                        <span class="CartList-item-price flex-grow-1">NT$ 336</span>
                      </div>
-                     <div class="Summary-section py-2">
-                        <div class="p-1">
-                           <h3 class="H3-medium">匯款申請說明</h3>
-                           <ul class="Body-regular ps-4 mb-0">
-                              <li>分配金額超過NT$500，即可申請匯款。</li>
-                              <li>款項將於申請匯款當日起算30天內匯出。</li>
-                              <li>可領取金額為您實際可收到的金額。</li>
-                              <li>提出匯款申請後，客服人員將會與您聯繫處理後續作業。</li>
-                           </p>
-                        </div>
+                  </div>
+                  <div class="CartList-item">
+                     <div class="d-flex flex-grow-1 p-1 justify-content-between align-items-center">
+                        <p class="CartList-item-id Small-regular-secondary">
+                           #010123
+                        </p>
+                        <p class="CartList-item-name">
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名
+                        </p>
+                        <p class="CartList-item-certification">
+                           非商業授權(CC BY-NC-SA 3.0)
+                           <span class="icon-info icon-xs ms-2 text-secondary"></span>
+                        </p>
+                        <span class="CartList-item-price flex-grow-1">NT$ 336</span>
+                     </div>
+                  </div>
+                  <div class="CartList-footer pb-0">
+                     <div class="mx-1 mt-1 d-flex justify-content-between">
+                        <p class="H4-medium">小計</p>
+                        <p class="H4-medium">NT＄ 605</p>
+                     </div>
+                     <div class="mx-1 d-flex justify-content-between">
+                        <p class="H4-regular text-primary my-1">下殺7折優惠模型</p>
+                        <p class="H4-regular text-primary my-1">- NT＄ 144</p>
+                     </div>
+                     <div class="mx-1 d-flex justify-content-between">
+                        <p class="H4-regular text-primary mt-1">定模型限時免費</p>
+                        <p class="H4-regular text-primary mt-1">- NT＄ 125</p>
+                     </div>
+                     <div class="m-1 d-flex justify-content-between">
+                        <p class="H3-medium">總計</h1>
+                        <p class="H3-medium">NT $336</h1>
+                     </div>
+                  </div>
+                  <div class="CartList-footer pb-0">
+                     <div class="flex-column p-1">
+                        <span class="d-flex justify-content-between">
+                           <p class="H4-medium">訂單成立時間</p>
+                           <p class="H4-regular">2022/01/31 11:59</p>
+                        </span>
+                        <span class="d-flex justify-content-between">
+                           <p class="H4-medium">付款時間</p>
+                           <p class="H4-regular">2022/01/31 11:59</p>
+                        </span>
+                        <span class="d-flex justify-content-between">
+                           <p  class="H4-medium">付款卡號</p>
+                           <p class="H4-regular">VISA 543375******621</p>
+                        </span>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="card CartList my-3">
+               <div class="card-header p-3 d-flex justify-content-between"
+               data-bs-toggle="collapse" 
+               href="#purchaseRecord-2"
+               role="button" aria-expanded="false" aria-controls="purchaseRecord-2">
+                  <h3 class="H3-medium p-1 m-0">
+                     訂單編號
+                     <span class="ms-1">910293</span>
+                  </h3>
+                  <h3 class="H3-medium p-1 pe-6 m-0">
+                     訂單金額
+                     <span class="ms-1">NT$ 605</span>
+                  </h3>
+                  <span class="card-header-toggle me-3">
+                     <img src="assets/icon/btn_unfold.svg" />
+                  </span>
+               </div>
+               <div class="card-body p-3 pb-1 collapse" id="purchaseRecord-2">
+                  <div class="CartList-item">
+                     <div class="d-flex flex-grow-1 p-1 justify-content-between align-items-center">
+                        <p class="CartList-item-id Small-regular-secondary">
+                           #010123
+                        </p>
+                        <p class="CartList-item-name">
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名
+                        </p>
+                        <p class="CartList-item-certification">
+                           非商業授權(CC BY-NC-SA 3.0) 
+                           <span class="icon-info icon-xs ms-2 text-secondary"></span>
+                        </p>
+                        <span class="CartList-item-price flex-grow-1">NT$ 336</span>
+                     </div>
+                  </div>
+                  <div class="CartList-item">
+                     <div class="d-flex flex-grow-1 p-1 justify-content-between align-items-center">
+                        <p class="CartList-item-id Small-regular-secondary">
+                           #010123
+                        </p>
+                        <p class="CartList-item-name">
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名
+                        </p>
+                        <p class="CartList-item-certification">
+                           非商業授權(CC BY-NC-SA 3.0)
+                           <span class="icon-info icon-xs ms-2 text-secondary"></span>
+                        </p>
+                        <span class="CartList-item-price flex-grow-1">NT$ 336</span>
+                     </div>
+                  </div>
+                  <div class="CartList-footer pb-0">
+                     <div class="mx-1 mt-1 d-flex justify-content-between">
+                        <p class="H4-medium">小計</p>
+                        <p class="H4-medium">NT＄ 605</p>
+                     </div>
+                     <div class="mx-1 d-flex justify-content-between">
+                        <p class="H4-regular text-primary my-1">下殺7折優惠模型</p>
+                        <p class="H4-regular text-primary my-1">- NT＄ 144</p>
+                     </div>
+                     <div class="mx-1 d-flex justify-content-between">
+                        <p class="H4-regular text-primary mt-1">定模型限時免費</p>
+                        <p class="H4-regular text-primary mt-1">- NT＄ 125</p>
+                     </div>
+                     <div class="m-1 d-flex justify-content-between">
+                        <p class="H3-medium">總計</h1>
+                        <p class="H3-medium">NT $336</h1>
+                     </div>
+                  </div>
+                  <div class="CartList-footer pb-0">
+                     <div class="flex-column p-1">
+                        <span class="d-flex justify-content-between">
+                           <p class="H4-medium">訂單成立時間</p>
+                           <p class="H4-regular">2022/01/31 11:59</p>
+                        </span>
+                        <span class="d-flex justify-content-between">
+                           <p class="H4-medium">付款時間</p>
+                           <p class="H4-regular">2022/01/31 11:59</p>
+                        </span>
+                        <span class="d-flex justify-content-between">
+                           <p class="H4-medium">付款卡號</p>
+                           <p class="H4-regular">VISA 543375******621</p>
+                        </span>
                      </div>
                   </div>
                </div>
             </div>
-
-            <table class="SellingReportTable table mt-5">
-               <colgroup>
-                  <col class="SellingReportTable-submitTime">
-                  <col class="SellingReportTable-payment">
-                  <col class="SellingReportTable-status">
-                  <col class="SellingReportTable-comment">
-               </colgroup>
-               <thead>
-                 <tr>
-                   <th scope="col">申請日期</th>
-                   <th scope="col">匯款金額</th>
-                   <th scope="col">狀態</th>
-                   <th scope="col">備註</th>
-                 </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td>
-                        <p>2021/01/31</p>
-                     </td>
-                     <td>
-                        <p>NT$ 1,250</p>
-                     </td>
-                     <td>
-                        <p>處理中</p>
-                     </td>
-                     <td>
-                        <p></p>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>
-                        <p>2021/01/31</p>
-                     </td>
-                     <td>
-                        <p>NT$ 1,150</p>
-                     </td>
-                     <td>
-                        <p>已完成</p>
-                     </td>
-                     <td>
-                        <p>已將款項會到XXXX帳戶，請查收。</p>
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
+            <div class="card CartList my-3">
+               <div class="card-header p-3 d-flex justify-content-between"
+               data-bs-toggle="collapse" 
+               href="#purchaseRecord-3"
+               role="button" aria-expanded="false" aria-controls="purchaseRecord-3">
+                  <h3 class="H3-medium p-1 m-0">
+                     訂單編號
+                     <span class="ms-1">910293</span>
+                  </h3>
+                  <h3 class="H3-medium p-1 pe-6 m-0">
+                     訂單金額
+                     <span class="ms-1">NT$ 605</span>
+                  </h3>
+                  <span class="card-header-toggle me-3">
+                     <img src="assets/icon/btn_unfold.svg" />
+                  </span>
+               </div>
+               <div class="card-body p-3 pb-1 collapse" id="purchaseRecord-3">
+                  <div class="CartList-item">
+                     <div class="d-flex flex-grow-1 p-1 justify-content-between align-items-center">
+                        <p class="CartList-item-id Small-regular-secondary">
+                           #010123
+                        </p>
+                        <p class="CartList-item-name">
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名
+                        </p>
+                        <p class="CartList-item-certification">
+                           非商業授權(CC BY-NC-SA 3.0) 
+                           <span class="icon-info icon-xs ms-2 text-secondary"></span>
+                        </p>
+                        <span class="CartList-item-price flex-grow-1">NT$ 336</span>
+                     </div>
+                  </div>
+                  <div class="CartList-item">
+                     <div class="d-flex flex-grow-1 p-1 justify-content-between align-items-center">
+                        <p class="CartList-item-id Small-regular-secondary">
+                           #010123
+                        </p>
+                        <p class="CartList-item-name">
+                           模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名模型名稱範例模型名稱範例模型名稱範例模型名稱範例模型名
+                        </p>
+                        <p class="CartList-item-certification">
+                           非商業授權(CC BY-NC-SA 3.0)
+                           <span class="icon-info icon-xs ms-2 text-secondary"></span>
+                        </p>
+                        <span class="CartList-item-price flex-grow-1">NT$ 336</span>
+                     </div>
+                  </div>
+                  <div class="CartList-footer pb-0">
+                     <div class="mx-1 mt-1 d-flex justify-content-between">
+                        <p class="H4-medium">小計</p>
+                        <p class="H4-medium">NT＄ 605</p>
+                     </div>
+                     <div class="mx-1 d-flex justify-content-between">
+                        <p class="H4-regular text-primary my-1">下殺7折優惠模型</p>
+                        <p class="H4-regular text-primary my-1">- NT＄ 144</p>
+                     </div>
+                     <div class="mx-1 d-flex justify-content-between">
+                        <p class="H4-regular text-primary mt-1">定模型限時免費</p>
+                        <p class="H4-regular text-primary mt-1">- NT＄ 125</p>
+                     </div>
+                     <div class="m-1 d-flex justify-content-between">
+                        <p class="H3-medium">總計</h1>
+                        <p class="H3-medium">NT $336</h1>
+                     </div>
+                  </div>
+                  <div class="CartList-footer pb-0">
+                     <div class="flex-column p-1">
+                        <span class="d-flex justify-content-between">
+                           <p class="H4-medium">訂單成立時間</p>
+                           <p class="H4-regular">2022/01/31 11:59</p>
+                        </span>
+                        <span class="d-flex justify-content-between">
+                           <p class="H4-medium">付款時間</p>
+                           <p class="H4-regular">2022/01/31 11:59</p>
+                        </span>
+                        <span class="d-flex justify-content-between">
+                           <p class="H4-medium">付款卡號</p>
+                           <p class="H4-regular">VISA 543375******621</p>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
