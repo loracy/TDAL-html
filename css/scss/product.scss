@@ -1,0 +1,86 @@
+@import "mixin";
+@import "variable";
+
+.card {
+    border-radius: 0px;
+
+    &:hover {
+        cursor: default;
+    }
+}
+
+.Product {
+    padding-top: 40px;
+    padding-bottom: 100px;
+
+    // .bg-light {
+    //     background-color: $puregray-100 !important;
+    //     margin-bottom: 206px;
+    // }
+}
+
+.ProductCover {
+    display: flex;
+    flex-direction: column;
+
+    &-preview {
+        display: flex;
+        margin-top: 15px;
+        height: 90px;
+        
+        &-item {
+            margin: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            flex-grow: 1;
+            flex-basis: 0;
+            border-radius: 5px;
+
+            img {
+                height: 100%;
+            }
+
+            .btn-primary {
+                padding: 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #FFF !important;
+                width: 100%;
+
+                span {
+                    color: #FFF !important;
+                }
+            }
+        }
+    }
+}
+
+.ProductRecommend {
+    margin-top: 160px;
+
+    .card {
+        width: 163px;
+        margin: 10px;
+
+        &-body {
+            overflow: hidden;
+            padding: 10px 12px;
+        }
+        
+        &-text {
+            word-break: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            line-height: 16px; /* fallback */
+            max-height: 32px; /* fallback */
+            -webkit-line-clamp: 2; /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
+
+    }
+
+}

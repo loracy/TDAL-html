@@ -1,0 +1,103 @@
+.card {
+  border-radius: 0px;
+}
+
+.card:hover {
+  cursor: default;
+}
+
+.Product {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.ProductCover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ProductCover-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+  height: 90px;
+}
+
+.ProductCover-preview-item {
+  margin: 8px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  border-radius: 5px;
+}
+
+.ProductCover-preview-item img {
+  height: 100%;
+}
+
+.ProductCover-preview-item .btn-primary {
+  padding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFF !important;
+  width: 100%;
+}
+
+.ProductCover-preview-item .btn-primary span {
+  color: #FFF !important;
+}
+
+.ProductRecommend {
+  margin-top: 160px;
+}
+
+.ProductRecommend .card {
+  width: 163px;
+  margin: 10px;
+}
+
+.ProductRecommend .card-body {
+  overflow: hidden;
+  padding: 10px 12px;
+}
+
+.ProductRecommend .card-text {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 16px;
+  /* fallback */
+  max-height: 32px;
+  /* fallback */
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+/*# sourceMappingURL=product.css.map */

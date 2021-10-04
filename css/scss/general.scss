@@ -264,7 +264,7 @@
         }
 
         &-light {
-            color: $text-black;
+            color: $text-black !important;
             background: rgba(255, 58, 30, 0.1);
         }
     }
@@ -1715,4 +1715,9 @@ footer {
         color: #C4C4C4 !important;
         margin-left: 10px;
     }
+}
+
+.Tags {
+    display: flex;
+    flex-wrap: wrap;
 }

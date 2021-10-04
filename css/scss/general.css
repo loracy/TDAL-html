@@ -12224,7 +12224,7 @@ fieldset:disabled .btn {
 }
 
 .btn-primary-light {
-  color: #212529;
+  color: #212529 !important;
   background: rgba(255, 58, 30, 0.1);
 }
 
@@ -13813,5 +13813,13 @@ footer .FooterList ul li a {
 .dropdown-menu[aria-labelledby="cart"] .icon-delete {
   color: #C4C4C4 !important;
   margin-left: 10px;
+}
+
+.Tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=general.css.map */
