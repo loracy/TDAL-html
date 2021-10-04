@@ -27,9 +27,23 @@ $(document).ready(function() {
     });
 
     $('.btn[updload]').each(function(index) {
-        console.log($(this).find('.FileUploaderWrapper-progressBar'));
-        console.log($(this).attr('updload'));
         $(this).find('.FileUploaderWrapper-progressBar').css('width', $(this).attr('updload') + '%');
+    });
+
+    $('#dualListboxImporter').click(function(){
+        let selectedAmount = $('.form-select-dualListbox[dualListbox="left"] option:selected').length;
+        let $selectedItems = $('.form-select-dualListbox[dualListbox="left"] option:selected');
+
+        $selectedItems.remove();
+        $('.form-select-dualListbox[dualListbox="right"]').append($selectedItems);
+    });
+    
+    $('#dualListboxExporter').click(function(){
+        let selectedAmount = $('.form-select-dualListbox[dualListbox="right"] option:selected').length;
+        let $selectedItems = $('.form-select-dualListbox[dualListbox="right"] option:selected');
+
+        $selectedItems.remove();
+        $('.form-select-dualListbox[dualListbox="left"]').append($selectedItems);
     });
 });
 
