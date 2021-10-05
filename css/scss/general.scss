@@ -701,6 +701,12 @@ main {
 
 .breadcrumb {
     @include common-text(h3, regular);
+
+    a {
+        text-decoration: none;
+        color: $text-black;
+        font-weight: 400;
+    }
 }
 
 .bootstrap-autocomplete.dropdown-menu {
@@ -1720,4 +1726,9 @@ footer {
 .Tags {
     display: flex;
     flex-wrap: wrap;
+
+    button {
+        margin: 6px 10px 6px 0;
+        border-radius: 50rem !important;
+    }
 }
