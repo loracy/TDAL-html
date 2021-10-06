@@ -19,18 +19,22 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
-.ProductCover-preview {
+.ProductCover .carousel-indicators {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 7px 0 0 0;
-  position: unset;
+  margin: 0;
+  height: calc(90px + 8px);
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  bottom: 0;
 }
 
-.ProductCover-preview-item {
-  height: 90px;
+.ProductCover .carousel-indicators button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,30 +44,35 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  border-radius: 5px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  width: auto;
+  height: auto;
   margin: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  opacity: 1;
   overflow: hidden;
+  text-indent: unset;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
 }
 
-.ProductCover-preview-item:first-of-type {
+.ProductCover .carousel-indicators button:first-of-type {
   margin-left: 0;
 }
 
-.ProductCover-preview-item:last-of-type {
+.ProductCover .carousel-indicators button:last-of-type {
   margin-right: 0;
 }
 
-.ProductCover-preview-item img {
+.ProductCover .carousel-indicators button img {
   height: 100%;
 }
 
-.ProductCover-preview-item .btn-primary {
-  padding: 12px;
+.ProductCover .carousel-indicators button[data-bs-toggle="modal"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,26 +84,16 @@
       -ms-flex-align: center;
           align-items: center;
   color: #FFF !important;
-  width: 100%;
+  padding: 12px;
+  background-color: #FF3A1E !important;
 }
 
-.ProductCover-preview-item .btn-primary span {
+.ProductCover .carousel-indicators button[data-bs-toggle="modal"] span {
   color: #FFF !important;
 }
 
-.ProductCover-preview-item button[data-bs-target] {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  width: auto;
-  height: auto;
-  margin: 0;
-  text-indent: unset;
-  background-color: transparent;
-  border: none;
-  opacity: 1;
-  -webkit-transition: opacity 0.6s ease;
-  transition: opacity 0.6s ease;
+.ProductCover .carousel-inner {
+  margin-bottom: calc(90px + 15px);
 }
 
 .ProductRecommend {
@@ -121,5 +120,14 @@
   -webkit-line-clamp: 2;
   /* number of lines to show */
   -webkit-box-orient: vertical;
+}
+
+.modal#previewProdcutThreeD .ProductCover .carousel-indicators button[data-bs-target] {
+  max-width: 120px;
+}
+
+.modal#previewProdcutThreeD .ProductCover .carousel-indicators button[data-bs-target].active {
+  -webkit-box-shadow: 0 0 0 2px #248DEE;
+          box-shadow: 0 0 0 2px #248DEE;
 }
 /*# sourceMappingURL=product.css.map */
