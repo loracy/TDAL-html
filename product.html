@@ -325,6 +325,7 @@
      <div class="navbar navbar-expand shadow-sm">
        <div class="container-fluid">
          <a href="#" class="navbar-brand d-flex align-items-center justify-content-center">
+            <img class="w-100" src="assets/img/logo/logo.png" />
          </a>
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto">
@@ -650,25 +651,49 @@
             <div class="col-8">
                <div class="ProductCover">
                   <div id="productCoverImage" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                     <div class="ProductCover-preview carousel-indicators">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#previewProdcutThreeD">
+                           <img src="assets/icon/3d.svg" />
+                           <span class="Small-medium">3D預覽</span>
+                        </button>
+                        <button type="button" data-bs-target="#productCoverImage" data-bs-slide-to="0" class="active" aria-current="true">
+                           <img src="assets/img/product_1.png">
+                        </button>
+                        <button type="button" data-bs-target="#productCoverImage" data-bs-slide-to="1">
+                           <img src="assets/img/product_2.png">
+                        </button>
+                        <button type="button" data-bs-target="#productCoverImage" data-bs-slide-to="2">
+                           <img src="assets/img/product_3.png">
+                        </button>
+                        <button type="button" data-bs-target="#productCoverImage" data-bs-slide-to="3">
+                           <img src="assets/img/product_4.png">
+                        </button>
+                        <button type="button" data-bs-target="#productCoverImage" data-bs-slide-to="4">
+                           <img src="assets/img/product_5.png">
+                        </button>
+                        <button type="button" data-bs-target="#productCoverImage" data-bs-slide-to="5">
+                           <img src="assets/img/product_6.png">
+                        </button>
+                     </div>
                      <div class="carousel-inner">
-                       <div class="carousel-item active">
+                        <div class="carousel-item active">
                            <img src="assets/img/product_1.png" class="d-block w-100">
-                       </div>
-                       <div class="carousel-item">
+                        </div>
+                        <div class="carousel-item">
                            <img src="assets/img/product_2.png" class="d-block w-100">
-                       </div>
-                       <div class="carousel-item">
+                        </div>
+                        <div class="carousel-item">
                            <img src="assets/img/product_3.png" class="d-block w-100">
-                       </div>
-                       <div class="carousel-item">
+                        </div>
+                        <div class="carousel-item">
                            <img src="assets/img/product_4.png" class="d-block w-100">
-                       </div>
-                       <div class="carousel-item">
+                        </div>
+                        <div class="carousel-item">
                            <img src="assets/img/product_5.png" class="d-block w-100">
-                       </div>
-                       <div class="carousel-item">
+                        </div>
+                        <div class="carousel-item">
                            <img src="assets/img/product_6.png" class="d-block w-100">
-                       </div>
+                        </div>
                      </div>
                      <button class="carousel-control-prev" type="button" data-bs-target="#productCoverImage" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -678,44 +703,6 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                      </button>
-                  </div>
-                  <div class="ProductCover-preview carousel-indicators">
-                     <div class="ProductCover-preview-item">
-                        <button class="btn btn-primary">
-                           <img src="assets/icon/3d.svg" />
-                           <span class="Small-medium">3D預覽</span>
-                        </button>
-                     </div>
-                     <div class="ProductCover-preview-item">
-                        <button type="button" data-bs-target="#productCoverImage" data-bs-slide-to="0" class="active" aria-current="true">
-                           <img src="assets/img/product_1.png">
-                        </button>
-                     </div>
-                     <div class="ProductCover-preview-item">
-                        <button type="button" data-bs-target="#productCoverImage" data-bs-slide-to="1">
-                           <img src="assets/img/product_2.png">
-                        </button>
-                     </div>
-                     <div class="ProductCover-preview-item">
-                        <button type="button" data-bs-target="#productCoverImage" data-bs-slide-to="2">
-                           <img src="assets/img/product_3.png">
-                        </button>
-                     </div>
-                     <div class="ProductCover-preview-item">
-                        <button type="button" data-bs-target="#productCoverImage" data-bs-slide-to="3">
-                           <img src="assets/img/product_4.png">
-                        </button>
-                     </div>
-                     <div class="ProductCover-preview-item">
-                        <button type="button" data-bs-target="#productCoverImage" data-bs-slide-to="4">
-                           <img src="assets/img/product_5.png">
-                        </button>
-                     </div>
-                     <div class="ProductCover-preview-item">
-                        <button type="button" data-bs-target="#productCoverImage" data-bs-slide-to="5">
-                           <img src="assets/img/product_6.png">
-                        </button>
-                     </div>
                   </div>
                </div>
                <div class="py-2">
@@ -1067,6 +1054,62 @@
       </div>
   </div>
 </footer>
+<div class="modal fade" id="previewProdcutThreeD" abindex="-1" aria-labelledby="previewProdcutThreeD" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-lg" >
+      <div class="modal-content">
+         <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body ProductCover pt-1">
+            <div id="productCoverImage_full" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="false">
+               <div class="carousel-indicators">
+                  <button type="button" class="active"
+                  data-bs-target="#productCoverImage_full" data-bs-slide-to="0" aria-current="true">
+                     <img src="assets/img/product_1.png">
+                  </button>
+
+                  <button type="button" 
+                  data-bs-target="#productCoverImage_full" data-bs-slide-to="1">
+                     <img src="assets/img/product_2.png">
+                  </button>
+
+                  <button type="button" 
+                  data-bs-target="#productCoverImage_full" data-bs-slide-to="2">
+                     <img src="assets/img/product_3.png">
+                  </button>
+
+                  <button type="button" 
+                  data-bs-target="#productCoverImage_full" data-bs-slide-to="3">
+                     <img src="assets/img/product_4.png">
+                  </button>
+
+                  <button type="button" 
+                  data-bs-target="#productCoverImage_full" data-bs-slide-to="4">
+                     <img src="assets/img/product_5.png">
+                  </button>
+               </div>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <img src="assets/img/product_1.png" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="assets/img/product_2.png" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="assets/img/product_3.png" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="assets/img/product_4.png" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="assets/img/product_5.png" class="d-block w-100">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    <script src="js/jquery-ui.min.js"></script>
    <script src="bootstrap/js/bootstrap.min.js"></script>
