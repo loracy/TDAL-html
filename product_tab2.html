@@ -14,7 +14,8 @@
   </head>
   <body>
     
-<header>
+<header login="false">
+   <!-- modal area for header -->
    <div class="modal fade" id="siteSearch" data-bs-backdrop="static" abindex="-1" aria-labelledby="siteSearch" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl">
          <div class="modal-content">
@@ -94,18 +95,59 @@
                   </button>
                </div>
             </div>
-          </div>
+            </div>
+      </div>
+   </div>
+   <div class="modal fade" id="logInDialog" data-bs-backdrop="static" abindex="-1" aria-labelledby="logInDialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">登入</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+               <form>
+                  <div class="pb-3 mb-3 border-bottom d-flex justify-content-between">
+                     <button type="button" class="btn btn-primary-fb mr-1">
+                        使用Facebook註冊
+                     </button>
+                     <button type="button" class="btn btn-primary-gmail ml-1">
+                        使用Gmail註冊
+                     </button>
+                  </div>
+                  <div class="mb-3">
+                     <input type="text" class="form-control" placeholder="帳號*">
+                  </div>
+                  <div class="mb-3">
+                     <input type="text" class="form-control" placeholder="密碼*">
+                  </div>
+                  <div class="mb-3 d-flex">
+                     <button type="button" class="btn btn-primary flex-grow-1" data-bs-target="#emailValidateDialog" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        繼續
+                     </button>
+                  </div>
+                  <div class="mb-3 text-center">
+                     <a href="#">忘記密碼？</a>
+                  </div>
+               </form>
+               </div>
+               <div class="modal-footer">
+               <p>
+                  還沒有帳號嗎？<a href="#">前往註冊</a>
+               </p>
+               </div>
+            </div>
       </div>
    </div>
    <div class="modal fade" id="signUpDialog" data-bs-backdrop="static" abindex="-1" aria-labelledby="signUpDialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
          <div class="modal-content">
             <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">註冊</h5>
+               <h5 class="modal-title">註冊</h5>
                <p class="modal-subtitle">請建立您的帳號密碼</p>
                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-             </div>
-             <div class="modal-body">
+               </div>
+               <div class="modal-body">
                <form>
                   <div class="pb-3 mb-3 border-bottom d-flex justify-content-between">
                      <button type="button" class="btn btn-primary-fb mr-1">
@@ -130,7 +172,7 @@
                      <span class="icon-refresh icon-md"></span>
                   </div>
                   <div class="mb-3 d-flex">
-                     <button type="button" class="btn btn-primary flex-grow-1">
+                     <button type="button" class="btn btn-primary flex-grow-1" data-bs-target="#signUpInfoDialog" data-bs-toggle="modal" data-bs-dismiss="modal">
                         繼續
                      </button>
                   </div>
@@ -139,17 +181,149 @@
                      <p class="text-center"><a href="#">使用者條款</a>以及<a href="#">隱私權政策</a></p>
                   </div>
                </form>
-             </div>
-             <div class="modal-footer">
+               </div>
+               <div class="modal-footer">
                <p>
                   已經有帳戶了？<a href="#">前往登入</a>
                </p>
-             </div>            
-          </div>
+               </div>            
+            </div>
       </div>
    </div>
-  <div class="navbar navbar-expand shadow-sm">
-    <div class="container-fluid">
+   <div class="modal fade" id="emailValidateDialog" data-bs-backdrop="static" abindex="-1" aria-labelledby="emailValidateDialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Email驗證</h5>
+               <p class="modal-subtitle">帳號尚未經過驗證，請先至您的email進行驗證</p>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+               <div class="mb-3 d-flex">
+                  <button type="button" class="btn btn-primary flex-grow-1" onclick="showToast('1', '驗證信已發送至 : tdal1234@gmail.com 請前往驗證。')" data-bs-dismiss="modal">
+                     重發認證信
+                  </button>
+               </div>
+               </div>
+            </div>
+      </div>
+   </div>
+   <div class="modal fade" id="signUpInfoDialog" data-bs-backdrop="static" abindex="-1" aria-labelledby="signUpInfoDialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">註冊</h5>
+               <p class="modal-subtitle">請輸入您的基本資料</p>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                  <form>
+                  <div class="row justify-content-center g-3">
+                     <div class="col-12 mt-0">
+                        <div class="d-flex align-items-center justify-content-center">
+                           <button type="button" class="AvatarUploader">
+                              <img src="assets/img/avatar.png" />
+                           </button>
+                        </div>
+                        <div class="d-flex justify-content-center p-2">
+                           <p class="H4-medium mb-0">上傳頭像</p>
+                        </div>
+                     </div>
+                     <div class="col-6">
+                        <input type="text" class="form-control" id="input_familyName" placeholder="姓氏*">
+                     </div>
+                     <div class="col-6">
+                        <input type="text" class="form-control" id="input_name" placeholder="名字*">
+                     </div>
+                     <div class="col-12">
+                        <input type="text" class="form-control" id="input_nickName" placeholder="用戶暱稱*">
+                     </div>
+                     <div class="col-12">
+                        <input type="text" class="form-control" id="input_email" placeholder="電子信箱*">
+                     </div>
+                     <div class="col-12">
+                        <div class="d-flex align-items-center justify-content-between">
+                           <div class="form-check form-radio form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                              <label class="form-check-label" for="inlineRadio1">男性</label>
+                           </div>
+                           <div class="form-check form-radio form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                              <label class="form-check-label" for="inlineRadio2">女性</label>
+                           </div>
+                           <div class="form-check form-radio form-check-inline d-flex align-items-center">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                              <label class="form-check-label d-flex align-items-center" for="inlineRadio3">
+                                 <input class="form-control py-2 ms-2" type="text" placeholder="自訂" style="width: 150px;">
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-12">
+                        <select type="text" class="form-select" id="input_birthday">
+                           <option selected>出生年月日*</option>
+                        </select>
+                     </div>
+                     <div class="col-12">
+                        <select type="text" class="form-select" id="input_country">
+                           <option selected>居住的國家*</option>
+                        </select>
+                     </div>
+                     <div class="col-12">
+                        <select type="text" class="form-select" id="input_job">
+                           <option selected>職業類別*</option>
+                        </select>
+                     </div>
+                     <div class="col-12">
+                        <select type="text" class="form-select" id="input_interests">
+                           <option selected>您感興趣的模型* (複選)</option>
+                        </select>
+                     </div>
+                     <div class="col-12">
+                        <select type="text" class="form-select" id="input_usage">
+                           <option selected>對3D模型的用途* (複選)</option>
+                        </select>
+                     </div>
+                     <div class="col-12">
+                        <div class="d-flex align-items-center justify-content-between">
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio4" value="option1" checked>
+                              <label class="form-check-label" for="inlineRadio4">我願意收到會員專屬情報、限時優惠以及特別活動等訊息。</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                     <div class="my-3 d-flex">
+                     <button type="button" class="btn btn-primary flex-grow-1" data-bs-target="#signUpFinalDialog" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        註冊
+                     </button>
+                  </div>
+                  </form>
+               </div>
+            </div>
+      </div>
+   </div>
+   <div class="modal fade" id="signUpFinalDialog" data-bs-backdrop="static" abindex="-1" aria-labelledby="signUpFinalDialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">完成註冊</h5>
+               <p class="modal-subtitle">恭喜您完成註冊！請先至您的email進行驗證</p>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+               <div class="mb-3 d-flex">
+                  <button type="button" class="btn btn-primary flex-grow-1" data-bs-dismiss="modal">
+                     立即登入
+                  </button>
+               </div>
+               </div>
+            </div>
+      </div>
+   </div>
+   <!-- modal area for header end -->
+   <div class="navbar navbar-expand shadow-sm">
+      <div class="container-fluid">
       <a href="#" class="navbar-brand d-flex align-items-center justify-content-center">
       </a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -443,7 +617,7 @@
                <li><a class="dropdown-item" href="#">Action</a></li>
                <li><a class="dropdown-item" href="#">Another action</a></li>
                <li><a class="dropdown-item" href="#">Something else here</a></li>
-             </ul>
+               </ul>
          </div>
          <button type="button" class="btn btn-outline-primary border-0 ms-2" data-bs-toggle="modal" data-bs-target="#logInDialog">
             登入
@@ -455,9 +629,9 @@
             <span class="icon-earth icon-xs"></span> EN
          </button>
          
-       </form>
-    </div>
-  </div>
+         </form>
+      </div>
+   </div>
 </header>
 
 <main>

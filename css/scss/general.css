@@ -12443,6 +12443,7 @@ main {
   width: 18px;
   height: 16px;
   margin: 3px 2px;
+  top: 0;
   left: -28px;
   position: absolute;
   background-image: url(../../assets/icon/check.svg);
@@ -13441,28 +13442,57 @@ footer .FooterList ul li a {
   background: rgba(255, 255, 255, 0.4);
 }
 
-#signUpDialog .form-control {
+#signUpDialog a,
+#logInDialog a,
+#emailValidateDialog a,
+#signUpInfoDialog a,
+#signUpFinalDialog a {
+  color: #248DEE;
+  text-decoration: none;
+}
+
+#signUpDialog .form-control,
+#logInDialog .form-control,
+#emailValidateDialog .form-control,
+#signUpInfoDialog .form-control,
+#signUpFinalDialog .form-control {
   padding: 10px;
 }
 
-#signUpDialog .modal-content {
+#signUpDialog .modal-content,
+#logInDialog .modal-content,
+#emailValidateDialog .modal-content,
+#signUpInfoDialog .modal-content,
+#signUpFinalDialog .modal-content {
   padding: 0 calc(50% - 193px);
 }
 
-#signUpDialog .modal-header {
+#signUpDialog .modal-header,
+#logInDialog .modal-header,
+#emailValidateDialog .modal-header,
+#signUpInfoDialog .modal-header,
+#signUpFinalDialog .modal-header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-top: 40px;
   border-bottom: none;
 }
 
-#signUpDialog .modal-header .btn-close {
+#signUpDialog .modal-header .btn-close,
+#logInDialog .modal-header .btn-close,
+#emailValidateDialog .modal-header .btn-close,
+#signUpInfoDialog .modal-header .btn-close,
+#signUpFinalDialog .modal-header .btn-close {
   position: absolute;
   right: 16px;
   top: 16px;
 }
 
-#signUpDialog .modal-title {
+#signUpDialog .modal-title,
+#logInDialog .modal-title,
+#emailValidateDialog .modal-title,
+#signUpInfoDialog .modal-title,
+#signUpFinalDialog .modal-title {
   font-family: PingFang TC, Roboto;
   color: #212529;
   font-size: 18px;
@@ -13473,7 +13503,11 @@ footer .FooterList ul li a {
   text-align: center;
 }
 
-#signUpDialog .modal-subtitle {
+#signUpDialog .modal-subtitle,
+#logInDialog .modal-subtitle,
+#emailValidateDialog .modal-subtitle,
+#signUpInfoDialog .modal-subtitle,
+#signUpFinalDialog .modal-subtitle {
   font-family: PingFang TC, Roboto;
   color: #212529;
   font-size: 18px;
@@ -13484,7 +13518,11 @@ footer .FooterList ul li a {
   text-align: center;
 }
 
-#signUpDialog .modal-footer {
+#signUpDialog .modal-footer,
+#logInDialog .modal-footer,
+#emailValidateDialog .modal-footer,
+#signUpInfoDialog .modal-footer,
+#signUpFinalDialog .modal-footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
