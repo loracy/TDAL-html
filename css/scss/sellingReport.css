@@ -238,6 +238,11 @@
   margin-bottom: 0;
 }
 
+.SellingReportTable tbody tr td img {
+  width: 140px;
+  max-width: 140px;
+}
+
 .SellingReportTable tbody tr.Invalid {
   position: relative;
 }

@@ -238,12 +238,33 @@
     }
 }
 
-
 .btn {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.375rem 1.25rem;
+
+    &-sort {
+        background-color: rgba($primary, 0.1);
+        border-color: $puregray-300;
+
+        &-text {
+            color: $text-black;
+            flex: 1;
+            @include common-text(h4, medium);
+            
+        }
+
+        &-icon {
+            display: none;
+        }
+
+        &.Reverse {
+            .btn-sort-icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
 
     &-link {
         color: $info !important;
@@ -303,6 +324,22 @@
             span.icon-download {
                 color: $primary;
             }
+
+        }
+    }
+}
+
+.btn-group {
+    .btn-check:checked + .btn-sort {
+        color: #FFF !important;
+
+        .btn-sort-text {
+            color: #FFF !important;
+        }
+
+        .btn-sort-icon {
+            display: inline;
+            color: #FFF !important;
 
         }
     }
@@ -1535,41 +1572,47 @@ footer {
     margin-bottom: 36px;
     background: $puregray-100;
 
-    &-cover {
-
+    h6, p {
+        @include common-text(h3, regular);
     }
 
     &-countdown {
         background: #E84028;
-        padding: 16px;
+        padding: 30px;
 
-        p {
-            @include common-text(h2, regular, #FFFFFF);
-            margin-bottom: 0;
-            padding-top: 7px;
-            padding-bottom: 7px;
-            
-            span {
-                font-size: 30px;
-                font-weight: 700;
-                line-height: 35px;
+        &-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+            background: rgba(#FFF, 0.3);
+            border-radius: 5px;
+            margin: 0 10px;
+            width: 183px;
+            padding: 10px;
+
+            h1 {
+                color: #FFF;
+                font-family: Roboto;
+                font-size: 64px;
+                font-weight: 500;
+                line-height: 80px;
                 letter-spacing: 0px;
-                margin-bottom: 0;
-                margin-left: 6px;
-                margin-right: 6px;
+                text-align: center;
             }
-    }
+            
+            p {
+                text-align: center;
+                @include common-text(h4, medium, #FFF);
+            }
 
-    .btn {
-        &:hover {
-            color: #E84028 !important;
         }
-    }
 
-    }
-
-    h6, p {
-        @include common-text(h3, regular);
+        .btn {
+            &:hover {
+                color: #E84028 !important;
+            }
+        }
     }
 }
 
@@ -1742,11 +1785,110 @@ footer {
 }
 
 .Tags {
-    display: flex;
-    flex-wrap: wrap;
+    position: relative;
+    
+    .TagsContainer {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: scroll;
+        padding: 4px 0px;
+        
+        button {
+            margin-right: 10px;
+            border-radius: 50rem !important;
+            white-space: nowrap;
+        }
+    }
 
-    button {
-        margin: 6px 10px 6px 0;
-        border-radius: 50rem !important;
+    &-leftButton {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 8px 4px;
+        border-radius: 5px 0 0 5px;
+        background-color: #FFF;
+        height: 100%;
+
+
+        span {
+            transform: rotate(180deg);
+            color: $text-black;
+        }
+
+        &:hover {
+            background-color: $puregray-300;
+        }
+    }
+
+    &-rightButton {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 8px 4px;
+        border-radius: 0 5px 5px 0;
+        background-color: #FFF;
+        height: 100%;
+
+        span {
+            color: $text-black;
+        }
+
+        &:hover {
+            background-color: $puregray-300;
+        }
+    }
+
+    &__overflow {
+        .Tags-leftButton,
+        .Tags-rightButton {
+            display: flex;
+        }
+
+        .TagsContainer {
+            
+            button {
+                &:first-of-type {
+                    margin-left: 24px;
+                }
+                
+                &:last-of-type {
+                    margin-right: 24px;
+
+                }
+            }
+        }
+    }
+
+    &.Start {
+        .Tags-leftButton {
+            display: none;
+        }
+
+        .TagsContainer {
+            button {
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+
+    }
+    
+    &.End {
+        .Tags-rightButton {
+            display: none;
+        }
+
+        .TagsContainer {
+            button {
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+
     }
 }
