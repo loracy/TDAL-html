@@ -1,0 +1,68 @@
+.Article {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.ArticleCover {
+  height: 350px;
+}
+
+.ArticleCover img {
+  width: 100%;
+}
+
+.ArticleList .card {
+  border-bottom: none;
+}
+
+.ArticleList .card:last-of-type {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.ArticleList .card-body img {
+  width: 40px;
+}
+
+.ArticleList .card-body:hover {
+  background-color: #F2F2F2;
+}
+
+.ArticleContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.ArticleContent-main {
+  border: 1px solid #DDDDDD;
+  border-bottom: none;
+  padding: 20px 20px 30px 20px;
+}
+
+.ArticleContent-main-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ArticleContent-main-author img {
+  width: 60px;
+  height: 60px;
+}
+
+.ArticleContent-comments {
+  border: 1px solid #DDDDDD;
+  border-top: none;
+  padding: 0 20px 20px 20px;
+}
+/*# sourceMappingURL=article.css.map */

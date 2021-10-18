@@ -129,6 +129,23 @@ $(document).ready(function() {
     $(document).on('click', '.btn-check:checked + .btn-sort', function() {
         $(this).toggleClass('Reverse');
     });
+    
+    //   input field with toggleable action sheet
+    if($('div[display-by]').length > 0) {
+        $('div[display-by]').each(function(index) {
+            let inputId = $($('div[display-by]')[index]).attr('display-by');
+            
+            $('#' + inputId).focus(function() {
+                $('div[display-by="' + inputId + '"]').removeClass('d-none');
+            });
+            
+            $('#' + inputId).focusout(function() {
+                if($('div[display-by="' + inputId + '"] button:active').length == 0) {
+                    $('div[display-by="' + inputId + '"]').addClass('d-none');
+                }
+            });
+        });
+    }
 });
 
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
