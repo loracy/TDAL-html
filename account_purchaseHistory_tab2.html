@@ -690,7 +690,7 @@
                         </div>
                      </td>
                      <td>
-                        <button type="button" class="btn btn-outline-info border-0">
+                        <button type="button" class="btn btn-outline-info border-0" data-bs-toggle="modal" data-bs-target="#leaveCommentDialog">
                            <span class="icon-star icon-xs me-1"></span>
                            給予評論
                         </button>
@@ -974,6 +974,38 @@
                   </button>
                   <button type="button" class="btn btn-primary ms-2 flex-grow-1" data-bs-dismiss="modal">
                      提出申請
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="modal fade CommonModal" id="leaveCommentDialog" data-bs-backdrop="static" abindex="-1" aria-labelledby="leaveCommentDialog" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">請給予模型分數</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body pt-1">
+            <form>
+               <div class="pb-1 mb-3 d-flex justify-content-center">
+                  <span class="Rating">
+                     <img class="" src="assets/icon/rate_empty.svg" />
+                     <img class="" src="assets/icon/rate_empty.svg" />
+                     <img class="" src="assets/icon/rate_empty.svg" />
+                     <img class="" src="assets/icon/rate_empty.svg" />
+                     <img class="" src="assets/icon/rate_empty.svg" />
+                  </span>
+               </div>
+               <textarea type="text" class="form-control mb-5" rows="3" placeholder="請留下您的評論"></textarea>
+               <div class="pb-3 mb-3 d-flex justify-content-center">
+                  <button type="button" class="btn btn-outline-primary me-2 px-6">
+                     取消
+                  </button>
+                  <button type="button" class="btn btn-primary ms-2 px-6">
+                     確認送出
                   </button>
                </div>
             </form>

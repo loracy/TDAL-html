@@ -94,6 +94,23 @@
 
 .ProductCover .carousel-inner {
   margin-bottom: calc(90px + 15px);
+  max-height: 541px;
+  position: relative;
+}
+
+.ProductCover .carousel-inner.Loading {
+  background: #C4C4C4;
+}
+
+.ProductCover .carousel .progress {
+  width: 50%;
+  margin: 260px auto;
+  border-radius: 1rem;
+  background-color: #F2F2F2;
+}
+
+.ProductCover .carousel .progress-bar {
+  border-radius: 1rem;
 }
 
 .ProductRecommend {

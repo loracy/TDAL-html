@@ -1,6 +1,6 @@
 $(document).ready(function() {
+    // Global menu function
     $('.DropdownInner-item > .dropdown-item.icon-arrow').each(function(index) {
-        
         $(this).hover(function() {
             $('.DropdownInner[category="' + (index + 1) + '"]').addClass('Show');
         }, function() {
@@ -12,9 +12,11 @@ $(document).ready(function() {
         });
     });
 
+    // Bootstrap ui elements initialization
     $('#autocomplete-homeTopSearchbar').autoComplete('show');
     $('#autocomplete-siteSearch').autoComplete('show');
-
+    
+    // Jquery ui elements initialization
     $('#FilterSectionOption-4_1').slider({
         range: true,
         min: 0,
@@ -26,10 +28,33 @@ $(document).ready(function() {
         }
     });
 
+    $(".form-datepicker").datepicker({
+        dateFormat: 'yy / dd / mm'
+    });
+    
+    $(".form-datepicker").datepicker({
+        dateFormat: 'yy / dd / mm'
+    });
+
+    $('.form-mutiselect#input_interests').multiselect({
+        selectedText: " Selected #/#",
+        header: false,
+        noneSelectedText: '您感興趣的模型* (複選)',
+    });
+    
+    $('.form-mutiselect#input_usage').multiselect({
+        selectedText: " Selected #/#",
+        header: false,
+        noneSelectedText: '對3D模型的用途* (複選)',
+    });
+    
+    // Customized ui elements initialization
+    //   upload button
     $('.btn[updload]').each(function(index) {
         $(this).find('.FileUploaderWrapper-progressBar').css('width', $(this).attr('updload') + '%');
     });
-
+    
+    //   dualListbox
     $('#dualListboxImporter').click(function(){
         let selectedAmount = $('.form-select-dualListbox[dualListbox="left"] option:selected').length;
         let $selectedItems = $('.form-select-dualListbox[dualListbox="left"] option:selected');
@@ -46,6 +71,7 @@ $(document).ready(function() {
         $('.form-select-dualListbox[dualListbox="left"]').append($selectedItems);
     });
 
+    //   tags
     if($('.Tags').length > 0 && $('.TagsContainer').length > 0) {
         let tagsWidth = $('.Tags').innerWidth();
         let tagsInnerWidth = $('.TagsContainer').get(0).scrollWidth;
@@ -86,6 +112,20 @@ $(document).ready(function() {
         });
     }
 
+    //   rating
+    $('.Rating img').hover(function() {
+        $(this).attr('src', 'assets/icon/rate_full.svg');
+        $(this).prevAll().attr('src', 'assets/icon/rate_full.svg');
+        $(this).nextAll().attr('src', 'assets/icon/rate_empty.svg');
+    });
+    
+    $('.Rating img').click(function() {
+        $(this).attr('src', 'assets/icon/rate_full.svg');
+        $(this).prevAll().attr('src', 'assets/icon/rate_full.svg');
+        $(this).nextAll().attr('src', 'assets/icon/rate_empty.svg');
+    });
+
+    //   sortable tab
     $(document).on('click', '.btn-check:checked + .btn-sort', function() {
         $(this).toggleClass('Reverse');
     });

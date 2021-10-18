@@ -75,6 +75,23 @@ $IndicatorHeight: 90px;
 
         &-inner {
             margin-bottom: calc(#{$IndicatorHeight} + 15px);
+            max-height: 541px;
+            position: relative;
+
+            &.Loading {
+                background: $puregray-500;
+            }
+        }
+
+        .progress {
+            width: 50%;
+            margin: 260px auto;
+            border-radius: 1rem;
+            background-color: $puregray-200;
+            
+            &-bar {
+                border-radius: 1rem;
+            }
         }
     }
 }
