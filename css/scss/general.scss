@@ -845,16 +845,22 @@ main {
 }
 
 .AvatarUploader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     padding: 0;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
-    border: 3px solid #FFFFFF;
+    border: 4px solid #FFFFFF;
 
     img {
         width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
     }
 
     &::after {
