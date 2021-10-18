@@ -13,547 +13,496 @@
       <link href="css/scss/sellingReport.css" rel="stylesheet">
   </head>
   <body>
-<header login="true">
-   <div class="modal fade" id="siteSearch" data-bs-backdrop="static" abindex="-1" aria-labelledby="siteSearch" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-xl">
-         <div class="modal-content">
-            <div class="d-flex justify-content-end">
-               <button type="button" class="btn btn-outline-primary mb-5" data-bs-dismiss="modal">
-                  <span class="icon-close icon-xs"></span>
-                  關閉站內搜尋
-               </button>
-            </div>
-            <div class="input-group">
-               <input type="text" class="form-control" placeholder="搜尋3D模型" aria-label="搜尋3D模型" aria-describedby="button-addon2">
-               <button class="btn btn-primary p-3" type="button" id="button-addon2">
-                  <img src="./icons/search_2.svg">
-               </button>
-            </div>
-            <div class="d-flex flex-column align-items-stretch mt-4">
-               <div class="d-flex justofy-content-stretch px-5 mt-3">
-                  <h5>熱門標籤</h5>
-               </div>
-               <div class="d-flex flex-wrap p-4">
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標籤標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標籤標籤標
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標籤標籤標籤標
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標籤標籤標
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標籤標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標籤標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標籤標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標籤標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標籤標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標籤標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標籤
-                  </button>
-                  <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
-                     標籤標
+   <header login="true">
+      <div class="modal fade" id="siteSearch" data-bs-backdrop="static" abindex="-1" aria-labelledby="siteSearch" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+               <div class="d-flex justify-content-end">
+                  <button type="button" class="btn btn-outline-primary mb-5" data-bs-dismiss="modal">
+                     <span class="icon-close icon-xs"></span>
+                     關閉站內搜尋
                   </button>
                </div>
-            </div>
-            </div>
-      </div>
-   </div>
-   <div class="modal fade" id="signUpDialog" data-bs-backdrop="static" abindex="-1" aria-labelledby="signUpDialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-         <div class="modal-content">
-            <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">註冊</h5>
-               <p class="modal-subtitle">請建立您的帳號密碼</p>
-               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               <div class="input-group">
+                  <input type="text" class="form-control" placeholder="搜尋3D模型" aria-label="搜尋3D模型" aria-describedby="button-addon2">
+                  <button class="btn btn-primary p-3" type="button" id="button-addon2">
+                     <span class="icon-search icon-md"></span>
+                  </button>
                </div>
-               <div class="modal-body">
-               <form>
-                  <div class="pb-3 mb-3 border-bottom d-flex justify-content-between">
-                     <button type="button" class="btn btn-primary-fb mr-1">
-                        使用Facebook註冊
+               <div class="d-flex flex-column align-items-stretch mt-4">
+                  <div class="d-flex justofy-content-stretch px-5 mt-3">
+                     <h5>熱門標籤</h5>
+                  </div>
+                  <div class="d-flex flex-wrap p-4">
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤
                      </button>
-                     <button type="button" class="btn btn-primary-gmail ml-1">
-                        使用Gmail註冊
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標籤標籤
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標籤
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標籤標籤標
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標籤標籤標籤標
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標籤標籤標
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標籤標籤
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標籤標籤
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標籤標籤
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標籤標籤
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標籤標籤
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標籤標籤
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標籤
+                     </button>
+                     <button type="button" class="btn btn-outline-light rounded-pill mx-1 my-2 px-3" type="submit" value="Submit">
+                        標籤標
                      </button>
                   </div>
-                  <div class="mb-3">
-                     <input type="text" class="form-control" placeholder="帳號* 6-20位英數(不可含空白/符號)">
-                  </div>
-                  <div class="mb-3">
-                     <input type="text" class="form-control" placeholder="密碼* 6-20位英數符號(區分大小寫)">
-                  </div>
-                  <div class="mb-3">
-                     <input type="text" class="form-control" placeholder="請再次輸入密碼*">
-                  </div>
-                  <div class="mb-3 d-flex">
-                     <input type="text" class="form-control" placeholder="請輸入右側驗證碼*">
-                     <img class="ms-2" src="./img/validationcode.png" />
-                     <img class="ms-2" src="./icons/refresh.svg" />
-                  </div>
-                  <div class="mb-3 d-flex">
-                     <button type="button" class="btn btn-primary flex-grow-1">
-                        繼續
-                     </button>
-                  </div>
-                  <div class="mb-3">
-                     <p class="text-center mb-2">繼續使用即代表你同意本站的</p>
-                     <p class="text-center"><a href="#">使用者條款</a>以及<a href="#">隱私權政策</a></p>
-                  </div>
-               </form>
                </div>
-               <div class="modal-footer">
-               <p>
-                  已經有帳戶了？<a href="#">前往登入</a>
-               </p>
-               </div>            
-            </div>
+             </div>
+         </div>
       </div>
-   </div>
-   <div class="navbar navbar-expand shadow-sm">
-      <div class="container-fluid">
-      <a href="#" class="navbar-brand d-flex align-items-center justify-content-center">
-            <img class="w-100" src="assets/img/logo/logo.png" />
-      </a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul class="navbar-nav me-auto">
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  3D數位模型
-               </a>
-               <div class="Dropdown dropdown-menu" aria-labelledby="navbarDropdown-1">
-                  <div class="Dropdown-col">
-                     <div class="DropdownInner">
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">
-                              <span class="icon-star icon-xs"></span>
-                              精選推薦
-                           </a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">
-                              <span class="icon-download icon-xs"></span>
-                              熱門下載
-                           </a>
-                        </div>
-                        <div class="DropdownInner-item Active">
-                           <a class="dropdown-item" href="#">
-                              <span class="icon-update icon-xs"></span>
-                              最新上架
-                           </a>
-                        </div>
-                        <div class="DropdownInner-item_featured">
-                           <a class="dropdown-item" href="#">
-                              特色標籤 1
-                           </a>
-                        </div>
-                        <div class="DropdownInner-item_featured">
-                           <a class="dropdown-item" href="#">
-                              特色標籤 2
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="Dropdown-col">
-                     <div class="DropdownInner">
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item icon-arrow" href="#">建築</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item icon-arrow" href="#">大型招牌</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item icon-arrow" href="#">動植物</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item icon-arrow" href="#">人物</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item icon-arrow" href="#">建築二</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item icon-arrow" href="#">大型招牌二</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item icon-arrow" href="#">主分類1</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item icon-arrow" href="#">主分類2</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item icon-arrow" href="#">主分類3</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item icon-arrow" href="#">主分類4</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="Dropdown-col">
-                     <div class="DropdownInner" category="1">
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">所有建築</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">年代</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">種類</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類1</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類2</a>
-                        </div>
-                     </div>
-                     <div class="DropdownInner" category="2">
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">大型招牌</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類1</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類2</a>
-                        </div>
-                     </div>
-                     <div class="DropdownInner" category="3">
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">動植物</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類1</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類2</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類3</a>
-                        </div>
-                     </div>
-                     <div class="DropdownInner" category="4">
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">人物</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類1</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類2</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類3</a>
-                        </div>
-                     </div>
-                     <div class="DropdownInner" category="5">
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">建築二</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類1</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類2</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類3</a>
-                        </div>
-                     </div>
-                     <div class="DropdownInner" category="6">
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">大型招牌二</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類1</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類2</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類3</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類4</a>
-                        </div>
-                     </div>
-                     <div class="DropdownInner" category="7">
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">主分類1</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類1</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類2</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類3</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類4</a>
-                        </div>
-                     </div>
-                     <div class="DropdownInner" category="8">
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">主分類2</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類1</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類2</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類3</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類4</a>
-                        </div>
-                     </div>
-                     <div class="DropdownInner" category="9">
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">主分類3</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類1</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類2</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類3</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類4</a>
-                        </div>
-                     </div>
-                     <div class="DropdownInner" category="10">
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">主分類4</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類1</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類2</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類3</a>
-                        </div>
-                        <div class="DropdownInner-item">
-                           <a class="dropdown-item" href="#">次分類4</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  CC創用免費區
-               </a>
-               <ul class="Dropdown dropdown-menu" aria-labelledby="navbarDropdown-2">
-                  <div class="Dropdown-col">
-                     <div class="DropdownInner">
-                        <div class="DropdownInner-item">
-                           <li><a class="dropdown-item" href="#">商用</a></li>
-                           <li><a class="dropdown-item" href="#">非商用</a></li>
-                        </div>
-                     </div>
-                  </div>
-               </ul>
-            </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  優惠活動
-               </a>
-               <ul class="Dropdown dropdown-menu" aria-labelledby="navbarDropdown-3">
-                  <div class="Dropdown-col">
-                     <div class="DropdownInner">
-                        <div class="DropdownInner-item">
-                           <li><a class="dropdown-item" href="#">商用</a></li>
-                           <li><a class="dropdown-item" href="#">非商用</a></li>
-                        </div>
-                     </div>
-                  </div>
-               </ul>
-            </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  主題專區
-               </a>
-               <ul class="Dropdown dropdown-menu" aria-labelledby="navbarDropdown-4">
-                  <div class="Dropdown-col">
-                     <div class="DropdownInner">
-                        <div class="DropdownInner-item">
-                           <li><a class="dropdown-item" href="#">商用</a></li>
-                           <li><a class="dropdown-item" href="#">非商用</a></li>
-                        </div>
-                     </div>
-                  </div>
-               </ul>
-            </li>
-         </ul>
-      </div>
-      <form class="d-flex">
-         <button type="button" class="btn btn-outline-primary border-0 p-1" data-bs-toggle="modal" data-bs-target="#siteSearch">
-            <span class="icon-search icon-md"></span>
-         </button>
-         <div class="dropdown">
-            <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" id="cart">
-               <span class="icon-cart icon-md"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="cart">
-               <div class="d-flex justify-content-between">
-                  <p class="flex-grow-1">共 3 項商品</p>
-                  <button class="btn btn-outline-info border-0 p-0 btn-sm border-round-0 d-flex align-items-center">
-                     <span class="icon-cart icon-xs"></span>  
-                     檢視購物車
-                  </button>
-               </div>
-               <div class="d-flex my-2">
-                  <img src="assets/img/home_product_2.png" />
-                  <div class="d-flex flex-column flex-align-stretch py-1">
-                     <p class="Small-regular">標題標題標題標題標題標題標...</p>
-                     <p class="Small-medium">NT$ 500</p>
-                  </div>
-                  <div class="d-flex flex-align-center ml-2">
-                     <a href="#"><span class="icon-delete icon-xxs"></span></a>
-                  </div>
-               </div>
-               <div class="d-flex my-2">
-                  <img src="assets/img/home_product_2.png" />
-                  <div class="d-flex flex-column flex-align-stretch py-1">
-                     <p class="Small-regular">標題標題標題標題標題標題標...</p>
-                     <p class="Small-medium">NT$ 500</p>
-                  </div>
-                  <div class="d-flex flex-align-center ml-2">
-                     <a href="#"><span class="icon-delete icon-xxs"></span></a>
-                  </div>
-               </div>
-               <div class="d-flex my-2 border-bottom">
-                  <img src="assets/img/home_product_2.png" />
-                  <div class="d-flex flex-column flex-align-stretch py-1">
-                     <p class="Small-regular">標題標題標題標題標題標題標...</p>
-                     <div class="d-flex">
-                        <span class="LineTrough">
-                           <span class="LineTrough-inner">NT$ 900</span>
-                        </span>
-                        <span class="text-primary ms-2">NT$ 400</span>
-                     </div>
-                  </div>
-                  <div class="d-flex flex-align-center ml-2">
-                     <a href="#"><span class="icon-delete icon-xxs"></span></a>
-                  </div>
-               </div>
-               <p class="my-2">總計 NT$ 1000</p>
-               <button class="btn btn-primary w-100 mt-1">前往購物車</button> 
-            </div>
-         </ul>
-         <div class="dropdown">
-            <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" id="userAccount">
-               <img src="assets/img/avatar.png">
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="userAccount">
-               <li>
-                  <a class="dropdown-item H4-medium" href="#">
-                     <img src="assets/icon/member_2nd.svg" />
-                     Hi, Lisa !
+     <div class="navbar navbar-expand shadow-sm">
+       <div class="container-fluid">
+         <a href="#" class="navbar-brand d-flex align-items-center justify-content-center">
+               <img class="w-100" src="assets/img/logo/logo.png" />
+         </a>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     3D數位模型
                   </a>
+                  <div class="Dropdown dropdown-menu" aria-labelledby="navbarDropdown-1">
+                     <div class="Dropdown-col">
+                        <div class="DropdownInner">
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">
+                                 <span class="icon-star icon-xs"></span>
+                                 精選推薦
+                              </a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">
+                                 <span class="icon-download icon-xs"></span>
+                                 熱門下載
+                              </a>
+                           </div>
+                           <div class="DropdownInner-item Active">
+                              <a class="dropdown-item" href="#">
+                                 <span class="icon-update icon-xs"></span>
+                                 最新上架
+                              </a>
+                           </div>
+                           <div class="DropdownInner-item_featured">
+                              <a class="dropdown-item" href="#">
+                                 特色標籤 1
+                              </a>
+                           </div>
+                           <div class="DropdownInner-item_featured">
+                              <a class="dropdown-item" href="#">
+                                 特色標籤 2
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="Dropdown-col">
+                        <div class="DropdownInner">
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item icon-arrow" href="#">建築</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item icon-arrow" href="#">大型招牌</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item icon-arrow" href="#">動植物</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item icon-arrow" href="#">人物</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item icon-arrow" href="#">建築二</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item icon-arrow" href="#">大型招牌二</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item icon-arrow" href="#">主分類1</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item icon-arrow" href="#">主分類2</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item icon-arrow" href="#">主分類3</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item icon-arrow" href="#">主分類4</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="Dropdown-col">
+                        <div class="DropdownInner" category="1">
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">所有建築</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">年代</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">種類</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類1</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類2</a>
+                           </div>
+                        </div>
+                        <div class="DropdownInner" category="2">
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">大型招牌</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類1</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類2</a>
+                           </div>
+                        </div>
+                        <div class="DropdownInner" category="3">
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">動植物</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類1</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類2</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類3</a>
+                           </div>
+                        </div>
+                        <div class="DropdownInner" category="4">
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">人物</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類1</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類2</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類3</a>
+                           </div>
+                        </div>
+                        <div class="DropdownInner" category="5">
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">建築二</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類1</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類2</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類3</a>
+                           </div>
+                        </div>
+                        <div class="DropdownInner" category="6">
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">大型招牌二</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類1</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類2</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類3</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類4</a>
+                           </div>
+                        </div>
+                        <div class="DropdownInner" category="7">
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">主分類1</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類1</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類2</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類3</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類4</a>
+                           </div>
+                        </div>
+                        <div class="DropdownInner" category="8">
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">主分類2</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類1</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類2</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類3</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類4</a>
+                           </div>
+                        </div>
+                        <div class="DropdownInner" category="9">
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">主分類3</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類1</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類2</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類3</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類4</a>
+                           </div>
+                        </div>
+                        <div class="DropdownInner" category="10">
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">主分類4</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類1</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類2</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類3</a>
+                           </div>
+                           <div class="DropdownInner-item">
+                              <a class="dropdown-item" href="#">次分類4</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </li>
-               <li>
-                  <a class="dropdown-item" href="#">
-                     <span class="icon-user icon-xs"></span>
-                     帳戶設定
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     CC創用免費區
                   </a>
+                  <ul class="Dropdown dropdown-menu" aria-labelledby="navbarDropdown-2">
+                     <div class="Dropdown-col">
+                        <div class="DropdownInner">
+                           <div class="DropdownInner-item">
+                              <li><a class="dropdown-item" href="#">商用</a></li>
+                              <li><a class="dropdown-item" href="#">非商用</a></li>
+                           </div>
+                        </div>
+                     </div>
+                  </ul>
                </li>
-               <li>
-                  <a class="dropdown-item" href="#">
-                     <span class="icon-bell icon-xs"></span>
-                     訊息通知
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     優惠活動
                   </a>
+                  <ul class="Dropdown dropdown-menu" aria-labelledby="navbarDropdown-3">
+                     <div class="Dropdown-col">
+                        <div class="DropdownInner">
+                           <div class="DropdownInner-item">
+                              <li><a class="dropdown-item" href="#">商用</a></li>
+                              <li><a class="dropdown-item" href="#">非商用</a></li>
+                           </div>
+                        </div>
+                     </div>
+                  </ul>
                </li>
-               <li>
-                  <a class="dropdown-item" href="#">
-                     <span class="icon-form icon-xs"></span>
-                     訂單記錄
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     主題專區
                   </a>
-               </li>
-               <li>
-                  <a class="dropdown-item" href="#">
-                     <span class="icon-heart icon-xs"></span>
-                     收藏清單
-                  </a>
-               </li>
-               <li>
-                  <a class="dropdown-item" href="#">
-                     <span class="icon-heart icon-xs"></span>
-                     收藏清單
-                  </a>
-               </li>
-               <li>
-                  <a class="dropdown-item" href="#">
-                     <span class="icon-chart icon-xs"></span>
-                     模型銷售
-                  </a>
-               </li>
-               <li>
-                  <a class="dropdown-item" href="#">
-                     <span class="icon-card icon-xs"></span>
-                     我的錢包
-                  </a>
-               </li>
-               <li>
-                  <a class="dropdown-item text-info" href="#">
-                     <span class="icon-folder icon-xs"></span>
-                     上傳模型
-                  </a>
-               </li>
-               <li>
-                  <a class="dropdown-item" href="#">
-                     <span class=""></span>
-                     登出
-                  </a>
+                  <ul class="Dropdown dropdown-menu" aria-labelledby="navbarDropdown-4">
+                     <div class="Dropdown-col">
+                        <div class="DropdownInner">
+                           <div class="DropdownInner-item">
+                              <li><a class="dropdown-item" href="#">商用</a></li>
+                              <li><a class="dropdown-item" href="#">非商用</a></li>
+                           </div>
+                        </div>
+                     </div>
+                  </ul>
                </li>
             </ul>
          </div>
-         <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1" id="languageSwitch">
-            <span class="icon-earth icon-xs"></span> EN
-         </button>
-         </form>
-      </div>
-   </div>
-</header>
+         <form class="d-flex">
+            <button type="button" class="btn btn-outline-primary border-0 p-1" data-bs-toggle="modal" data-bs-target="#siteSearch">
+               <span class="icon-search icon-md"></span>
+            </button>
+            <div class="dropdown">
+               <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" id="cart">
+                  <span class="icon-cart icon-md"></span>
+               </button>
+               <ul class="dropdown-menu" aria-labelledby="cart">
+                  <div class="d-flex justify-content-between">
+                     <p class="flex-grow-1">共 3 項商品</p>
+                     <button class="btn btn-outline-info border-0 p-0 btn-sm border-round-0 d-flex align-items-center">
+                        <span class="icon-cart icon-xs"></span>  
+                        檢視購物車
+                     </button>
+                  </div>
+                  <div class="d-flex my-2">
+                     <img src="assets/img/home_product_2.png" />
+                     <div class="d-flex flex-column flex-align-stretch py-1">
+                        <p class="Small-regular">標題標題標題標題標題標題標...</p>
+                        <p class="Small-medium">NT$ 500</p>
+                     </div>
+                     <div class="d-flex flex-align-center ml-2">
+                        <a href="#"><span class="icon-delete icon-xxs"></span></a>
+                     </div>
+                  </div>
+                  <div class="d-flex my-2">
+                     <img src="assets/img/home_product_2.png" />
+                     <div class="d-flex flex-column flex-align-stretch py-1">
+                        <p class="Small-regular">標題標題標題標題標題標題標...</p>
+                        <p class="Small-medium">NT$ 500</p>
+                     </div>
+                     <div class="d-flex flex-align-center ml-2">
+                        <a href="#"><span class="icon-delete icon-xxs"></span></a>
+                     </div>
+                  </div>
+                  <div class="d-flex my-2 border-bottom">
+                     <img src="assets/img/home_product_2.png" />
+                     <div class="d-flex flex-column flex-align-stretch py-1">
+                        <p class="Small-regular">標題標題標題標題標題標題標...</p>
+                        <div class="d-flex">
+                           <span class="LineTrough">
+                              <span class="LineTrough-inner">NT$ 900</span>
+                           </span>
+                           <span class="text-primary ms-2">NT$ 400</span>
+                        </div>
+                     </div>
+                     <div class="d-flex flex-align-center ml-2">
+                        <a href="#"><span class="icon-delete icon-xxs"></span></a>
+                     </div>
+                  </div>
+                  <p class="my-2">總計 NT$ 1000</p>
+                  <button class="btn btn-primary w-100 mt-1">前往購物車</button> 
+               </ul>
+            </div>
+            <div class="dropdown">
+               <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" id="userAccount">
+                  <img src="assets/img/avatar.png">
+               </button>
+               <ul class="dropdown-menu" aria-labelledby="userAccount">
+                  <li>
+                     <a class="dropdown-item H4-medium" href="#">
+                        <img src="assets/icon/member_2nd.svg" />
+                        Hi, Lisa !
+                     </a>
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="#">
+                        <span class="icon-user icon-xs"></span>
+                        帳戶設定
+                     </a>
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="#">
+                        <span class="icon-bell icon-xs"></span>
+                        訊息通知
+                     </a>
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="#">
+                        <span class="icon-form icon-xs"></span>
+                        訂單記錄
+                     </a>
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="#">
+                        <span class="icon-heart icon-xs"></span>
+                        收藏清單
+                     </a>
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="#">
+                        <span class="icon-heart icon-xs"></span>
+                        收藏清單
+                     </a>
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="#">
+                        <span class="icon-chart icon-xs"></span>
+                        模型銷售
+                     </a>
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="#">
+                        <span class="icon-card icon-xs"></span>
+                        我的錢包
+                     </a>
+                  </li>
+                  <li>
+                     <a class="dropdown-item text-info" href="#">
+                        <span class="icon-folder icon-xs"></span>
+                        上傳模型
+                     </a>
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="#">
+                        <span class=""></span>
+                        登出
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1" id="languageSwitch">
+               <span class="icon-earth icon-xs me-1"></span> EN
+            </button>
+          </form>
+       </div>
+     </div>
+   </header>
 
 <main>
    <div class="SellingReport">

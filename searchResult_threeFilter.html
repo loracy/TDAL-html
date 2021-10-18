@@ -631,14 +631,19 @@
                   <span class="icon-search icon-md"></span>
                </button>
                <div class="dropdown">
-                  <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" id="cart">
+                  <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" id="cart" unread="false">
                      <span class="icon-cart icon-md"></span>
                   </button>
-                  <ul class="dropdown-menu" aria-labelledby="loginDialog">
-                     <li><a class="dropdown-item" href="#">Action</a></li>
-                     <li><a class="dropdown-item" href="#">Another action</a></li>
-                     <li><a class="dropdown-item" href="#">Something else here</a></li>
-                     </ul>
+                  <ul class="dropdown-menu" aria-labelledby="cart">
+                     <p class="Body-medium text-center mb-3">
+                        請先登入才能進行選購
+                     </p>
+                     <span class="d-flex justify-content-between mb-2">
+                        <span class="Body-regular-secondary flex-grow-1">還沒有帳號嗎？</span>
+                        <a class="Body-regular text-info" href="#">前往註冊</a>
+                     </span>
+                     <button class="btn btn-primary">立即登入</button>
+                  </ul>
                </div>
                <button type="button" class="btn btn-outline-primary border-0 ms-2" data-bs-toggle="modal" data-bs-target="#logInDialog">
                   登入
@@ -647,7 +652,7 @@
                   註冊
                </button>
                <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1" id="languageSwitch">
-                  <span class="icon-earth icon-xs"></span> EN
+                  <span class="icon-earth icon-xs me-1"></span> EN
                </button>
             </form>
          </div>

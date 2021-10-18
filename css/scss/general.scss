@@ -1686,6 +1686,16 @@ footer {
     }
 }
 
+.dropdown-toggle#userAccount {
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
 .dropdown-menu[aria-labelledby="userAccount"] {
     width: 320px;
     padding: 1px;
@@ -1722,19 +1732,21 @@ footer {
 }
 
 .dropdown-toggle#cart {
-    &:before {
-        content: '99';
-        height: 14px;
-        background: #FF3A1E;
-        position: absolute;
-        right: 0px;
-        top: -2px;
-        padding: 5px 4px;
-        color: #FFF;
-        border-radius: 12px;
-        font-size: 9px;
-        line-height: 8px;
-        text-align: center;
+    &:not([unread="false"]) {
+        &:before {
+            content: '99';
+            height: 14px;
+            background: #FF3A1E;
+            position: absolute;
+            right: 0px;
+            top: -2px;
+            padding: 5px 4px;
+            color: #FFF;
+            border-radius: 12px;
+            font-size: 9px;
+            line-height: 8px;
+            text-align: center;
+        }
     }
 }
 

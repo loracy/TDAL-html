@@ -13832,6 +13832,16 @@ footer .FooterList ul li a {
   z-index: 1;
 }
 
+.dropdown-toggle#userAccount {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.dropdown-toggle#userAccount img {
+  width: 32px;
+  height: 32px;
+}
+
 .dropdown-menu[aria-labelledby="userAccount"] {
   width: 320px;
   padding: 1px;
@@ -13868,7 +13878,7 @@ footer .FooterList ul li a {
           box-shadow: 0 -19px 0 -18px #DDDDDD;
 }
 
-.dropdown-toggle#cart:before {
+.dropdown-toggle#cart:not([unread="false"]):before {
   content: '99';
   height: 14px;
   background: #FF3A1E;

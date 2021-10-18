@@ -26,7 +26,7 @@
                <div class="input-group">
                   <input type="text" class="form-control" placeholder="搜尋3D模型" aria-label="搜尋3D模型" aria-describedby="button-addon2">
                   <button class="btn btn-primary p-3" type="button" id="button-addon2">
-                     <img src="./icons/search_2.svg">
+                     <span class="icon-search icon-md"></span>
                   </button>
                </div>
                <div class="d-flex flex-column align-items-stretch mt-4">
@@ -90,61 +90,10 @@
              </div>
          </div>
       </div>
-      <div class="modal fade" id="signUpDialog" data-bs-backdrop="static" abindex="-1" aria-labelledby="signUpDialog" aria-hidden="true">
-         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">註冊</h5>
-                  <p class="modal-subtitle">請建立您的帳號密碼</p>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                     <div class="pb-3 mb-3 border-bottom d-flex justify-content-between">
-                        <button type="button" class="btn btn-primary-fb mr-1">
-                           使用Facebook註冊
-                        </button>
-                        <button type="button" class="btn btn-primary-gmail ml-1">
-                           使用Gmail註冊
-                        </button>
-                     </div>
-                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="帳號* 6-20位英數(不可含空白/符號)">
-                     </div>
-                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="密碼* 6-20位英數符號(區分大小寫)">
-                     </div>
-                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="請再次輸入密碼*">
-                     </div>
-                     <div class="mb-3 d-flex">
-                        <input type="text" class="form-control" placeholder="請輸入右側驗證碼*">
-                        <img class="ms-2" src="./img/validationcode.png" />
-                        <img class="ms-2" src="./icons/refresh.svg" />
-                     </div>
-                     <div class="mb-3 d-flex">
-                        <button type="button" class="btn btn-primary flex-grow-1">
-                           繼續
-                        </button>
-                     </div>
-                     <div class="mb-3">
-                        <p class="text-center mb-2">繼續使用即代表你同意本站的</p>
-                        <p class="text-center"><a href="#">使用者條款</a>以及<a href="#">隱私權政策</a></p>
-                     </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <p>
-                     已經有帳戶了？<a href="#">前往登入</a>
-                  </p>
-                </div>            
-             </div>
-         </div>
-      </div>
      <div class="navbar navbar-expand shadow-sm">
        <div class="container-fluid">
          <a href="#" class="navbar-brand d-flex align-items-center justify-content-center">
-            <img class="w-100" src="assets/img/logo/logo.png" />
+               <img class="w-100" src="assets/img/logo/logo.png" />
          </a>
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto">
@@ -478,8 +427,8 @@
                   </div>
                   <p class="my-2">總計 NT$ 1000</p>
                   <button class="btn btn-primary w-100 mt-1">前往購物車</button> 
-               </div>
-            </ul>
+               </ul>
+            </div>
             <div class="dropdown">
                <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" id="userAccount">
                   <img src="assets/img/avatar.png">
@@ -548,7 +497,7 @@
                </ul>
             </div>
             <button type="button" class="btn btn-outline-primary border-0 ms-2 p-1" id="languageSwitch">
-               <span class="icon-earth icon-xs"></span> EN
+               <span class="icon-earth icon-xs me-1"></span> EN
             </button>
           </form>
        </div>
