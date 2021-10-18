@@ -1149,8 +1149,9 @@
 
       // Note that the menu width defaults to the button width if menuWidth option is null or blank.
       if (menuWidth !== 'auto') {
-         this.$menu.outerWidth(width);
-         this._savedMenuWidth = width;
+        // ---- Lora Edited for the assigned width of the muti-select menu ----
+        //  this.$menu.outerWidth(width);
+          this._savedMenuWidth = width;
          return;
       }
 

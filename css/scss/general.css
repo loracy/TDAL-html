@@ -14034,12 +14034,82 @@ footer .FooterList ul li a {
   background: #FFF;
 }
 
-.form-mutiselect + .ui-multiselect.ui-state-active {
+.form-mutiselect + .ui-multiselect.ui-state-active, .form-mutiselect + .ui-multiselect.ui-state-focus {
   border-color: #FF3A1E !important;
 }
 
 .ui-multiselect-menu {
   max-height: 276px;
+  font-family: PingFang TC, Roboto;
+  color: #212529;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  background: #FFF;
+  padding: 0;
+  -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: 1px solid #DDDDDD;
+  min-height: unset;
+}
+
+.ui-multiselect-menu .ui-multiselect-checkboxes {
+  max-height: 276px;
+  overflow: scroll !important;
+  padding: 0;
+}
+
+.ui-multiselect-menu .ui-multiselect-checkboxes li {
+  border-bottom: 1px solid #DDDDDD;
+  padding: 0;
+}
+
+.ui-multiselect-menu .ui-multiselect-checkboxes li label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  padding: 0 !important;
+  border: none;
+  text-indent: 0px;
+  background-color: transparent;
+  background: none;
+  border-radius: 0 !important;
+}
+
+.ui-multiselect-menu .ui-multiselect-checkboxes li label input {
+  position: absolute;
+  left: -99999px;
+}
+
+.ui-multiselect-menu .ui-multiselect-checkboxes li label span {
+  width: 100%;
+  padding: 10.5px 10px;
+  background: rgba(255, 58, 30, 0.05);
+  font-family: PingFang TC, Roboto;
+  color: #979797;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.ui-multiselect-menu .ui-multiselect-checkboxes li label input:checked ~ span {
+  background: rgba(255, 58, 30, 0.2);
+  background-color: rgba(255, 58, 30, 0.25);
+  font-family: PingFang TC, Roboto;
+  color: #212529;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.ui-multiselect-menu .ui-multiselect-checkboxes li label.ui-state-hover span {
+  background: rgba(255, 58, 30, 0.2);
+  background-color: rgba(255, 58, 30, 0.2);
   font-family: PingFang TC, Roboto;
   color: #212529;
   font-size: 18px;
@@ -14086,9 +14156,5 @@ footer .FooterList ul li a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-
-div[display-by] {
-  display: none;
 }
 /*# sourceMappingURL=general.css.map */

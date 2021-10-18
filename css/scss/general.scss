@@ -1909,7 +1909,8 @@ footer {
         border-radius: 5px;
         background: #FFF;
 
-        &.ui-state-active {
+        &.ui-state-active,
+        &.ui-state-focus {
             border-color: $primary !important;
         }
     }
@@ -1920,6 +1921,61 @@ footer {
 .ui-multiselect-menu {
     max-height: 276px;
     @include common-text(h3, regular);
+    background: #FFF;
+    padding: 0;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: 1px solid $puregray-300;
+    min-height: unset;
+    
+    .ui-multiselect-checkboxes {
+        max-height: 276px;
+        overflow: scroll !important;
+        padding: 0;
+
+        li {
+            border-bottom: 1px solid $puregray-300;
+            padding: 0;
+
+            label {
+                cursor: pointer;
+                display: flex;
+                justify-content: stretch;
+                padding: 0 !important;
+                border: none;
+                text-indent: 0px;
+                background-color: transparent;
+                background: none;
+                border-radius: 0 !important;
+
+                input {
+                    position: absolute;
+                    left: -99999px;
+                }
+        
+                span {
+                    width: 100%;
+                    padding: 10.5px 10px;
+                    background: rgba($primary, 0.05);
+                    @include common-text(h3, regular, $text-secondary);
+                }
+
+                input:checked ~ span {
+                    background: rgba($primary, 0.2);
+                    background-color: rgba($primary, 0.25);
+                    @include common-text(h3, regular, $text-black);
+                }
+                
+                &.ui-state-hover {
+                    span {
+                        background: rgba($primary, 0.2);
+                        background-color: rgba($primary, 0.2);
+                        @include common-text(h3, regular, $text-black);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .popover {
@@ -1956,8 +2012,4 @@ footer {
         flex-grow: 1;
     }
 
-}
-
-div[display-by] {
-    display: none;
 }

@@ -36,18 +36,46 @@ $(document).ready(function() {
         dateFormat: 'yy / dd / mm'
     });
 
+    $('.form-mutiselect#input_country').multiselect({
+        noneSelectedText: '居住的國家*',
+        selectedList: 1,
+        header: false,
+        beforeopen: function(event, ui) {
+            $('label[for*="input_country-option"]').closest('.ui-multiselect-menu').width($('#input_country').width() - 12);
+        }
+    });
+
+    $('.form-mutiselect#input_job').multiselect({
+        noneSelectedText: '職業類別*',
+        selectedList: 1,
+        header: false,
+        beforeopen: function(event, ui) {
+            $('label[for*="input_job-option"]').closest('.ui-multiselect-menu').width($('#input_job').width() - 12);
+        }
+    });
+
     $('.form-mutiselect#input_interests').multiselect({
-        selectedText: " Selected #/#",
+        selectedText: '已選擇 #/#',
         header: false,
         noneSelectedText: '您感興趣的模型* (複選)',
-    });
-    
+        beforeopen: function(event, ui) {
+            $('label[for*="input_interests-option"]').closest('.ui-multiselect-menu').width($('#input_interests').width() - 12);
+        }
+    });    
+
     $('.form-mutiselect#input_usage').multiselect({
-        selectedText: " Selected #/#",
+        selectedText: '已選擇 #/#',
         header: false,
         noneSelectedText: '對3D模型的用途* (複選)',
+        beforeopen: function(event, ui) {
+            $('label[for*="input_usage-option"]').closest('.ui-multiselect-menu').width($('#input_usage').width() - 12);
+        }
     });
     
+    $('#signUpInfoDialog').on('show.bs.modal', function () {
+        setTimeout(setMutiSelectMenuWidth, 500);
+    });
+
     // Customized ui elements initialization
     //   upload button
     $('.btn[updload]').each(function(index) {
@@ -182,4 +210,11 @@ function showToast(state, content) {
         $('.toast-container').show();
         $('.toast').toast('show');
     }
+}
+
+function setMutiSelectMenuWidth() {
+    $('label[for*="input_interests-option"]').closest('.ui-multiselect-menu').width($('#input_interests').width() - 12);
+    $('label[for*="input_usage-option"]').closest('.ui-multiselect-menu').width($('#input_usage').width() - 12);
+    $('label[for*="input_job-option"]').closest('.ui-multiselect-menu').width($('#input_job').width() - 12);
+    $('label[for*="input_country-option"]').closest('.ui-multiselect-menu').width($('#input_country').width() - 12);
 }

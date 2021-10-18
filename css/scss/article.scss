@@ -8,15 +8,16 @@
 
 .ArticleCover {
     height: 350px;
+    display: flex;
+    align-items: stretch;
 
     img {
-        width: 100%;
+        height: 100%;
     }
 }
 
 .ArticleList {
     .card {
-        
         border-bottom: none;
         
         &:last-of-type {
