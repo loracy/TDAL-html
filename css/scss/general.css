@@ -14179,4 +14179,12 @@ footer .FooterList ul li a {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+
+.ErrorPage {
+  padding: 40px 0 162px 0;
+}
+
+.ErrorPage img {
+  height: 200px;
+}
 /*# sourceMappingURL=general.css.map */
