@@ -74,6 +74,18 @@
             align-items: center;
         }
 
+        &-actions {
+            .btn-outline-secondary {
+                &:hover {
+                    background-color: transparent;
+
+                    .Small-medium-secondary {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
         &-price {
             @include common-text(body, medium);
             width: 100px;

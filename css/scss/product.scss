@@ -27,15 +27,17 @@ $IndicatorHeight: 90px;
             display: flex;
             margin: 0;
             height: calc(#{$IndicatorHeight} + #{$IndicatorMargin});
+            justify-content: flex-start !important;
             align-items: stretch;
             bottom: 0;
             
             button {
                 display: flex;
                 align-items: stretch;
-                justify-content: center;
+                justify-content: flex-start;
                 flex: 0 1 100%;
                 width: auto;
+                max-width: 100px;
                 height: auto;
                 margin: $IndicatorMargin;
                 border: none;
@@ -121,6 +123,17 @@ $IndicatorHeight: 90px;
 
     }
 
+}
+
+.dropdown-menu[aria-labelledby="shareProductInfo"] {
+    width: 320px;
+    max-width: 320px;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
 }
 
 .modal#previewProdcutThreeD {

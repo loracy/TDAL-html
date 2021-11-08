@@ -1,14 +1,17 @@
 $(document).ready(function() {
     // Global menu function
-    $('.DropdownInner-item > .dropdown-item.icon-arrow').each(function(index) {
-        $(this).hover(function() {
-            $('.DropdownInner[category="' + (index + 1) + '"]').addClass('Show');
-        }, function() {
-            let isHoverOnChild = $('.DropdownInner[category="' + (index + 1) + '"]:hover').length > 0;
-            
-            if(!isHoverOnChild) {
-                $('.DropdownInner[category="' + (index + 1) + '"]').removeClass('Show');
-            }
+    $('.Dropdown-col[dropdown-column="1"] .dropdown-item').each(function(index) {
+        $(this).click(function(e) {
+            e.stopPropagation();
+        });
+    });
+
+    $('.Dropdown-col[dropdown-column="2"] .dropdown-item').each(function(index) {
+        $(this).click(function(e) {
+            e.stopPropagation();
+
+            $('.Dropdown-col[dropdown-column="3"] .DropdownInner[category]').removeClass('Show');
+            $('.Dropdown-col[dropdown-column="3"] .DropdownInner[category="' + (index + 1) + '"]').addClass('Show');
         });
     });
 

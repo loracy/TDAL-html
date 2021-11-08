@@ -84,6 +84,14 @@
           align-items: center;
 }
 
+.CartList-item-actions .btn-outline-secondary:hover {
+  background-color: transparent;
+}
+
+.CartList-item-actions .btn-outline-secondary:hover .Small-medium-secondary {
+  color: #FF3A1E;
+}
+
 .CartList-item-price {
   font-family: PingFang TC, Roboto;
   color: #212529;

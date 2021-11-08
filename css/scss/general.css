@@ -12060,7 +12060,7 @@ fieldset:disabled .btn {
   color: #979797;
   font-size: 12px;
   line-height: 17px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .toast {
@@ -12180,6 +12180,10 @@ fieldset:disabled .btn {
 
 .form-control.Invalid, .form-select.Invalid {
   border-color: #EF6B23;
+}
+
+.form-control[disabled], .form-select[disabled] {
+  background-color: #F7F7F7;
 }
 
 .form-select[multiple] {
@@ -12609,6 +12613,10 @@ main {
   position: relative;
 }
 
+.Progress-item:first-of-type {
+  z-index: 10;
+}
+
 .Progress-item .rounded-circle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12631,34 +12639,15 @@ main {
   z-index: 2;
 }
 
-.Progress-item .rounded-circle::before {
+.Progress-item:not(:first-of-type) .rounded-circle::before {
   content: '';
-  width: calc(50% - 20px);
+  width: calc(100% - 40px);
   height: 2px;
   position: absolute;
   top: 19px;
-  left: 0px;
+  left: calc(-50% + 20px);
   background: #CDCDCD;
   z-index: 1;
-}
-
-.Progress-item .rounded-circle::after {
-  content: '';
-  width: calc(50% - 20px);
-  height: 2px;
-  position: absolute;
-  top: 19px;
-  right: 0px;
-  background: #CDCDCD;
-  z-index: 1;
-}
-
-.Progress-item:first-of-type .rounded-circle::before {
-  display: none;
-}
-
-.Progress-item:last-of-type .rounded-circle::after {
-  display: none;
 }
 
 .Progress-item p {
@@ -12671,16 +12660,12 @@ main {
   background: #FF3A1E;
 }
 
-.Progress-item.active .rounded-circle::before, .Progress-item.active .rounded-circle::after {
+.Progress-item.active .rounded-circle::before {
   background: #FF3A1E;
 }
 
 .Progress-item.active p {
   color: #FF3A1E;
-}
-
-.Progress-item.active:first-of-type .rounded-circle::after {
-  background: #CDCDCD;
 }
 
 .Filter {
@@ -13250,7 +13235,6 @@ header .nav-link.dropdown-toggle.show:after {
 .HomeCommonSection-widget-cover {
   margin-bottom: 16px;
   overflow: hidden;
-  border-radius: 50% !important;
 }
 
 .HomeCommonSection-widget > img {
@@ -14174,7 +14158,9 @@ footer .FooterList ul li a {
 }
 
 .CopyField-content {
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -14186,5 +14172,36 @@ footer .FooterList ul li a {
 
 .ErrorPage img {
   height: 200px;
+}
+
+.Mobile {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../assets/img/mobileBg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Mobile-mask {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(167.23deg, rgba(0, 0, 0, 0.5) 57.62%, rgba(127, 94, 80, 0) 95.14%, rgba(0, 0, 0, 0) 95.14%);
+  z-index: 1;
+}
+
+.Mobile-inner {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding: 70px 30px;
+  z-index: 2;
+}
+
+.Mobile-inner p {
+  color: #FFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 /*# sourceMappingURL=general.css.map */
