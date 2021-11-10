@@ -66,6 +66,14 @@
   height: 60px;
 }
 
+.ArticleContent-main-article {
+  line-height: 24px;
+}
+
+.ArticleContent-main-article a {
+  color: #248DEE;
+}
+
 .ArticleContent-comments {
   border: 1px solid #DDDDDD;
   border-top: none;

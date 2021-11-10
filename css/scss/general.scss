@@ -1520,27 +1520,31 @@ footer {
 
     button {
         &:first-of-type {
-            
         }
 
         &:last-of-type {
         }
-
     }
 
     .pagination {
         .page-item {
-            a.page-link {
+            .page-link {
                 border-color: transparent;
+                border-radius: 0px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             &.active {
-                a.page-link {
+                .page-link {
+                    background: rgba($primary, 0.5);
                     border-color: transparent;
                 }
             }
         }
-
     }
 }
 

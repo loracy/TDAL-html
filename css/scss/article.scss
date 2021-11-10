@@ -55,6 +55,14 @@
                 height: 60px;
             }
         }
+
+        &-article {
+            line-height: 24px;
+
+            a {
+                color: $info;
+            }
+        }
     }
 
     &-comments {
