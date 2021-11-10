@@ -127,7 +127,9 @@
                      </button>
                   </div>
                   <div class="mb-3 text-center">
-                     <a href="#">忘記密碼？</a>
+                     <a type="button" data-bs-target="#forgetPasswordDialog" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        忘記密碼？
+                     </a>
                   </div>
                </form>
                </div>
@@ -340,6 +342,28 @@
                </div>
                </div>
             </div>
+      </div>
+   </div>
+   <div class="modal fade CommonModal" id="forgetPasswordDialog" data-bs-backdrop="static" abindex="-1" aria-labelledby="forgetPasswordDialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+         <div class="modal-content" style="padding: 0 calc(50% - 193px);">
+            <div class="modal-header">
+               <h5 class="modal-title">忘記密碼</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <form>
+                  <div class="mb-3">
+                     <input type="text" class="form-control" placeholder="請輸入您註冊帳號的信箱*">
+                  </div>
+                  <div class="mb-3 d-flex">
+                     <button type="button" class="btn btn-primary flex-grow-1" data-bs-dismiss="modal">
+                        發送新密碼
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </div>
       </div>
    </div>
    <!-- modal area for header end -->
