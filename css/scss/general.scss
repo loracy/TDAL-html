@@ -360,8 +360,17 @@ main {
     overflow: hidden;
     position: relative;
 
-    &-img-top {
+    &-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         z-index: 1;
+        
+        &-top {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
     }
 
     &-body {
@@ -409,7 +418,7 @@ main {
     &:hover {
         cursor: pointer;
 
-        > img {
+        .card-img-top {
             transform: scale(1.25);
             transition: 0.1s all ease-in-out;
         }
@@ -927,6 +936,7 @@ header {
             &:first-of-type {
                 width: 196px;
                 background: #FFF8EF;
+                background: rgba($primary, 0.1);
                 box-shadow: none;
             }
         }
@@ -978,11 +988,16 @@ header {
                     }
                 }
             }
+
+            &:hover,
+            &:active {
+                background-color: $puregray-200;
+            }
         }
 
         &.Active {
             .dropdown-item {
-                background: rgba(241, 228, 211, 1);
+                background: rgba($primary, 0.2);
             }
         }
 
@@ -1024,7 +1039,7 @@ $CarouselControls: 4;
         bottom: 0px;
         padding-top: 16px;
         padding-bottom: 16px;
-        background: rgba(35, 68, 89, 0.3);
+        background: rgba($secondary, 0.3);
         z-index: $SearchbarlineLayer;
         
         .input-group {
@@ -1035,6 +1050,7 @@ $CarouselControls: 4;
 
             button {
                 color: #FFFFFF !important;
+                padding: 12.5px;
             }
         }
     
@@ -1085,10 +1101,10 @@ $CarouselControls: 4;
                 margin-left: 8px;
                 border: none;
                 border-radius: 12px;
-                background: #C4C4C4;
+                background: rgba(255, 255, 255, 0.5);
                 
                 &.active {
-                    background: #6F593E;
+                    background: #FFFFFF;
                 }
             }
         }
@@ -1188,7 +1204,7 @@ $CarouselControls: 4;
 
         &.active {
             font-weight: 500;
-            box-shadow: 0 3px 0 0 #6F593E;
+            box-shadow: 0 3px 0 0 $primary;
         }
     }
 }
@@ -1314,7 +1330,7 @@ $CarouselControls: 4;
 }
 
 footer {
-    background: #234459;
+    background: $secondary;
     height: 362px;
     padding-top: 80px;
     padding-bottom: 40px;
@@ -1335,7 +1351,25 @@ footer {
                 a {
                     @include common-text(body, regular, #FFFFFF);
                     text-decoration: none !important;
+
+                    &:hover {
+                        font-weight: bold;
+                    }
                 }
+            }
+        }
+
+        .form-select {
+            background-color: rgba(255, 255, 255, 0.2);
+            background-image: url(../../assets/icon/caret-down.svg);
+            background-size: 20px 20px;
+            color: #FFFFFF;
+
+            &:before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-image: url(../../assets/icon/earth.svg);
             }
         }
     }
@@ -1553,6 +1587,24 @@ footer {
 .SearchResult, .SellingReportContent {
     padding-top: 40px;
     padding-bottom: 100px;
+}
+
+.SearchResult,
+.SellingReport,
+.HomeProducts {
+    .card {    
+        &-img {
+            height: 160px;
+        }
+    }
+}
+
+.ProductRecommend {
+    .card {    
+        &-img {
+            height: 91px;
+        }
+    }
 }
 
 .SearchResultAddon {
