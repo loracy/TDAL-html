@@ -13484,18 +13484,30 @@ footer .FooterList ul li a:hover {
   font-weight: bold;
 }
 
-footer .FooterList .form-select {
-  background-color: rgba(255, 255, 255, 0.2);
-  background-image: url(../../assets/icon/caret-down.svg);
-  background-size: 20px 20px;
-  color: #FFFFFF;
+#languageSwitchInFooter {
+  position: relative;
 }
 
-footer .FooterList .form-select:before {
+#languageSwitchInFooter:before {
   content: '';
   width: 20px;
   height: 20px;
   background-image: url(../../assets/icon/earth.svg);
+  background-size: 20px 20px;
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  z-index: 2;
+}
+
+#languageSwitchInFooter .form-select {
+  padding-left: 48px;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url(../../assets/icon/caret-down.svg);
+  background-size: 20px 20px;
+  color: #FFFFFF;
+  z-index: 1;
 }
 
 .FooterBottom p {
