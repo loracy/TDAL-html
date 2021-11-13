@@ -13009,7 +13009,9 @@ header .nav-link.dropdown-toggle.show:after {
   padding: 15px 20px;
 }
 
-.DropdownInner-item .dropdown-item span[class*="icon-"] {
+.DropdownInner-item .dropdown-item img {
+  width: 20px;
+  height: 20px;
   margin-right: 4px;
 }
 

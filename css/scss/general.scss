@@ -955,7 +955,9 @@ header {
             align-items: center;
             padding: 15px 20px;
 
-            span[class*="icon-"] {
+            img {
+                width: 20px;
+                height: 20px;
                 margin-right: 4px;
             }
 
