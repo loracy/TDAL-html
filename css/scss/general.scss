@@ -290,13 +290,19 @@
         &-fb {
             background: $info;
             color: #FFFFFF;
+            flex-basis: 50%;
+            padding-left: 0;
+            padding-right: 0;
         }
         
         &-gmail {
             background: #EA371D;
             color: #FFFFFF;
+            flex-basis: 50%;
+            padding-left: 0;
+            padding-right: 0;
         }
-
+        
         &-light {
             color: $text-black !important;
             background: rgba(255, 58, 30, 0.1);
