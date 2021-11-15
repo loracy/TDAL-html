@@ -12960,7 +12960,7 @@ header .nav-link.dropdown-toggle.show:after {
   width: 236px;
   min-width: 196px;
   padding: 10px 0;
-  overflow: scroll;
+  overflow: auto;
   background: #FFFFFF;
   -webkit-box-shadow: -1px 0 0 0 #DDDDDD;
           box-shadow: -1px 0 0 0 #DDDDDD;
