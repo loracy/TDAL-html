@@ -90,6 +90,8 @@
 
 }
 
+$SellingReportTableGutter: 20px;
+
 .SellingReportTable {
 
     &-separate {
@@ -98,23 +100,35 @@
     }
 
     &-image {
-        width: 140px;
+        width: calc(140px + #{$SellingReportTableGutter} + 10px);
     }
 
     &-id {
-        width: 120px;
+        width: calc(104px + #{$SellingReportTableGutter});
     }
 
     &-permission {
-        width: 99px;
+        width: calc(124px + #{$SellingReportTableGutter});
+    }
+    
+    &-price {
+        width: calc(80px + #{$SellingReportTableGutter});
+    }
+    
+    &-selling {
+        width: calc(40px + #{$SellingReportTableGutter});
+    }
+    
+    &-status {
+        width: calc(80px + #{$SellingReportTableGutter});
     }
 
-    &-status {
-        width: 99px;
+    &-time {
+        width: calc(80px + #{$SellingReportTableGutter});
     }
 
     &-action {
-        width: 153px;
+        width: calc(80px + #{$SellingReportTableGutter} + 10px);
     }
 
     &-submitTime {
@@ -151,6 +165,7 @@
     }
 
     &-name {
+        width: auto;
     }
 
     thead {
@@ -158,13 +173,13 @@
             background: $puregray-100;
 
             th {
-                padding: 20px;
+                padding: 20px 0;
                 @include common-text(h3, medium);
                 text-align: center;
                 vertical-align: middle;
                 border-bottom: 1px solid $puregray-300 !important;
                 border-top: 1px solid $puregray-300;
-                padding: 20px;
+                padding: 20px 0;
 
                 &:first-of-type {
                     border-left: 1px solid $puregray-300;
@@ -184,15 +199,17 @@
                 text-align: center;
                 border-top: 1px solid $puregray-300 !important;
                 border-bottom: 1px solid $puregray-300 !important;
-                padding: 30px 20px;
+                padding: 30px 10px;
                 vertical-align: middle;
 
 
                 &:first-of-type {
+                    padding-left: 20px;
                     border-left: 1px solid $puregray-300;
                 }
-
+                
                 &:last-of-type {
+                    padding-right: 20px;
                     border-right: 1px solid $puregray-300;
                 }
 
@@ -204,8 +221,8 @@
                 }
 
                 img {
-                    width: 140px;
-                    max-width: 140px;
+                    width: 100%;
+                    max-width: 100%;
                 }
             }
 
@@ -287,7 +304,7 @@
         }
 
         &-id {
-            width: 80px;
+            width: 104px;
             margin: 0 10px 0 0;
         }
 

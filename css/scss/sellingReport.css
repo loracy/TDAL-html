@@ -130,23 +130,35 @@
 }
 
 .SellingReportTable-image {
-  width: 140px;
+  width: calc(140px + 20px + 10px);
 }
 
 .SellingReportTable-id {
-  width: 120px;
+  width: calc(104px + 20px);
 }
 
 .SellingReportTable-permission {
-  width: 99px;
+  width: calc(124px + 20px);
+}
+
+.SellingReportTable-price {
+  width: calc(80px + 20px);
+}
+
+.SellingReportTable-selling {
+  width: calc(40px + 20px);
 }
 
 .SellingReportTable-status {
-  width: 99px;
+  width: calc(80px + 20px);
+}
+
+.SellingReportTable-time {
+  width: calc(80px + 20px);
 }
 
 .SellingReportTable-action {
-  width: 153px;
+  width: calc(80px + 20px + 10px);
 }
 
 .SellingReportTable-submitTime {
@@ -181,12 +193,16 @@
   text-align: left;
 }
 
+.SellingReportTable-name {
+  width: auto;
+}
+
 .SellingReportTable thead tr {
   background: #F7F7F7;
 }
 
 .SellingReportTable thead tr th {
-  padding: 20px;
+  padding: 20px 0;
   font-family: PingFang TC, Roboto;
   color: #212529;
   font-size: 18px;
@@ -196,7 +212,7 @@
   vertical-align: middle;
   border-bottom: 1px solid #DDDDDD !important;
   border-top: 1px solid #DDDDDD;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .SellingReportTable thead tr th:first-of-type {
@@ -216,15 +232,17 @@
   text-align: center;
   border-top: 1px solid #DDDDDD !important;
   border-bottom: 1px solid #DDDDDD !important;
-  padding: 30px 20px;
+  padding: 30px 10px;
   vertical-align: middle;
 }
 
 .SellingReportTable tbody tr td:first-of-type {
+  padding-left: 20px;
   border-left: 1px solid #DDDDDD;
 }
 
 .SellingReportTable tbody tr td:last-of-type {
+  padding-right: 20px;
   border-right: 1px solid #DDDDDD;
 }
 
@@ -239,8 +257,8 @@
 }
 
 .SellingReportTable tbody tr td img {
-  width: 140px;
-  max-width: 140px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .SellingReportTable tbody tr.Invalid {
@@ -329,7 +347,7 @@
 }
 
 .CartList-item-id {
-  width: 80px;
+  width: 104px;
   margin: 0 10px 0 0;
 }
 
