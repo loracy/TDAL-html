@@ -101,28 +101,38 @@ $IndicatorHeight: 90px;
 .ProductRecommend {
     margin-top: 160px;
 
-    .card {
-        width: 163px;
-        margin: 10px;
-
-        &-body {
-            overflow: hidden;
-            padding: 10px 12px;
-        }
-        
-        &-text {
-            word-break: break-word;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            line-height: 18px;
-            max-height: 34px;
-            -webkit-line-clamp: 2; /* number of lines to show */
-            -webkit-box-orient: vertical;
+    .carousel {
+        &-inner {
+            padding: 0 50px;
         }
 
+        &-control-prev,
+        &-control-next {
+            width: 50px;
+        }
+
+        .card {
+            flex: 1;
+            margin: 10px;
+    
+            &-body {
+                overflow: hidden;
+                padding: 10px 12px;
+            }
+            
+            &-text {
+                word-break: break-word;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                line-height: 18px;
+                max-height: 34px;
+                -webkit-line-clamp: 2; /* number of lines to show */
+                -webkit-box-orient: vertical;
+            }
+    
+        }
     }
-
 }
 
 .dropdown-menu[aria-labelledby="shareProductInfo"] {

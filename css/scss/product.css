@@ -121,17 +121,27 @@
   margin-top: 160px;
 }
 
-.ProductRecommend .card {
-  width: 163px;
+.ProductRecommend .carousel-inner {
+  padding: 0 50px;
+}
+
+.ProductRecommend .carousel-control-prev, .ProductRecommend .carousel-control-next {
+  width: 50px;
+}
+
+.ProductRecommend .carousel .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin: 10px;
 }
 
-.ProductRecommend .card-body {
+.ProductRecommend .carousel .card-body {
   overflow: hidden;
   padding: 10px 12px;
 }
 
-.ProductRecommend .card-text {
+.ProductRecommend .carousel .card-text {
   word-break: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
