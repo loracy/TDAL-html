@@ -1571,17 +1571,31 @@ footer {
 .ProductsPagination {
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 
     button {
-        &:first-of-type {
+        padding: 12px 56px;
+        
+        .icon-previous{
+            margin-right: 12px;
         }
 
-        &:last-of-type {
+        .icon-next {
+            margin-left: 12px;
         }
     }
 
     .pagination {
+        width: 100%;
+        flex-shrink: 1;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        margin: 0 20px;
+
         .page-item {
+            margin: 0 10px;
+
             .page-link {
                 border-color: transparent;
                 border-radius: 0px;
@@ -1590,12 +1604,27 @@ footer {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                color: $text-black;
             }
 
             &.active {
                 .page-link {
                     background: rgba($primary, 0.5);
                     border-color: transparent;
+                    color: #FFF;
+
+                }
+            }
+
+            &.overflow {
+                margin: 0;
+                flex-shrink: 1;
+
+                .page-link {
+                    &:hover {
+                        background-color: transparent;
+                        border-color: transparent;
+                    }
                 }
             }
         }

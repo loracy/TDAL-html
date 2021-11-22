@@ -13738,6 +13738,37 @@ footer .FooterList ul li a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
+}
+
+.ProductsPagination button {
+  padding: 12px 56px;
+}
+
+.ProductsPagination button .icon-previous {
+  margin-right: 12px;
+}
+
+.ProductsPagination button .icon-next {
+  margin-left: 12px;
+}
+
+.ProductsPagination .pagination {
+  width: 100%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20px;
+}
+
+.ProductsPagination .pagination .page-item {
+  margin: 0 10px;
 }
 
 .ProductsPagination .pagination .page-item .page-link {
@@ -13754,10 +13785,23 @@ footer .FooterList ul li a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #212529;
 }
 
 .ProductsPagination .pagination .page-item.active .page-link {
   background: rgba(255, 58, 30, 0.5);
+  border-color: transparent;
+  color: #FFF;
+}
+
+.ProductsPagination .pagination .page-item.overflow {
+  margin: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.ProductsPagination .pagination .page-item.overflow .page-link:hover {
+  background-color: transparent;
   border-color: transparent;
 }
 
