@@ -13743,6 +13743,7 @@ footer .FooterList ul li a:hover {
 
 .ProductsPagination button {
   padding: 12px 56px;
+  line-height: 19px;
 }
 
 .ProductsPagination button .icon-previous {
